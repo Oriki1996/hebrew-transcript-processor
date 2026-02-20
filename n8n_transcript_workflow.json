@@ -1,0 +1,113 @@
+{
+  "name": "מעבד תמלילים אקדמי",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "trigger-1",
+      "name": "הפעל ידנית",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "// הדבק כאן את תוכן קובץ ה-JSON שהורדת מהאתר\n// לדוגמה: const pkg = { metadata: {...}, payload: [...] }\n\n// שיטה 1: הדבק JSON ישירות\nconst pkg = $input.first().json;\n\n// ודא שהמבנה תקין\nif (!pkg.payload || !Array.isArray(pkg.payload)) {\n  throw new Error('מבנה JSON לא תקין — חסר שדה payload');\n}\n\nconsole.log(`נטענו ${pkg.payload.length} חלקים לעיבוד`);\nreturn pkg.payload.map(item => ({ json: item }));"
+      },
+      "id": "code-1",
+      "name": "פרוס חבילה",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "batch-1",
+      "name": "עבד חלק אחד בכל פעם",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={{ $vars.GEMINI_API_KEY }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "Content-Type", "value": "application/json" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"contents\": [{\n    \"parts\": [{\n      \"text\": \"{{ $json.prompt }}\\n\\n{{ $json.content }}\"\n    }]\n  }],\n  \"generationConfig\": {\n    \"maxOutputTokens\": 8192,\n    \"temperature\": 0.3\n  }\n}",
+        "options": {}
+      },
+      "id": "http-1",
+      "name": "קרא ל-Gemini API",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [900, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "// חלץ את הטקסט מתשובת Gemini\nconst response = $input.first().json;\nconst text = response?.candidates?.[0]?.content?.parts?.[0]?.text || '';\n\nif (!text) throw new Error('Gemini לא החזיר תוכן — בדוק מפתח API ומכסה');\n\nreturn [{ json: {\n  part: $('עבד חלק אחד בכל פעם').first().json.part,\n  total: $('עבד חלק אחד בכל פעם').first().json.total,\n  result: text\n}}];"
+      },
+      "id": "code-2",
+      "name": "חלץ תשובה",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1120, 300]
+    },
+    {
+      "parameters": {
+        "unit": "seconds",
+        "amount": 12
+      },
+      "id": "wait-1",
+      "name": "המתן 12 שניות (מניעת 429)",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [1340, 300],
+      "webhookId": "wait-webhook-1"
+    },
+    {
+      "parameters": {
+        "jsCode": "// איחוד כל התוצאות לקובץ אחד\nconst items = $input.all();\nconst sorted = items\n  .map(i => i.json)\n  .sort((a, b) => a.part - b.part);\n\nconst combined = sorted.map(s => s.result).join('\\n\\n---\\n\\n');\n\nreturn [{ json: {\n  combined_output: combined,\n  parts_processed: sorted.length,\n  timestamp: new Date().toISOString()\n}}];"
+      },
+      "id": "code-3",
+      "name": "מזג תוצאות",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1560, 300]
+    }
+  ],
+  "connections": {
+    "הפעל ידנית": {
+      "main": [[{ "node": "פרוס חבילה", "type": "main", "index": 0 }]]
+    },
+    "פרוס חבילה": {
+      "main": [[{ "node": "עבד חלק אחד בכל פעם", "type": "main", "index": 0 }]]
+    },
+    "עבד חלק אחד בכל פעם": {
+      "main": [
+        [{ "node": "קרא ל-Gemini API", "type": "main", "index": 0 }],
+        [{ "node": "מזג תוצאות", "type": "main", "index": 0 }]
+      ]
+    },
+    "קרא ל-Gemini API": {
+      "main": [[{ "node": "חלץ תשובה", "type": "main", "index": 0 }]]
+    },
+    "חלץ תשובה": {
+      "main": [[{ "node": "המתן 12 שניות (מניעת 429)", "type": "main", "index": 0 }]]
+    },
+    "המתן 12 שניות (מניעת 429)": {
+      "main": [[{ "node": "עבד חלק אחד בכל פעם", "type": "main", "index": 0 }]]
+    }
+  },
+  "active": false,
+  "settings": { "executionOrder": "v1" },
+  "meta": { "templateCredsSetupCompleted": true }
+}
