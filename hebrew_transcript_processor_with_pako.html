@@ -11,6 +11,15 @@
   --border:rgba(160,130,50,0.18);--shadow:0 2px 14px rgba(120,90,20,0.07);
   --fg:#261c0a;--muted:#7a6a4a;--accent:#7a5c1e;--gold:#c09830;--orange:#b86010;
 }
+/* ── DARK ACADEMIA THEME ─────────────────────────────────────────── */
+.dark-theme{
+  --bg:#1c1a2e;--surface:#17162b;--card:#1f1c3a;
+  --border:rgba(160,130,50,0.22);--shadow:0 2px 14px rgba(0,0,0,0.45);
+  --fg:#e8dfc8;--muted:#9a8f72;--accent:#d4a84b;
+  /* --gold, --orange unchanged — gold accents stay gold */
+}
+.dark-theme body{background-color:var(--bg)}
+.dark-theme .settings-bar{background:rgba(23,21,43,0.92)}
 *{box-sizing:border-box}
 html,body{height:100%;margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans Hebrew","Heebo",sans-serif;background:var(--bg);color:var(--fg);direction:rtl}
 /* Star tiled background — 5-pointed polygon, ~4.5% gold opacity */
@@ -96,7 +105,10 @@ select.override:focus{outline:none;border-color:var(--gold)}
 <header>
   <div class="header-top">
     <div class="header-title">מעבד תמלילים אקדמי</div>
-    <button id="settingsToggle" class="settings-toggle">⚙ הגדרות</button>
+    <div style="display:flex;gap:8px">
+      <button id="themeToggle" class="settings-toggle">🌙</button>
+      <button id="settingsToggle" class="settings-toggle">⚙ הגדרות</button>
+    </div>
   </div>
   <div id="settingsBar" class="settings-bar">
     <div class="field-grp">
@@ -112,10 +124,13 @@ select.override:focus{outline:none;border-color:var(--gold)}
     <div class="field-grp" style="flex:0;min-width:auto;gap:8px">
       <label class="lbl">מודל</label>
       <select id="modelSelect" class="model-sel">
-        <option value="claude-sonnet-4-20250514">Claude Sonnet 4</option>
-        <option value="claude-opus-4-20250514">Claude Opus 4</option>
+        <option value="claude-3-5-sonnet-20241022">Claude 3.5 Sonnet</option>
+        <option value="claude-3-opus-20240229">Claude 3 Opus</option>
+        <option value="claude-3-5-haiku-20241022">Claude 3.5 Haiku</option>
+        <option value="gemini-2.5-pro">Gemini 2.5 Pro</option>
         <option value="gemini-2.0-flash">Gemini 2.0 Flash</option>
         <option value="gemini-1.5-pro">Gemini 1.5 Pro</option>
+        <option value="gemini-1.5-flash">Gemini 1.5 Flash</option>
       </select>
       <div id="providerTag" class="provider-tag">Anthropic</div>
     </div>
@@ -173,6 +188,7 @@ select.override:focus{outline:none;border-color:var(--gold)}
     <div class="output-actions">
       <button id="copyAll" class="btn-main">העתק הכל</button>
       <button id="exportTxt" class="btn-secondary">ייצא כ-TXT</button>
+      <button id="exportDoc" class="btn-secondary">ייצא ל-Word</button>
       <button id="newProcess" class="btn-secondary">עיבוד חדש</button>
     </div>
     <div id="statsBar" class="stats-bar"></div>
@@ -255,7 +271,9 @@ const outputArea      = document.getElementById('outputArea');
 const statsBarEl      = document.getElementById('statsBar');
 const copyAllBtn      = document.getElementById('copyAll');
 const exportTxtBtn    = document.getElementById('exportTxt');
+const exportDocBtn    = document.getElementById('exportDoc');
 const newProcessBtn   = document.getElementById('newProcess');
+const themeToggleBtn  = document.getElementById('themeToggle');
 
 let rawText = '';
 let rotatingInterval = null;
@@ -274,8 +292,27 @@ if (savedModel && modelSelectEl.querySelector(`option[value="${savedModel}"]`)) 
 }
 updateProviderTag();
 
-// Auto-open settings if no keys are saved yet
+// Auto-open settings only if no keys saved yet
 if (!savedKey && !savedGeminiKey) settingsBarEl.classList.add('open');
+
+// Dark theme restore
+if (localStorage.getItem('dark_theme') === '1') {
+  document.documentElement.classList.add('dark-theme');
+  themeToggleBtn.textContent = '☀️';
+}
+
+// Draft restore — raw textarea
+const savedDraftRaw = localStorage.getItem('draft_raw');
+if (savedDraftRaw) rawEl.value = savedDraftRaw;
+
+// Draft restore — processed output
+const savedDraftOutput = localStorage.getItem('draft_output');
+if (savedDraftOutput) {
+  outputArea.innerHTML = savedDraftOutput;
+  const savedStats = localStorage.getItem('draft_stats');
+  if (savedStats) statsBarEl.textContent = savedStats;
+  showScreen(screenOutput);
+}
 
 function showScreen(el) {
   SCREENS.forEach(s => s.classList.remove('active'));
@@ -286,6 +323,18 @@ function updateProviderTag() {
   const isGemini = modelSelectEl.value.startsWith('gemini');
   providerTagEl.textContent = isGemini ? 'Google AI' : 'Anthropic';
 }
+
+// ── THEME TOGGLE ─────────────────────────────────────────────────────
+themeToggleBtn.addEventListener('click', () => {
+  const isDark = document.documentElement.classList.toggle('dark-theme');
+  themeToggleBtn.textContent = isDark ? '☀️' : '🌙';
+  localStorage.setItem('dark_theme', isDark ? '1' : '0');
+});
+
+// ── AUTO-SAVE DRAFT (RAW) ────────────────────────────────────────────
+rawEl.addEventListener('input', () => {
+  localStorage.setItem('draft_raw', rawEl.value);
+});
 
 // ── SETTINGS EVENTS ─────────────────────────────────────────────────
 settingsToggleBtn.addEventListener('click', () => {
@@ -463,8 +512,12 @@ confirmStartBtn.addEventListener('click', async () => {
   const elapsed = Math.round((Date.now() - start) / 1000);
   const finalHtml = results.join('\n');
   const wordCount = finalHtml.replace(/<[^>]+>/g, '').split(/\s+/).filter(Boolean).length;
-  statsBarEl.textContent = `⏱ זמן עיבוד: ${elapsed} שניות · 📝 מילים: ${wordCount.toLocaleString()} · 🔢 טוקנים משוערים: ${totalTokensEst.toLocaleString()} · מודל: ${model}`;
+  const statsText = `⏱ זמן עיבוד: ${elapsed} שניות · 📝 מילים: ${wordCount.toLocaleString()} · 🔢 טוקנים משוערים: ${totalTokensEst.toLocaleString()} · מודל: ${model}`;
+  statsBarEl.textContent = statsText;
   outputArea.innerHTML = finalHtml.replace(/\[([^\]]+)\]/g, '<span class="bracket">[$1]</span>');
+  // Auto-save processed output and stats to localStorage
+  localStorage.setItem('draft_output', outputArea.innerHTML);
+  localStorage.setItem('draft_stats', statsText);
   showScreen(screenOutput);
 });
 
@@ -491,12 +544,25 @@ exportTxtBtn.addEventListener('click', () => {
   a.remove(); URL.revokeObjectURL(url);
 });
 
+exportDocBtn.addEventListener('click', () => {
+  const html = `<!DOCTYPE html><html><head><meta charset="utf-8"><style>body{font-family:Arial,sans-serif;direction:rtl;line-height:1.7}h1,h2,h3{color:#261c0a}</style></head><body>${outputArea.innerHTML}</body></html>`;
+  const blob = new Blob([html], { type: 'application/msword' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'תמליל_מעובד.doc';
+  document.body.appendChild(a); a.click();
+  a.remove(); URL.revokeObjectURL(url);
+});
+
 newProcessBtn.addEventListener('click', () => {
   outputArea.innerHTML = '';
   statsBarEl.textContent = '';
   progressBar.style.width = '0%';
   rawEl.value = '';
   fileInfoEl.textContent = '';
+  localStorage.removeItem('draft_raw');
+  localStorage.removeItem('draft_output');
+  localStorage.removeItem('draft_stats');
   showScreen(screenInput);
 });
 
