@@ -253,7 +253,7 @@ fileOtherEl.addEventListener('change', async e => {
       }
     } else if (ext === 'pdf') {
       const ab = await f.arrayBuffer();
-      const txt = extractPdfText(ab);
+      const txt = await extractPdfText(ab);
       if (txt && txt.length > 10) {
         rawEl.value = txt;
         fileInfoEl.textContent = `קובץ: ${f.name} — תווים: ${txt.length.toLocaleString()}`;
@@ -454,17 +454,212 @@ async function extractDocxText(ab) {
   } catch { return null; }
 }
 
-function extractPdfText(ab) {
+async function extractPdfText(ab) {
   try {
-    const txt = new TextDecoder('latin1').decode(ab);
-    const matches = [];
-    const re = /\(([^)\\]{1,200})\)/g;
-    let m;
-    while ((m = re.exec(txt)) !== null) {
-      const s = m[1].replace(/\\n/g,' ').replace(/\\/g,'');
-      if (/[\u0590-\u05FFa-zA-Z]/.test(s)) matches.push(s);
+    const bytes = new Uint8Array(ab);
+    const latin1 = new TextDecoder('latin1').decode(bytes);
+
+    // Try to decompress a Flate/zlib stream; tries both zlib-wrapped and raw deflate
+    async function tryDeflate(raw) {
+      if (typeof DecompressionStream === 'undefined') return null;
+      for (const fmt of ['deflate', 'deflate-raw']) {
+        try {
+          const ds = new DecompressionStream(fmt);
+          const writer = ds.writable.getWriter();
+          const reader = ds.readable.getReader();
+          writer.write(raw);
+          writer.close();
+          const parts = [];
+          for (;;) { const { done, value } = await reader.read(); if (done) break; parts.push(value); }
+          const total = parts.reduce((n, c) => n + c.length, 0);
+          const out = new Uint8Array(total);
+          let off = 0;
+          for (const p of parts) { out.set(p, off); off += p.length; }
+          return new TextDecoder('latin1').decode(out);
+        } catch { /* try next format */ }
+      }
+      return null;
     }
-    return matches.join(' ').replace(/\s+/g,' ').trim() || null;
+
+    // Decode PDF literal string escapes: \n \r \t \b \f \\ \( \) \ddd (octal)
+    function decodeLiteralStr(raw) {
+      let out = '';
+      for (let i = 0; i < raw.length; i++) {
+        if (raw[i] !== '\\') { out += raw[i]; continue; }
+        i++;
+        const c = raw[i];
+        if (c === 'n') out += '\n';
+        else if (c === 'r') out += '\r';
+        else if (c === 't') out += '\t';
+        else if (c === 'b') out += '\b';
+        else if (c === 'f') out += '\f';
+        else if (c === '(' || c === ')' || c === '\\') out += c;
+        else if (c >= '0' && c <= '7') {
+          let oct = c;
+          if (i + 1 < raw.length && raw[i + 1] >= '0' && raw[i + 1] <= '7') oct += raw[++i];
+          if (i + 1 < raw.length && raw[i + 1] >= '0' && raw[i + 1] <= '7') oct += raw[++i];
+          out += String.fromCharCode(parseInt(oct, 8));
+        } else { out += c; }
+      }
+      return out;
+    }
+
+    // Decode PDF hex string <AABB...>
+    function decodeHexStr(hex) {
+      hex = hex.replace(/\s/g, '');
+      if (hex.length % 2) hex += '0';
+      let out = '';
+      for (let i = 0; i < hex.length; i += 2)
+        out += String.fromCharCode(parseInt(hex.slice(i, i + 2), 16));
+      return out;
+    }
+
+    // Convert raw byte string to Unicode, handling UTF-16BE BOM (common in Hebrew PDFs)
+    function toUnicode(s) {
+      if (s.length >= 2 && s.charCodeAt(0) === 0xFE && s.charCodeAt(1) === 0xFF) {
+        let u = '';
+        for (let i = 2; i + 1 < s.length; i += 2)
+          u += String.fromCodePoint((s.charCodeAt(i) << 8) | s.charCodeAt(i + 1));
+        return u;
+      }
+      return s;
+    }
+
+    // Parse a decompressed PDF content stream and extract text from BT...ET blocks
+    // Handles text operators: Tj, TJ, ' (quote), " (double-quote)
+    // Handles both literal (...)  and hex <...> string types
+    function extractTextFromContent(content) {
+      const texts = [];
+      const stack = [];
+      let inBT = false;
+      let i = 0;
+      const len = content.length;
+      const WS = new Set([0x00, 0x09, 0x0A, 0x0C, 0x0D, 0x20]);
+      const DELIM = new Set(['(', ')', '<', '>', '[', ']', '{', '}', '/', '%']);
+
+      function skip() { while (i < len && WS.has(content.charCodeAt(i))) i++; }
+
+      function readPdfString() {
+        if (content[i] === '(') {
+          i++;
+          let raw = ''; let depth = 1;
+          while (i < len && depth > 0) {
+            if (content[i] === '\\' && i + 1 < len) { raw += content[i] + content[i + 1]; i += 2; }
+            else if (content[i] === '(') { depth++; raw += content[i++]; }
+            else if (content[i] === ')') { depth--; if (depth > 0) raw += content[i]; i++; }
+            else { raw += content[i++]; }
+          }
+          return toUnicode(decodeLiteralStr(raw));
+        }
+        if (content[i] === '<' && content[i + 1] !== '<') {
+          i++;
+          let hex = '';
+          while (i < len && content[i] !== '>') hex += content[i++];
+          if (i < len) i++;
+          return toUnicode(decodeHexStr(hex));
+        }
+        return null;
+      }
+
+      while (i < len) {
+        skip();
+        if (i >= len) break;
+        const ch = content[i];
+
+        if (ch === '(' || (ch === '<' && content[i + 1] !== '<')) {
+          const s = readPdfString();
+          if (s !== null) stack.push({ t: 's', v: s });
+          continue;
+        }
+
+        if (ch === '[') {
+          i++;
+          const arr = [];
+          while (i < len) {
+            skip();
+            if (i >= len || content[i] === ']') break;
+            if (content[i] === '(' || (content[i] === '<' && content[i + 1] !== '<')) {
+              const s = readPdfString();
+              if (s !== null) arr.push({ t: 's', v: s });
+            } else {
+              let tok = '';
+              while (i < len && !WS.has(content.charCodeAt(i)) && !DELIM.has(content[i])) tok += content[i++];
+              if (tok) arr.push({ t: 'n', v: tok });
+            }
+          }
+          if (i < len) i++;
+          stack.push({ t: 'a', v: arr });
+          continue;
+        }
+
+        // Dictionary <<...>> — skip entirely
+        if (ch === '<' && content[i + 1] === '<') {
+          let depth = 1; i += 2;
+          while (i < len && depth > 0) {
+            if (content[i] === '<' && content[i + 1] === '<') { depth++; i += 2; }
+            else if (content[i] === '>' && content[i + 1] === '>') { depth--; i += 2; }
+            else i++;
+          }
+          stack.length = 0;
+          continue;
+        }
+
+        if (ch === '%') { while (i < len && content[i] !== '\n' && content[i] !== '\r') i++; continue; }
+        if (ch === '/') { while (i < len && !WS.has(content.charCodeAt(i)) && !DELIM.has(content[i])) i++; stack.length = 0; continue; }
+
+        let word = '';
+        while (i < len && !WS.has(content.charCodeAt(i)) && !DELIM.has(content[i])) word += content[i++];
+        if (!word) { i++; continue; }
+
+        if (!isNaN(word)) { stack.push({ t: 'n', v: word }); continue; }
+
+        // PDF text-showing operators
+        if (word === 'BT') { inBT = true; }
+        else if (word === 'ET') { inBT = false; }
+        else if (inBT) {
+          const top = stack[stack.length - 1];
+          if ((word === 'Tj' || word === "'") && top && top.t === 's' && top.v.trim()) {
+            texts.push(top.v);
+          } else if (word === '"' && top && top.t === 's' && top.v.trim()) {
+            // Stack: [..., word-spacing, char-spacing, string]
+            texts.push(top.v);
+          } else if (word === 'TJ' && top && top.t === 'a') {
+            for (const item of top.v) if (item.t === 's' && item.v.trim()) texts.push(item.v);
+          }
+        }
+        stack.length = 0;
+      }
+
+      return texts.join('');
+    }
+
+    // Locate and process all streams in the PDF
+    const allTexts = [];
+    const streamRe = /stream[\r\n]+([\s\S]*?)[\r\n]endstream/g;
+    let m;
+    while ((m = streamRe.exec(latin1)) !== null) {
+      const rawStr = m[1];
+      const rawBytes = new Uint8Array(rawStr.length);
+      for (let j = 0; j < rawStr.length; j++) rawBytes[j] = rawStr.charCodeAt(j) & 0xff;
+      const decompressed = await tryDeflate(rawBytes);
+      const content = decompressed ?? rawStr;
+      if (!content.includes('BT')) continue;
+      const text = extractTextFromContent(content);
+      if (text && text.trim()) allTexts.push(text.trim());
+    }
+
+    // Fallback for simple uncompressed PDFs: naive literal-string scan
+    if (allTexts.length === 0) {
+      const fallbackRe = /\(([^)\\]{1,300})\)/g;
+      let fm;
+      while ((fm = fallbackRe.exec(latin1)) !== null) {
+        const s = decodeLiteralStr(fm[1]);
+        if (/[\u0590-\u05FFa-zA-Z]{2,}/.test(s)) allTexts.push(s);
+      }
+    }
+
+    const result = allTexts.join(' ').replace(/\s+/g, ' ').trim();
+    return result || null;
   } catch { return null; }
 }
 </script>
