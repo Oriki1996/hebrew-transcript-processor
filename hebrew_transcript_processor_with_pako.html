@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>מעבד תמלולים אקדמי</title>
+<style>
+:root{--bg:#1a1a2e;--fg:#e0e0e0;--muted:#b8b8c8;--accent:#7c6af7;--orange:#f0a500;--card:#12122a}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans Hebrew","Heebo",sans-serif;background:var(--bg);color:var(--fg);direction:rtl}
+.app{display:flex;flex-direction:column;min-height:100vh}
+header{display:flex;align-items:center;gap:12px;padding:10px 20px;border-bottom:1px solid rgba(255,255,255,0.06);background:var(--card);flex-wrap:wrap}
+.key-wrap{display:flex;align-items:center;gap:8px;flex:1}
+label.lbl{font-size:13px;color:var(--muted);white-space:nowrap}
+input.api{background:#0f0f1a;border:1px solid rgba(255,255,255,0.08);color:var(--fg);padding:7px 10px;border-radius:6px;width:260px;font-size:14px}
+.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.1);padding:6px 10px;border-radius:6px;color:var(--muted);cursor:pointer;font-size:13px}
+.model-tag{color:var(--muted);font-size:13px;margin-right:auto}
+main{flex:1;padding:24px 20px;max-width:900px;width:100%;margin:0 auto}
+.screen{display:none}.screen.active{display:block}
+
+/* INPUT */
+.section-title{font-size:22px;font-weight:700;margin-bottom:16px;color:var(--fg)}
+textarea#raw{width:100%;height:38vh;background:#0f0f1a;border:1px solid rgba(255,255,255,0.08);color:var(--fg);padding:14px;border-radius:10px;resize:vertical;direction:rtl;font-size:15px;line-height:1.6;font-family:inherit}
+textarea#raw::placeholder{color:var(--muted)}
+.uploads{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap}
+.btn-upload{background:rgba(124,106,247,0.12);border:1px solid rgba(124,106,247,0.3);color:var(--accent);padding:9px 16px;border-radius:8px;cursor:pointer;font-size:14px;transition:background .2s}
+.btn-upload:hover{background:rgba(124,106,247,0.22)}
+.file-info{color:var(--muted);font-size:13px;margin-top:8px;min-height:18px}
+.btn-main{background:var(--accent);color:#fff;border:none;padding:12px 28px;border-radius:10px;font-size:16px;font-weight:600;cursor:pointer;margin-top:16px;transition:opacity .2s}
+.btn-main:hover{opacity:.88}
+.btn-secondary{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:var(--fg);padding:10px 20px;border-radius:8px;font-size:14px;cursor:pointer}
+
+/* IDENT */
+.ident-card{background:var(--card);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:20px;margin-bottom:16px}
+.big-type{font-size:22px;font-weight:700;color:var(--accent);margin-bottom:8px}
+.parts-info{color:var(--muted);font-size:15px;margin-bottom:10px}
+.warning-text{color:#ffcc00;font-size:14px;margin-bottom:10px}
+select.override{background:#0f0f1a;border:1px solid rgba(255,255,255,0.1);color:var(--fg);padding:8px 12px;border-radius:8px;font-size:14px;margin-bottom:14px;direction:rtl}
+.ident-actions{display:flex;gap:10px;flex-wrap:wrap}
+
+/* PROCESS */
+.process-wrap{text-align:center;padding:40px 0}
+.progress-outer{height:12px;background:rgba(255,255,255,0.06);border-radius:8px;overflow:hidden;margin:20px 0}
+.progress-inner{height:100%;background:linear-gradient(90deg,var(--accent),#5e4df0);width:0%;transition:width .4s}
+.status-msg{color:var(--muted);font-size:15px;margin-top:10px}
+.part-indicator{color:var(--accent);font-size:14px;margin-top:6px}
+
+/* OUTPUT */
+.output-box{background:#0f0f1a;border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:24px;overflow:auto;line-height:1.8;font-size:15px}
+.output-box h1{font-size:24px;color:var(--fg);border-bottom:2px solid var(--accent);padding-bottom:8px;margin-top:0}
+.output-box h2{font-size:20px;color:var(--fg);margin-top:28px;margin-bottom:8px}
+.output-box h3{font-size:17px;color:var(--muted);margin-top:18px;margin-bottom:6px}
+.output-box p{margin:0 0 14px 0}
+.bracket{color:var(--orange);font-weight:500}
+.stats-bar{color:var(--muted);font-size:13px;margin:14px 0 10px 0}
+.output-actions{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="key-wrap">
+    <label class="lbl">Anthropic API Key</label>
+    <input id="apiKey" class="api" type="password" placeholder="sk-ant-..." />
+    <button id="toggleKey" class="btn-ghost">הצג/הסתר</button>
+  </div>
+  <div class="model-tag">claude-sonnet-4-20250514</div>
+</header>
+
+<main>
+  <!-- SCREEN 1: INPUT -->
+  <div id="screen-input" class="screen active">
+    <div class="section-title">מעבד תמלילים אקדמי</div>
+    <textarea id="raw" placeholder="הדבק כאן את התמליל הגולמי..."></textarea>
+    <div class="uploads">
+      <label class="btn-upload">העלה TXT<input id="fileTxt" type="file" accept=".txt" style="display:none"></label>
+      <label class="btn-upload">העלה Word/PDF<input id="fileOther" type="file" accept=".docx,.pdf,.txt" style="display:none"></label>
+    </div>
+    <div id="fileInfo" class="file-info"></div>
+    <div><button id="identifyBtn" class="btn-main">זהה סוג ועבד ←</button></div>
+  </div>
+
+  <!-- SCREEN 2: IDENTIFICATION -->
+  <div id="screen-ident" class="screen">
+    <div class="section-title">זיהוי התמליל</div>
+    <div class="ident-card">
+      <div id="detectedType" class="big-type">מנתח...</div>
+      <div id="recommendedParts" class="parts-info"></div>
+      <div id="identWarning" class="warning-text"></div>
+      <select id="manualOverride" class="override">
+        <option value="auto">זיהוי אוטומטי</option>
+        <option value="הרצאה אקדמית">הרצאה אקדמית</option>
+        <option value="ישיבת עבודה">ישיבת עבודה</option>
+        <option value="ראיון">ראיון</option>
+        <option value="פאנל">פאנל</option>
+      </select>
+      <div class="ident-actions">
+        <button id="confirmStart" class="btn-main">אשר והתחל עיבוד ←</button>
+        <button id="resetBtn" class="btn-secondary">התחל מחדש</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREEN 3: PROCESSING -->
+  <div id="screen-process" class="screen">
+    <div class="process-wrap">
+      <div class="section-title">מעבד תמליל...</div>
+      <div class="progress-outer"><div id="progressBar" class="progress-inner"></div></div>
+      <div id="statusMsg" class="status-msg">מתחיל עיבוד...</div>
+      <div id="partIndicator" class="part-indicator"></div>
+    </div>
+  </div>
+
+  <!-- SCREEN 4: OUTPUT -->
+  <div id="screen-output" class="screen">
+    <div class="section-title">תמליל מעובד</div>
+    <div class="output-actions">
+      <button id="copyAll" class="btn-main">העתק הכל</button>
+      <button id="exportTxt" class="btn-secondary">ייצא כ-TXT</button>
+      <button id="newProcess" class="btn-secondary">עיבוד חדש</button>
+    </div>
+    <div id="statsBar" class="stats-bar"></div>
+    <div id="outputArea" class="output-box"></div>
+  </div>
+</main>
+</div>
+
+<script>
+const SYSTEM_PROMPT = `תפקיד
+אתה עורך אקדמי ומקצועי בכיר המתמחה בהפיכת תמלולים גולמיים למסמכים מעובדים ואיכותיים. תפקידך לחלץ את התוכן המהותי מתוך השפה המדוברת, לארגן אותו במבנה לוגי, ולהציג אותו בכתיבה רהוטה המותאמת לסוג החומר ולמטרתו.
+
+שלב מקדים חובה: זיהוי וניתוב
+לפני תחילת העיבוד, עליך לזהות את סוג התמלול ולהודיע למשתמש. סוגי התמלולים האפשריים הם הרצאה אקדמית, ישיבת עבודה או צוות, ראיון או שיחה, ופאנל או דיון מרובה משתתפים. לאחר הזיהוי, עליך להעריך את היקף החומר ולהודיע למשתמש בכמה חלקים תצטרך לעבד אותו כדי לשמור על איכות מלאה ללא תמצות או השמטות. אם יותר מ-20% מהתמלול אינו ניתן לשחזור, יש להודיע למשתמש לפני העיבוד ולשאול אם להמשיך. המשך לעיבוד רק לאחר אישור המשתמש.
+
+מסלול א: הרצאה אקדמית
+
+עקרונות יסוד
+
+מיקוד בקול המרצה. התוכן המרכזי הוא דברי המרצה. שאלות סטודנטים, הערות אגב ודיונים קצרים אינם חלק מהתוצר הסופי, אלא אם המרצה בחר להרחיב בתשובתו באופן משמעותי — במקרה כזה יש לשלב את תוכן ההסבר כחלק אורגני מהטקסט, ללא ציון שמדובר בתשובה לשאלה.
+
+הסרת גוף ראשון. דברי המרצה לא יופיעו בגוף ראשון ולא יצוטטו כ"המרצה אמר". הטקסט ייכתב כמשפטים עצמאיים בגוף שלישי. לעומת זאת, כאשר מוזכר הוגה, חוקר, תיאורטיקן או בעל עמדה כלשהו — יש לציין את שמו ולייחס לו את הרעיון. למשל: "פרויד טען כי...", "על פי ויגוצקי...", "לפי גישתו של מארקס...".
+
+שלמות אקדמית. כל מושג, תיאוריה, מודל, חוקר, מחקר, דוגמה או הסבר שהמרצה הציג חייב להופיע בתוצר. אין להשמיט תוכן אקדמי. אין להוסיף מידע שלא נאמר בהרצאה, גם אם הוא נכון ורלוונטי.
+
+מיצוי מושגים. בסוף כל מסמך יופיע פרק "מושגים מרכזיים" המכיל את כל המושגים, התיאוריות וההגדרות שהוזכרו בהרצאה. כל מושג יופיע עם הגדרתו כפי שניתנה בהרצאה. אם מושג הוזכר אך לא הוגדר בבירור, יש לציין: [מושג זה הוזכר בהרצאה אך הגדרתו אינה ברורה מהתמלול]. אין להמציא הגדרות ממקורות חיצוניים.
+
+ייחוס מקורות. יש לציין שמות חוקרים, מחקרים ומאמרים רק אם הוזכרו במפורש בהרצאה. כאשר המרצה התייחס למחקר ללא ציון המקור, יש לשמור על אותה רמת כלליות: "מחקרים בתחום מצביעים על כך ש..." או "גישה תיאורטית אחת גורסת כי...".
+
+טיפול בשפה מעורבת. מונחים אקדמיים באנגלית יופיעו בפורמט: המונח העברי (English Term) בהופעה הראשונה בלבד. לאחר מכן יופיע המונח בעברית בלבד. אם לא קיים תרגום עברי מקובל, יישאר המונח באנגלית עם הסבר בעברית בסוגריים.
+
+טיפול בנתונים כמותיים. מספרים, אחוזים ותאריכים ישמרו מדויקים כפי שנאמרו. אם מספר לא נשמע ברור בתמלול, יש לציין: [מספר לא ברור בתמלול].
+
+פורמט. הטקסט ייכתב כפרוזה רציפה בלבד — ללא נקודות, ללא רשימות, ללא מקפים. הטקסט יזרום כתמליל קונקרטי ורציף. מבנה הכותרות: H1 לנושא ההרצאה, H2 לנושאים מרכזיים, H3 לתתי-נושאים. מושגי מפתח יודגשו בהופעה הראשונה. השפה תהיה עברית אקדמית תקנית.
+
+מבנה התוצר. החומר יסודר לפי הרצף הבא: רקע תיאורטי או היסטורי נדרש, הגדרות יסוד ומושגי בסיס, פיתוח הרעיונות והקשרים ביניהם, דוגמאות יישומים ומסקנות, ולבסוף פרק "מושגים מרכזיים".
+
+מסלול ב: ישיבת עבודה או צוות
+מיפוי קולות והחלטות. יש לזהות את המשתתפים ותפקידיהם, להפריד בין דיון להחלטה, ולשמור מספרים ותאריכים מדויקים — אם לא ברורים יצוין [לא ברור בתמלול]. מבנה: סיכום מנהלים, נושאים שנדונו, החלטות עם אחראים ולוחות זמנים, נושאים פתוחים. פורמט: פרוזה לדיונים, רשימות להחלטות ומשימות בלבד.
+
+מסלול ג: ראיון או שיחה
+שימור שני הקולות, הבחנה בין עובדות לדעות, שיקוף היסוסים והסתייגויות. מבנה: הקדמה, חלוקה תמטית, סיכום. פורמט: פרוזה רציפה עם ציטוטים ישירים קצרים כשהניסוח המקורי חשוב.
+
+מסלול ד: פאנל או דיון מרובה משתתפים
+מיפוי עמדות, הבחנה בין הסכמה למחלוקת, איזון ייצוג לפי תרומה מהותית. מבנה: הצגת משתתפים, הנושא המרכזי, העמדות השונות, נקודות הסכמה ומחלוקת. פורמט: פרוזה עם ייחוס ברור, H2 לנושאים, H3 לעמדות.
+
+הנחיות משותפות לכל המסלולים
+טיפול באי-ודאות: [קטע לא ברור בתמלול]. ניקוי שפה מדוברת: מחק אוקיי, נכון?, אז בעצם, אממ, כאילו, יעני, חזרות, שיחות צדדיות, בדיחות, התייחסויות טכניות. עקביות טרמינולוגית לאורך כל המסמך. כל מסמך מסתיים במשפט: הסיכום הושלם.
+
+חשוב מאוד: החזר HTML תקני בלבד עם תגיות h1, h2, h3, p, strong. אל תחזיר Markdown. אל תוסיף קוד גדר. רק HTML נקי.`;
+
+// Elements
+const apiKeyEl = document.getElementById('apiKey');
+const toggleKeyBtn = document.getElementById('toggleKey');
+const rawEl = document.getElementById('raw');
+const fileTxtEl = document.getElementById('fileTxt');
+const fileOtherEl = document.getElementById('fileOther');
+const fileInfoEl = document.getElementById('fileInfo');
+const identifyBtn = document.getElementById('identifyBtn');
+const screenInput = document.getElementById('screen-input');
+const screenIdent = document.getElementById('screen-ident');
+const screenProcess = document.getElementById('screen-process');
+const screenOutput = document.getElementById('screen-output');
+const detectedTypeEl = document.getElementById('detectedType');
+const recommendedPartsEl = document.getElementById('recommendedParts');
+const manualOverrideEl = document.getElementById('manualOverride');
+const identWarningEl = document.getElementById('identWarning');
+const confirmStartBtn = document.getElementById('confirmStart');
+const resetBtn = document.getElementById('resetBtn');
+const progressBar = document.getElementById('progressBar');
+const statusMsgEl = document.getElementById('statusMsg');
+const partIndicatorEl = document.getElementById('partIndicator');
+const outputArea = document.getElementById('outputArea');
+const statsBarEl = document.getElementById('statsBar');
+const copyAllBtn = document.getElementById('copyAll');
+const exportTxtBtn = document.getElementById('exportTxt');
+const newProcessBtn = document.getElementById('newProcess');
+
+let rawText = '';
+let rotatingInterval = null;
+const SCREENS = [screenInput, screenIdent, screenProcess, screenOutput];
+
+// Init
+const savedKey = localStorage.getItem('anthropic_api_key');
+if (savedKey) apiKeyEl.value = savedKey;
+
+function showScreen(el) {
+  SCREENS.forEach(s => s.classList.remove('active'));
+  el.classList.add('active');
+}
+
+// Toggle key visibility
+toggleKeyBtn.addEventListener('click', () => {
+  apiKeyEl.type = apiKeyEl.type === 'password' ? 'text' : 'password';
+});
+
+// Save key on change
+apiKeyEl.addEventListener('change', () => {
+  localStorage.setItem('anthropic_api_key', apiKeyEl.value);
+});
+
+// File: TXT
+fileTxtEl.addEventListener('change', async e => {
+  const f = e.target.files[0];
+  if (!f) return;
+  try {
+    const txt = await f.text();
+    rawEl.value = txt;
+    fileInfoEl.textContent = `קובץ: ${f.name} — תווים: ${txt.length.toLocaleString()}`;
+  } catch (err) {
+    fileInfoEl.textContent = 'שגיאה בקריאת הקובץ: ' + err.message;
+  } finally { e.target.value = ''; }
+});
+
+// File: Word/PDF
+fileOtherEl.addEventListener('change', async e => {
+  const f = e.target.files[0];
+  if (!f) return;
+  const ext = (f.name.split('.').pop() || '').toLowerCase();
+  fileInfoEl.textContent = `טוען: ${f.name}...`;
+  try {
+    if (ext === 'txt') {
+      const txt = await f.text();
+      rawEl.value = txt;
+      fileInfoEl.textContent = `קובץ: ${f.name} — תווים: ${txt.length.toLocaleString()}`;
+    } else if (ext === 'docx') {
+      const ab = await f.arrayBuffer();
+      const txt = await extractDocxText(ab);
+      if (txt && txt.length > 10) {
+        rawEl.value = txt;
+        fileInfoEl.textContent = `קובץ: ${f.name} — תווים: ${txt.length.toLocaleString()}`;
+      } else {
+        fileInfoEl.textContent = 'לא הצלחנו לחלץ טקסט מ-DOCX. אנא פתח את הקובץ, העתק את הטקסט והדבק ידנית.';
+      }
+    } else if (ext === 'pdf') {
+      const ab = await f.arrayBuffer();
+      const txt = extractPdfText(ab);
+      if (txt && txt.length > 10) {
+        rawEl.value = txt;
+        fileInfoEl.textContent = `קובץ: ${f.name} — תווים: ${txt.length.toLocaleString()}`;
+      } else {
+        fileInfoEl.textContent = 'לא הצלחנו לחלץ טקסט מ-PDF. אנא פתח את הקובץ, העתק את הטקסט והדבק ידנית.';
+      }
+    } else {
+      fileInfoEl.textContent = 'סוג קובץ לא נתמך. אנא השתמש ב-TXT, DOCX, או PDF.';
+    }
+  } catch (err) {
+    fileInfoEl.textContent = 'שגיאה: ' + err.message;
+  } finally { e.target.value = ''; }
+});
+
+// Identify
+identifyBtn.addEventListener('click', async () => {
+  rawText = rawEl.value.trim();
+  localStorage.setItem('anthropic_api_key', apiKeyEl.value);
+  if (!rawText) { alert('אנא הכנס תמליל לפני הזיהוי'); return; }
+  if (!apiKeyEl.value.startsWith('sk-')) { alert('אנא הכנס מפתח API תקני (מתחיל ב-sk-)'); return; }
+  showScreen(screenIdent);
+  detectedTypeEl.textContent = 'מנתח...';
+  recommendedPartsEl.textContent = '';
+  identWarningEl.textContent = '';
+  const sample = rawText.slice(0, 800);
+  const prompt = sample + `\n\nזהה את סוג התמלול מבין 4 האפשרויות (הרצאה אקדמית / ישיבת עבודה / ראיון / פאנל). העריך בכמה חלקים יש לעבד. השב בדיוק בפורמט:\nסוג: [סוג] | חלקים: [מספר] | סיבה: [משפט אחד]`;
+  try {
+    const resp = await callAPI(prompt, 300);
+    const match = resp.match(/סוג:\s*\[?([^\]|]+)\]?\s*\|\s*חלקים:\s*\[?(\d+)\]?\s*\|\s*סיבה:\s*(.+)/i);
+    if (match) {
+      detectedTypeEl.textContent = `סוג מזוהה: ${match[1].trim()}`;
+      recommendedPartsEl.textContent = `המלצה: ${match[2]} חלקים — ${match[3].trim()}`;
+    } else {
+      detectedTypeEl.textContent = 'זוהה תמליל';
+      recommendedPartsEl.textContent = resp.slice(0, 200);
+    }
+    const badRatio = (rawText.match(/\?\?\?|xxx|\[לא ברור\]/gi) || []).length / Math.max(1, rawText.split(' ').length);
+    if (badRatio > 0.15) identWarningEl.textContent = '⚠️ שים לב: חלק מהתמליל עשוי להיות חסר או לא ברור.';
+  } catch (err) {
+    detectedTypeEl.textContent = 'שגיאה בזיהוי: ' + err.message;
+  }
+});
+
+// Confirm & process
+confirmStartBtn.addEventListener('click', async () => {
+  const override = manualOverrideEl.value;
+  const estChars = rawText.length;
+  const partsCount = Math.max(1, Math.ceil(estChars / 12000));
+  const chunks = splitChunks(rawText, partsCount);
+  showScreen(screenProcess);
+  progressBar.style.width = '0%';
+  const results = [];
+  const start = Date.now();
+  let totalTokensEst = 0;
+  startRotating(['מנתח מבנה התמלול...','מעבד תוכן אקדמי...','מחלץ מושגים מרכזיים...','מבצע הגהה לשונית...','מסיים עיבוד...']);
+  for (let i = 0; i < chunks.length; i++) {
+    partIndicatorEl.textContent = chunks.length > 1 ? `מעבד חלק ${i+1} מתוך ${chunks.length}` : '';
+    const typeHint = override !== 'auto' ? `סוג קבוע: ${override}\n\n` : '';
+    const userMsg = typeHint + chunks[i] + '\n\nעבד את הקטע הזה לפי הנחיות המערכת. החזר HTML בלבד עם h1/h2/h3/p/strong. אל תחזיר Markdown. אל תוסיף מידע שאינו בתמליל.';
+    try {
+      const res = await callAPI(userMsg, 4000);
+      results.push(res);
+      totalTokensEst += Math.ceil((chunks[i].length + res.length) / 4);
+      progressBar.style.width = Math.round(((i+1)/chunks.length)*100) + '%';
+    } catch (err) {
+      stopRotating();
+      statusMsgEl.textContent = 'שגיאה: ' + err.message;
+      return;
+    }
+  }
+  stopRotating();
+  progressBar.style.width = '100%';
+  partIndicatorEl.textContent = '';
+  statusMsgEl.textContent = 'הושלם!';
+  const elapsed = Math.round((Date.now() - start) / 1000);
+  const finalHtml = results.join('\n');
+  const wordCount = finalHtml.replace(/<[^>]+>/g,'').split(/\s+/).filter(Boolean).length;
+  statsBarEl.textContent = `⏱ זמן עיבוד: ${elapsed} שניות · 📝 מילים: ${wordCount.toLocaleString()} · 🔢 טוקנים משוערים: ${totalTokensEst.toLocaleString()}`;
+  outputArea.innerHTML = finalHtml.replace(/\[([^\]]+)\]/g, '<span class="bracket">[$1]</span>');
+  showScreen(screenOutput);
+});
+
+resetBtn.addEventListener('click', () => {
+  rawEl.value = '';
+  fileInfoEl.textContent = '';
+  showScreen(screenInput);
+});
+
+copyAllBtn.addEventListener('click', () => {
+  const text = outputArea.innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    copyAllBtn.textContent = '✓ הועתק!';
+    setTimeout(() => { copyAllBtn.textContent = 'העתק הכל'; }, 2000);
+  });
+});
+
+exportTxtBtn.addEventListener('click', () => {
+  const blob = new Blob([outputArea.innerText], { type: 'text/plain;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'תמליל_מעובד.txt';
+  document.body.appendChild(a); a.click();
+  a.remove(); URL.revokeObjectURL(url);
+});
+
+newProcessBtn.addEventListener('click', () => {
+  outputArea.innerHTML = '';
+  statsBarEl.textContent = '';
+  progressBar.style.width = '0%';
+  rawEl.value = '';
+  fileInfoEl.textContent = '';
+  showScreen(screenInput);
+});
+
+// Helpers
+function splitChunks(text, n) {
+  if (n <= 1) return [text];
+  const size = Math.ceil(text.length / n);
+  const out = [];
+  for (let i = 0; i < n; i++) out.push(text.slice(i*size, (i+1)*size));
+  return out.filter(Boolean);
+}
+
+function startRotating(msgs) {
+  let i = 0;
+  statusMsgEl.textContent = msgs[0];
+  rotatingInterval = setInterval(() => { i=(i+1)%msgs.length; statusMsgEl.textContent=msgs[i]; }, 2200);
+}
+function stopRotating() { clearInterval(rotatingInterval); }
+
+async function callAPI(userContent, maxTokens = 4000) {
+  const key = apiKeyEl.value.trim();
+  if (!key) throw new Error('אין מפתח API');
+  const body = {
+    model: 'claude-sonnet-4-20250514',
+    system: SYSTEM_PROMPT,
+    messages: [{ role: 'user', content: userContent }],
+    max_tokens: maxTokens
+  };
+  const resp = await fetch('https://api.anthropic.com/v1/messages', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'x-api-key': key,
+      'anthropic-version': '2023-06-01',
+      'anthropic-dangerous-direct-browser-calls': 'true'
+    },
+    body: JSON.stringify(body)
+  });
+  if (!resp.ok) {
+    const err = await resp.text();
+    throw new Error(`שגיאת API ${resp.status}: ${err.slice(0,200)}`);
+  }
+  const j = await resp.json();
+  return (j.content || []).map(c => c.text || '').join('');
+}
+
+async function extractDocxText(ab) {
+  try {
+    const data = new Uint8Array(ab);
+    const dv = new DataView(ab);
+    function findEOCD() {
+      for (let i = data.length - 22; i >= 0; i--)
+        if (dv.getUint32(i, true) === 0x06054b50) return i;
+      return -1;
+    }
+    const eocd = findEOCD();
+    if (eocd < 0) return null;
+    const centralOffset = dv.getUint32(eocd+16, true);
+    const centralSize = dv.getUint32(eocd+12, true);
+    let ptr = centralOffset;
+    while (ptr < centralOffset + centralSize) {
+      if (dv.getUint32(ptr, true) !== 0x02014b50) break;
+      const fnLen = dv.getUint16(ptr+28, true);
+      const exLen = dv.getUint16(ptr+30, true);
+      const cmLen = dv.getUint16(ptr+32, true);
+      const lhOff = dv.getUint32(ptr+42, true);
+      const fname = new TextDecoder().decode(data.slice(ptr+46, ptr+46+fnLen));
+      if (fname === 'word/document.xml') {
+        const lh = lhOff;
+        const lfn = dv.getUint16(lh+26, true);
+        const lfx = dv.getUint16(lh+28, true);
+        const compSize = dv.getUint32(lh+18, true);
+        const dataStart = lh + 30 + lfn + lfx;
+        const compressed = data.slice(dataStart, dataStart + compSize);
+        if (typeof DecompressionStream !== 'undefined') {
+          const ds = new DecompressionStream('deflate-raw');
+          const stream = new Blob([compressed]).stream().pipeThrough(ds);
+          const text = await new Response(stream).text();
+          const doc = new DOMParser().parseFromString(text, 'application/xml');
+          return Array.from(doc.getElementsByTagName('w:t')).map(n=>n.textContent).join(' ').replace(/\s+/g,' ').trim();
+        }
+        return null;
+      }
+      ptr += 46 + fnLen + exLen + cmLen;
+    }
+    return null;
+  } catch { return null; }
+}
+
+function extractPdfText(ab) {
+  try {
+    const txt = new TextDecoder('latin1').decode(ab);
+    const matches = [];
+    const re = /\(([^)\\]{1,200})\)/g;
+    let m;
+    while ((m = re.exec(txt)) !== null) {
+      const s = m[1].replace(/\\n/g,' ').replace(/\\/g,'');
+      if (/[\u0590-\u05FFa-zA-Z]/.test(s)) matches.push(s);
+    }
+    return matches.join(' ').replace(/\s+/g,' ').trim() || null;
+  } catch { return null; }
+}
+</script>
+</body>
+</html>
