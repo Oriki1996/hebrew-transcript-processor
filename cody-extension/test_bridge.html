@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+<meta charset="UTF-8">
+<title>Cody Bridge — בדיקת חיבור</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 640px; margin: 40px auto; padding: 20px; direction: rtl; }
+  h2 { color: #333; }
+  .step { background: #f7f4ee; border-radius: 10px; padding: 16px 20px; margin: 14px 0; border-right: 4px solid #ccc; }
+  .step.ok   { border-color: #2ecc71; background: #eefdf4; }
+  .step.fail { border-color: #e74c3c; background: #fdeaea; }
+  .step.wait { border-color: #f39c12; background: #fef9ec; }
+  .label { font-weight: 700; margin-bottom: 6px; }
+  .note  { font-size: 13px; color: #666; margin-top: 6px; }
+  textarea { width: 100%; height: 80px; margin: 8px 0; border-radius: 6px; border: 1px solid #ccc; padding: 8px; font-size: 14px; box-sizing: border-box; }
+  button { background: #7c5a2a; color: white; border: none; border-radius: 8px; padding: 10px 20px; cursor: pointer; font-size: 14px; margin-top: 6px; }
+  button:hover { background: #9a7040; }
+  #result { margin-top: 20px; padding: 16px; background: #f0f0f0; border-radius: 8px; min-height: 50px; white-space: pre-wrap; font-size: 13px; }
+  .tag { display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 20px; margin-right: 6px; }
+  .tag.ok   { background: #2ecc71; color: white; }
+  .tag.fail { background: #e74c3c; color: white; }
+  .tag.wait { background: #f39c12; color: white; }
+</style>
+</head>
+<body>
+
+<h2>🔌 Cody Auto-Bridge — בדיקת חיבור</h2>
+<p>פתח דף זה כ-<strong>file://</strong> לאחר שהתקנת את ההרחבה ב-Chrome.</p>
+
+<!-- Step 1 -->
+<div class="step" id="step1">
+  <div class="label"><span class="tag wait" id="tag1">ממתין</span> שלב 1 — ההרחבה נטענת?</div>
+  <div class="note">
+    אם אינך רואה "✓ נטענת" אחרי 2 שניות:<br>
+    ① chrome://extensions → הפעל <strong>Cody Auto-Bridge</strong><br>
+    ② לחץ "פרטים" → הפעל <strong>Allow access to file URLs</strong><br>
+    ③ רענן דף זה
+  </div>
+</div>
+
+<!-- Step 2 -->
+<div class="step" id="step2">
+  <div class="label"><span class="tag wait" id="tag2">ממתין</span> שלב 2 — Claude.ai פתוח בטאב נפרד?</div>
+  <div class="note">
+    פתח <a href="https://claude.ai/new" target="_blank">claude.ai/new</a> בטאב חדש וחזור לכאן.
+    ה-background.js מחפש טאב עם <code>https://claude.ai/*</code>.
+  </div>
+</div>
+
+<!-- Step 3 -->
+<div class="step" id="step3">
+  <div class="label"><span class="tag wait" id="tag3">ממתין</span> שלב 3 — שלח הודעת בדיקה</div>
+  <textarea id="testMsg" placeholder="הקלד כאן הודעת בדיקה (למשל: אמור שלום בעברית)">אמור שלום בעברית ורשום: BRIDGE_TEST_OK</textarea>
+  <button onclick="runTest()">📤 שלח לבדיקה</button>
+  <div class="note">ההודעה תוקלד אוטומטית ב-Claude.ai ותגובתו תחזור לכאן.</div>
+</div>
+
+<!-- Result -->
+<div id="result" style="display:none"></div>
+
+<script>
+// ── Step 1: check if content_bridge.js loaded ────────────────────────────
+// content_bridge.js sets a flag on the window when it loads
+let bridgeLoaded = false;
+
+// content_bridge.js will receive our postMessage and echo back an ACK
+// We piggy-back on the existing message listener: send a PING
+window.postMessage({ type: 'BRIDGE_PING' }, '*');
+
+const pingTimeout = setTimeout(() => {
+  if (!bridgeLoaded) setStep(1, 'fail', 'לא נטענת — בדוק הרחבה + Allow access to file URLs');
+}, 2500);
+
+window.addEventListener('message', (e) => {
+  if (e.source !== window) return;
+
+  if (e.data?.type === 'BRIDGE_PONG') {
+    clearTimeout(pingTimeout);
+    bridgeLoaded = true;
+    setStep(1, 'ok', 'נטענת בהצלחה ✓');
+    // Now check if Claude tab exists
+    checkClaudeTab();
+  }
+
+  if (e.data?.type === 'RESPONSE_FROM_EXTENSION') {
+    setStep(3, 'ok', 'תגובה התקבלה ✓');
+    const result = document.getElementById('result');
+    result.style.display = 'block';
+    result.textContent = '📥 תגובה מ-Claude:\n\n' + e.data.payload;
+  }
+
+  if (e.data?.type === 'EXTENSION_ERROR') {
+    setStep(3, 'fail', 'שגיאה: ' + e.data.payload);
+    const result = document.getElementById('result');
+    result.style.display = 'block';
+    result.textContent = '❌ שגיאה: ' + e.data.payload;
+  }
+
+  if (e.data?.type === 'CLAUDE_TAB_STATUS') {
+    if (e.data.payload === 'open') {
+      setStep(2, 'ok', 'Claude.ai פתוח ✓');
+    } else {
+      setStep(2, 'fail', 'Claude.ai לא נמצא — פתח claude.ai/new בטאב חדש ורענן');
+    }
+  }
+});
+
+function checkClaudeTab() {
+  window.postMessage({ type: 'CHECK_CLAUDE_TAB' }, '*');
+  setTimeout(() => {
+    if (document.getElementById('tag2').className.includes('wait')) {
+      setStep(2, 'wait', 'לא ניתן לבדוק — פתח claude.ai ידנית');
+    }
+  }, 3000);
+}
+
+function runTest() {
+  const msg = document.getElementById('testMsg').value.trim();
+  if (!msg) { alert('הכנס הודעת בדיקה'); return; }
+  if (!bridgeLoaded) { alert('ההרחבה לא נטענה — ראה שלב 1'); return; }
+  setStep(3, 'wait', 'שולח...');
+  document.getElementById('result').style.display = 'none';
+  window.postMessage({ type: 'REQUEST_EXTENSION_AI', payload: msg }, '*');
+}
+
+function setStep(n, state, text) {
+  const step = document.getElementById('step' + n);
+  const tag  = document.getElementById('tag' + n);
+  step.className = 'step ' + state;
+  tag.className  = 'tag ' + state;
+  const states = { ok: '✓', fail: '✗', wait: '⏳' };
+  tag.textContent = (states[state] || '') + ' ' + (state === 'ok' ? 'עבר' : state === 'fail' ? 'נכשל' : 'ממתין');
+  step.querySelector('.label').childNodes[1]
+    ? (step.querySelector('.label').lastChild.textContent = ' ' + step.querySelector('.label').lastChild.textContent.replace(/— .*/, '') + '— ' + text)
+    : null;
+  // simpler: append note
+  let info = step.querySelector('.info-msg');
+  if (!info) { info = document.createElement('div'); info.className = 'info-msg'; info.style.cssText = 'margin-top:6px;font-weight:600'; step.appendChild(info); }
+  info.textContent = text;
+}
+</script>
+</body>
+</html>
