@@ -3,68 +3,123 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>מעבד תמלולים אקדמי</title>
+<title>מעבד תמלילים אקדמי</title>
 <style>
-:root{--bg:#1a1a2e;--fg:#e0e0e0;--muted:#b8b8c8;--accent:#7c6af7;--orange:#f0a500;--card:#12122a}
+/* ── CREAM & STARS THEME ─────────────────────────────────────────── */
+:root{
+  --bg:#faf7f0;--surface:#fffef8;--card:#fff9ee;
+  --border:rgba(160,130,50,0.18);--shadow:0 2px 14px rgba(120,90,20,0.07);
+  --fg:#261c0a;--muted:#7a6a4a;--accent:#7a5c1e;--gold:#c09830;--orange:#b86010;
+}
 *{box-sizing:border-box}
 html,body{height:100%;margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans Hebrew","Heebo",sans-serif;background:var(--bg);color:var(--fg);direction:rtl}
+/* Star tiled background — 5-pointed polygon, ~4.5% gold opacity */
+body{
+  background-color:var(--bg);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cpolygon points='40,16 45.88,31.91 62.83,32.58 49.51,43.09 54.11,59.42 40,50 25.89,59.42 30.49,43.09 17.17,32.58 34.12,31.91' fill='%23c09830' fill-opacity='0.045'/%3E%3C/svg%3E");
+}
 .app{display:flex;flex-direction:column;min-height:100vh}
-header{display:flex;align-items:center;gap:12px;padding:10px 20px;border-bottom:1px solid rgba(255,255,255,0.06);background:var(--card);flex-wrap:wrap}
-.key-wrap{display:flex;align-items:center;gap:8px;flex:1}
-label.lbl{font-size:13px;color:var(--muted);white-space:nowrap}
-input.api{background:#0f0f1a;border:1px solid rgba(255,255,255,0.08);color:var(--fg);padding:7px 10px;border-radius:6px;width:260px;font-size:14px}
-.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.1);padding:6px 10px;border-radius:6px;color:var(--muted);cursor:pointer;font-size:13px}
-.model-tag{color:var(--muted);font-size:13px;margin-right:auto}
-main{flex:1;padding:24px 20px;max-width:900px;width:100%;margin:0 auto}
+
+/* ── HEADER ─────────────────────────────────────────────────────── */
+header{background:var(--surface);border-bottom:1px solid var(--border);box-shadow:var(--shadow)}
+.header-top{display:flex;align-items:center;justify-content:space-between;padding:13px 22px;gap:12px}
+.header-title{font-size:17px;font-weight:700;color:var(--accent);letter-spacing:0.3px;white-space:nowrap}
+.header-title::before{content:'✦ ';color:var(--gold)}
+.settings-toggle{background:transparent;border:1px solid var(--border);padding:6px 14px;border-radius:6px;color:var(--muted);cursor:pointer;font-size:13px;transition:all .2s}
+.settings-toggle:hover{border-color:var(--gold);color:var(--accent)}
+/* Settings bar — hidden by default, toggled open */
+.settings-bar{display:none;padding:12px 22px 15px;border-top:1px solid var(--border);background:rgba(255,252,240,0.85);gap:14px;flex-wrap:wrap;align-items:center}
+.settings-bar.open{display:flex}
+.field-grp{display:flex;align-items:center;gap:8px;flex:1;min-width:210px}
+label.lbl{font-size:12px;color:var(--muted);white-space:nowrap;font-weight:500}
+input.api-in{background:var(--bg);border:1px solid var(--border);color:var(--fg);padding:7px 10px;border-radius:6px;font-size:13px;flex:1;min-width:0;transition:border .2s}
+input.api-in:focus{outline:none;border-color:var(--gold)}
+.btn-ghost{background:transparent;border:1px solid var(--border);padding:6px 10px;border-radius:6px;color:var(--muted);cursor:pointer;font-size:12px;white-space:nowrap;transition:all .2s}
+.btn-ghost:hover{border-color:var(--gold);color:var(--accent)}
+select.model-sel{background:var(--bg);border:1px solid var(--border);color:var(--fg);padding:7px 10px;border-radius:6px;font-size:13px;cursor:pointer;direction:rtl}
+select.model-sel:focus{outline:none;border-color:var(--gold)}
+.provider-tag{font-size:11px;padding:3px 10px;border-radius:4px;white-space:nowrap;background:rgba(192,152,48,0.1);border:1px solid rgba(192,152,48,0.22);color:var(--accent);font-weight:500}
+
+/* ── MAIN LAYOUT ─────────────────────────────────────────────────── */
+main{flex:1;padding:28px 22px;max-width:920px;width:100%;margin:0 auto}
 .screen{display:none}.screen.active{display:block}
 
-/* INPUT */
-.section-title{font-size:22px;font-weight:700;margin-bottom:16px;color:var(--fg)}
-textarea#raw{width:100%;height:38vh;background:#0f0f1a;border:1px solid rgba(255,255,255,0.08);color:var(--fg);padding:14px;border-radius:10px;resize:vertical;direction:rtl;font-size:15px;line-height:1.6;font-family:inherit}
-textarea#raw::placeholder{color:var(--muted)}
-.uploads{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap}
-.btn-upload{background:rgba(124,106,247,0.12);border:1px solid rgba(124,106,247,0.3);color:var(--accent);padding:9px 16px;border-radius:8px;cursor:pointer;font-size:14px;transition:background .2s}
-.btn-upload:hover{background:rgba(124,106,247,0.22)}
-.file-info{color:var(--muted);font-size:13px;margin-top:8px;min-height:18px}
-.btn-main{background:var(--accent);color:#fff;border:none;padding:12px 28px;border-radius:10px;font-size:16px;font-weight:600;cursor:pointer;margin-top:16px;transition:opacity .2s}
-.btn-main:hover{opacity:.88}
-.btn-secondary{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:var(--fg);padding:10px 20px;border-radius:8px;font-size:14px;cursor:pointer}
+/* ── SECTION TITLES ─────────────────────────────────────────────── */
+.section-title{font-size:21px;font-weight:700;margin-bottom:16px;color:var(--fg);display:flex;align-items:center;gap:8px}
+.section-title::before{content:'✦';color:var(--gold);font-size:13px;flex-shrink:0}
 
-/* IDENT */
-.ident-card{background:var(--card);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:20px;margin-bottom:16px}
-.big-type{font-size:22px;font-weight:700;color:var(--accent);margin-bottom:8px}
+/* ── INPUT SCREEN ────────────────────────────────────────────────── */
+textarea#raw{width:100%;height:38vh;background:var(--surface);border:1px solid var(--border);color:var(--fg);padding:16px;border-radius:12px;resize:vertical;direction:rtl;font-size:15px;line-height:1.7;font-family:inherit;box-shadow:inset 0 1px 4px rgba(120,90,20,0.04);transition:border .2s}
+textarea#raw:focus{outline:none;border-color:var(--gold)}
+textarea#raw::placeholder{color:var(--muted)}
+.uploads{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
+.btn-upload{background:rgba(192,152,48,0.07);border:1px solid rgba(192,152,48,0.22);color:var(--accent);padding:9px 16px;border-radius:8px;cursor:pointer;font-size:14px;font-weight:500;transition:all .2s}
+.btn-upload:hover{background:rgba(192,152,48,0.15);border-color:var(--gold)}
+.file-info{color:var(--muted);font-size:13px;margin-top:8px;min-height:18px}
+.btn-main{background:var(--accent);color:#fffef0;border:none;padding:12px 28px;border-radius:10px;font-size:15px;font-weight:600;cursor:pointer;margin-top:16px;letter-spacing:0.3px;transition:all .2s}
+.btn-main:hover{background:var(--gold);box-shadow:0 4px 18px rgba(192,152,48,0.28)}
+.btn-secondary{background:rgba(120,90,20,0.05);border:1px solid var(--border);color:var(--fg);padding:10px 20px;border-radius:8px;font-size:14px;cursor:pointer;transition:all .2s}
+.btn-secondary:hover{border-color:var(--gold);background:rgba(192,152,48,0.07)}
+
+/* ── IDENT SCREEN ────────────────────────────────────────────────── */
+.ident-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:16px;box-shadow:var(--shadow)}
+.big-type{font-size:21px;font-weight:700;color:var(--accent);margin-bottom:8px}
 .parts-info{color:var(--muted);font-size:15px;margin-bottom:10px}
-.warning-text{color:#ffcc00;font-size:14px;margin-bottom:10px}
-select.override{background:#0f0f1a;border:1px solid rgba(255,255,255,0.1);color:var(--fg);padding:8px 12px;border-radius:8px;font-size:14px;margin-bottom:14px;direction:rtl}
+.warning-text{color:var(--orange);font-size:14px;margin-bottom:10px;font-weight:500}
+select.override{background:var(--bg);border:1px solid var(--border);color:var(--fg);padding:8px 12px;border-radius:8px;font-size:14px;margin-bottom:16px;direction:rtl}
+select.override:focus{outline:none;border-color:var(--gold)}
 .ident-actions{display:flex;gap:10px;flex-wrap:wrap}
 
-/* PROCESS */
-.process-wrap{text-align:center;padding:40px 0}
-.progress-outer{height:12px;background:rgba(255,255,255,0.06);border-radius:8px;overflow:hidden;margin:20px 0}
-.progress-inner{height:100%;background:linear-gradient(90deg,var(--accent),#5e4df0);width:0%;transition:width .4s}
+/* ── PROCESS SCREEN ──────────────────────────────────────────────── */
+.process-wrap{text-align:center;padding:60px 0}
+.star-anim{display:inline-block;font-size:38px;color:var(--gold);animation:starPulse 2.4s ease-in-out infinite;margin-bottom:22px}
+@keyframes starPulse{0%,100%{transform:rotate(0deg) scale(1);opacity:.9}50%{transform:rotate(180deg) scale(1.18);opacity:1}}
+.progress-outer{height:7px;background:rgba(120,90,20,0.1);border-radius:8px;overflow:hidden;margin:24px auto;max-width:480px}
+.progress-inner{height:100%;background:linear-gradient(90deg,var(--accent),var(--gold));width:0%;transition:width .4s;border-radius:8px}
 .status-msg{color:var(--muted);font-size:15px;margin-top:10px}
-.part-indicator{color:var(--accent);font-size:14px;margin-top:6px}
+.part-indicator{color:var(--accent);font-size:14px;margin-top:6px;font-weight:500}
 
-/* OUTPUT */
-.output-box{background:#0f0f1a;border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:24px;overflow:auto;line-height:1.8;font-size:15px}
-.output-box h1{font-size:24px;color:var(--fg);border-bottom:2px solid var(--accent);padding-bottom:8px;margin-top:0}
-.output-box h2{font-size:20px;color:var(--fg);margin-top:28px;margin-bottom:8px}
-.output-box h3{font-size:17px;color:var(--muted);margin-top:18px;margin-bottom:6px}
+/* ── OUTPUT SCREEN ───────────────────────────────────────────────── */
+.output-actions{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.stats-bar{color:var(--muted);font-size:13px;margin:0 0 14px;padding:10px 14px;background:rgba(192,152,48,0.05);border-radius:8px;border:1px solid var(--border)}
+.output-box{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:28px;overflow:auto;line-height:1.85;font-size:15px;box-shadow:var(--shadow)}
+.output-box h1{font-size:23px;color:var(--fg);border-bottom:2px solid var(--gold);padding-bottom:10px;margin-top:0}
+.output-box h2{font-size:19px;color:var(--fg);margin-top:28px;margin-bottom:8px;padding-right:12px;border-right:3px solid var(--gold)}
+.output-box h3{font-size:16px;color:var(--muted);margin-top:18px;margin-bottom:6px}
 .output-box p{margin:0 0 14px 0}
 .bracket{color:var(--orange);font-weight:500}
-.stats-bar{color:var(--muted);font-size:13px;margin:14px 0 10px 0}
-.output-actions{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
 </style>
 </head>
 <body>
 <div class="app">
+
 <header>
-  <div class="key-wrap">
-    <label class="lbl">Anthropic API Key</label>
-    <input id="apiKey" class="api" type="password" placeholder="sk-ant-..." />
-    <button id="toggleKey" class="btn-ghost">הצג/הסתר</button>
+  <div class="header-top">
+    <div class="header-title">מעבד תמלילים אקדמי</div>
+    <button id="settingsToggle" class="settings-toggle">⚙ הגדרות</button>
   </div>
-  <div class="model-tag">claude-sonnet-4-20250514</div>
+  <div id="settingsBar" class="settings-bar">
+    <div class="field-grp">
+      <label class="lbl">Anthropic Key</label>
+      <input id="apiKey" class="api-in" type="password" placeholder="sk-ant-..." />
+      <button id="toggleKey" class="btn-ghost">הצג</button>
+    </div>
+    <div class="field-grp">
+      <label class="lbl">Gemini Key</label>
+      <input id="geminiKey" class="api-in" type="password" placeholder="AIza..." />
+      <button id="toggleGeminiKey" class="btn-ghost">הצג</button>
+    </div>
+    <div class="field-grp" style="flex:0;min-width:auto;gap:8px">
+      <label class="lbl">מודל</label>
+      <select id="modelSelect" class="model-sel">
+        <option value="claude-sonnet-4-20250514">Claude Sonnet 4</option>
+        <option value="claude-opus-4-20250514">Claude Opus 4</option>
+        <option value="gemini-2.0-flash">Gemini 2.0 Flash</option>
+        <option value="gemini-1.5-pro">Gemini 1.5 Pro</option>
+      </select>
+      <div id="providerTag" class="provider-tag">Anthropic</div>
+    </div>
+  </div>
 </header>
 
 <main>
@@ -104,7 +159,8 @@ select.override{background:#0f0f1a;border:1px solid rgba(255,255,255,0.1);color:
   <!-- SCREEN 3: PROCESSING -->
   <div id="screen-process" class="screen">
     <div class="process-wrap">
-      <div class="section-title">מעבד תמליל...</div>
+      <div class="section-title" style="justify-content:center">מעבד תמליל</div>
+      <div class="star-anim">✦</div>
       <div class="progress-outer"><div id="progressBar" class="progress-inner"></div></div>
       <div id="statusMsg" class="status-msg">מתחיל עיבוד...</div>
       <div id="partIndicator" class="part-indicator"></div>
@@ -168,57 +224,93 @@ const SYSTEM_PROMPT = `תפקיד
 
 חשוב מאוד: החזר HTML תקני בלבד עם תגיות h1, h2, h3, p, strong. אל תחזיר Markdown. אל תוסיף קוד גדר. רק HTML נקי.`;
 
-// Elements
-const apiKeyEl = document.getElementById('apiKey');
-const toggleKeyBtn = document.getElementById('toggleKey');
-const rawEl = document.getElementById('raw');
-const fileTxtEl = document.getElementById('fileTxt');
-const fileOtherEl = document.getElementById('fileOther');
-const fileInfoEl = document.getElementById('fileInfo');
-const identifyBtn = document.getElementById('identifyBtn');
-const screenInput = document.getElementById('screen-input');
-const screenIdent = document.getElementById('screen-ident');
-const screenProcess = document.getElementById('screen-process');
-const screenOutput = document.getElementById('screen-output');
-const detectedTypeEl = document.getElementById('detectedType');
+// ── DOM ELEMENTS ────────────────────────────────────────────────────
+const apiKeyEl        = document.getElementById('apiKey');
+const geminiKeyEl     = document.getElementById('geminiKey');
+const modelSelectEl   = document.getElementById('modelSelect');
+const providerTagEl   = document.getElementById('providerTag');
+const settingsToggleBtn = document.getElementById('settingsToggle');
+const settingsBarEl   = document.getElementById('settingsBar');
+const toggleKeyBtn    = document.getElementById('toggleKey');
+const toggleGeminiKeyBtn = document.getElementById('toggleGeminiKey');
+const rawEl           = document.getElementById('raw');
+const fileTxtEl       = document.getElementById('fileTxt');
+const fileOtherEl     = document.getElementById('fileOther');
+const fileInfoEl      = document.getElementById('fileInfo');
+const identifyBtn     = document.getElementById('identifyBtn');
+const screenInput     = document.getElementById('screen-input');
+const screenIdent     = document.getElementById('screen-ident');
+const screenProcess   = document.getElementById('screen-process');
+const screenOutput    = document.getElementById('screen-output');
+const detectedTypeEl  = document.getElementById('detectedType');
 const recommendedPartsEl = document.getElementById('recommendedParts');
-const manualOverrideEl = document.getElementById('manualOverride');
-const identWarningEl = document.getElementById('identWarning');
+const manualOverrideEl   = document.getElementById('manualOverride');
+const identWarningEl  = document.getElementById('identWarning');
 const confirmStartBtn = document.getElementById('confirmStart');
-const resetBtn = document.getElementById('resetBtn');
-const progressBar = document.getElementById('progressBar');
-const statusMsgEl = document.getElementById('statusMsg');
+const resetBtn        = document.getElementById('resetBtn');
+const progressBar     = document.getElementById('progressBar');
+const statusMsgEl     = document.getElementById('statusMsg');
 const partIndicatorEl = document.getElementById('partIndicator');
-const outputArea = document.getElementById('outputArea');
-const statsBarEl = document.getElementById('statsBar');
-const copyAllBtn = document.getElementById('copyAll');
-const exportTxtBtn = document.getElementById('exportTxt');
-const newProcessBtn = document.getElementById('newProcess');
+const outputArea      = document.getElementById('outputArea');
+const statsBarEl      = document.getElementById('statsBar');
+const copyAllBtn      = document.getElementById('copyAll');
+const exportTxtBtn    = document.getElementById('exportTxt');
+const newProcessBtn   = document.getElementById('newProcess');
 
 let rawText = '';
 let rotatingInterval = null;
 const SCREENS = [screenInput, screenIdent, screenProcess, screenOutput];
 
-// Init
+// ── INITIALISATION ──────────────────────────────────────────────────
 const savedKey = localStorage.getItem('anthropic_api_key');
 if (savedKey) apiKeyEl.value = savedKey;
+
+const savedGeminiKey = localStorage.getItem('gemini_api_key');
+if (savedGeminiKey) geminiKeyEl.value = savedGeminiKey;
+
+const savedModel = localStorage.getItem('selected_model');
+if (savedModel && modelSelectEl.querySelector(`option[value="${savedModel}"]`)) {
+  modelSelectEl.value = savedModel;
+}
+updateProviderTag();
+
+// Auto-open settings if no keys are saved yet
+if (!savedKey && !savedGeminiKey) settingsBarEl.classList.add('open');
 
 function showScreen(el) {
   SCREENS.forEach(s => s.classList.remove('active'));
   el.classList.add('active');
 }
 
-// Toggle key visibility
+function updateProviderTag() {
+  const isGemini = modelSelectEl.value.startsWith('gemini');
+  providerTagEl.textContent = isGemini ? 'Google AI' : 'Anthropic';
+}
+
+// ── SETTINGS EVENTS ─────────────────────────────────────────────────
+settingsToggleBtn.addEventListener('click', () => {
+  const open = settingsBarEl.classList.toggle('open');
+  settingsToggleBtn.textContent = open ? '✕ סגור' : '⚙ הגדרות';
+});
+
 toggleKeyBtn.addEventListener('click', () => {
   apiKeyEl.type = apiKeyEl.type === 'password' ? 'text' : 'password';
+  toggleKeyBtn.textContent = apiKeyEl.type === 'password' ? 'הצג' : 'הסתר';
 });
 
-// Save key on change
-apiKeyEl.addEventListener('change', () => {
-  localStorage.setItem('anthropic_api_key', apiKeyEl.value);
+toggleGeminiKeyBtn.addEventListener('click', () => {
+  geminiKeyEl.type = geminiKeyEl.type === 'password' ? 'text' : 'password';
+  toggleGeminiKeyBtn.textContent = geminiKeyEl.type === 'password' ? 'הצג' : 'הסתר';
 });
 
-// File: TXT
+apiKeyEl.addEventListener('change', () => localStorage.setItem('anthropic_api_key', apiKeyEl.value));
+geminiKeyEl.addEventListener('change', () => localStorage.setItem('gemini_api_key', geminiKeyEl.value));
+modelSelectEl.addEventListener('change', () => {
+  localStorage.setItem('selected_model', modelSelectEl.value);
+  updateProviderTag();
+});
+
+// ── FILE: TXT ───────────────────────────────────────────────────────
 fileTxtEl.addEventListener('change', async e => {
   const f = e.target.files[0];
   if (!f) return;
@@ -231,7 +323,7 @@ fileTxtEl.addEventListener('change', async e => {
   } finally { e.target.value = ''; }
 });
 
-// File: Word/PDF
+// ── FILE: WORD / PDF ────────────────────────────────────────────────
 fileOtherEl.addEventListener('change', async e => {
   const f = e.target.files[0];
   if (!f) return;
@@ -268,16 +360,30 @@ fileOtherEl.addEventListener('change', async e => {
   } finally { e.target.value = ''; }
 });
 
-// Identify
+// ── IDENTIFY ─────────────────────────────────────────────────────────
 identifyBtn.addEventListener('click', async () => {
   rawText = rawEl.value.trim();
-  localStorage.setItem('anthropic_api_key', apiKeyEl.value);
   if (!rawText) { alert('אנא הכנס תמליל לפני הזיהוי'); return; }
-  if (!apiKeyEl.value.startsWith('sk-')) { alert('אנא הכנס מפתח API תקני (מתחיל ב-sk-)'); return; }
+
+  // Validate the key relevant to the chosen model
+  const model = modelSelectEl.value;
+  if (model.startsWith('gemini')) {
+    localStorage.setItem('gemini_api_key', geminiKeyEl.value);
+    if (!geminiKeyEl.value.startsWith('AIza')) {
+      alert('אנא הכנס מפתח Gemini API תקני (מתחיל ב-AIza)'); return;
+    }
+  } else {
+    localStorage.setItem('anthropic_api_key', apiKeyEl.value);
+    if (!apiKeyEl.value.startsWith('sk-')) {
+      alert('אנא הכנס מפתח Anthropic API תקני (מתחיל ב-sk-)'); return;
+    }
+  }
+
   showScreen(screenIdent);
   detectedTypeEl.textContent = 'מנתח...';
   recommendedPartsEl.textContent = '';
   identWarningEl.textContent = '';
+
   const sample = rawText.slice(0, 800);
   const prompt = sample + `\n\nזהה את סוג התמלול מבין 4 האפשרויות (הרצאה אקדמית / ישיבת עבודה / ראיון / פאנל). העריך בכמה חלקים יש לעבד. השב בדיוק בפורמט:\nסוג: [סוג] | חלקים: [מספר] | סיבה: [משפט אחד]`;
   try {
@@ -297,45 +403,72 @@ identifyBtn.addEventListener('click', async () => {
   }
 });
 
-// Confirm & process
+// ── CONFIRM & PROCESS ─────────────────────────────────────────────────
+// Text is ALWAYS fully extracted before this point (rawText = full document).
+// Chunk size is generous: 30 000 chars for Anthropic, 80 000 for Gemini.
+// Chunks are split only at natural semantic boundaries; overlap preserves context.
 confirmStartBtn.addEventListener('click', async () => {
   const override = manualOverrideEl.value;
-  const estChars = rawText.length;
-  const partsCount = Math.max(1, Math.ceil(estChars / 12000));
-  const chunks = splitChunks(rawText, partsCount);
+  const model = modelSelectEl.value;
+  const maxChars = model.startsWith('gemini') ? 80000 : 30000;
+  const chunks = semanticChunks(rawText, maxChars, 700);
+
   showScreen(screenProcess);
   progressBar.style.width = '0%';
   const results = [];
   const start = Date.now();
   let totalTokensEst = 0;
-  startRotating(['מנתח מבנה התמלול...','מעבד תוכן אקדמי...','מחלץ מושגים מרכזיים...','מבצע הגהה לשונית...','מסיים עיבוד...']);
+
+  startRotating([
+    'מנתח מבנה התמלול...',
+    'מעבד תוכן אקדמי...',
+    'מחלץ מושגים מרכזיים...',
+    'מבצע הגהה לשונית...',
+    'מסיים עיבוד...'
+  ]);
+
   for (let i = 0; i < chunks.length; i++) {
-    partIndicatorEl.textContent = chunks.length > 1 ? `מעבד חלק ${i+1} מתוך ${chunks.length}` : '';
+    partIndicatorEl.textContent = chunks.length > 1
+      ? `מעבד חלק ${i + 1} מתוך ${chunks.length}`
+      : '';
+
     const typeHint = override !== 'auto' ? `סוג קבוע: ${override}\n\n` : '';
-    const userMsg = typeHint + chunks[i] + '\n\nעבד את הקטע הזה לפי הנחיות המערכת. החזר HTML בלבד עם h1/h2/h3/p/strong. אל תחזיר Markdown. אל תוסיף מידע שאינו בתמליל.';
+
+    // Fidelity instruction: mandatory when multi-chunk to preserve 100% of content
+    const fidelityNote = chunks.length > 1
+      ? `\n\n[הנחיה לעיבוד חלק ${i + 1}/${chunks.length}: עבד את כל התוכן של קטע זה במלואו המוחלט. אין לתמצת, אין להשמיט, אין לדלג על נושא כלשהו. כל מושג, כל דוגמה, כל נתון — חייבים להופיע בפלט. נאמנות מלאה של 100% לטקסט המקורי היא הדרישה העליונה.]`
+      : '';
+
+    const userMsg = typeHint + chunks[i] + fidelityNote
+      + '\n\nעבד את הטקסט לפי הנחיות המערכת.'
+      + ' החזר HTML בלבד: h1/h2/h3/p/strong. אין Markdown. אין המצאות. אין השמטות.';
+
     try {
-      const res = await callAPI(userMsg, 4000);
+      const res = await callAPI(userMsg, 8000);
       results.push(res);
       totalTokensEst += Math.ceil((chunks[i].length + res.length) / 4);
-      progressBar.style.width = Math.round(((i+1)/chunks.length)*100) + '%';
+      progressBar.style.width = Math.round(((i + 1) / chunks.length) * 100) + '%';
     } catch (err) {
       stopRotating();
       statusMsgEl.textContent = 'שגיאה: ' + err.message;
       return;
     }
   }
+
   stopRotating();
   progressBar.style.width = '100%';
   partIndicatorEl.textContent = '';
   statusMsgEl.textContent = 'הושלם!';
+
   const elapsed = Math.round((Date.now() - start) / 1000);
   const finalHtml = results.join('\n');
-  const wordCount = finalHtml.replace(/<[^>]+>/g,'').split(/\s+/).filter(Boolean).length;
-  statsBarEl.textContent = `⏱ זמן עיבוד: ${elapsed} שניות · 📝 מילים: ${wordCount.toLocaleString()} · 🔢 טוקנים משוערים: ${totalTokensEst.toLocaleString()}`;
+  const wordCount = finalHtml.replace(/<[^>]+>/g, '').split(/\s+/).filter(Boolean).length;
+  statsBarEl.textContent = `⏱ זמן עיבוד: ${elapsed} שניות · 📝 מילים: ${wordCount.toLocaleString()} · 🔢 טוקנים משוערים: ${totalTokensEst.toLocaleString()} · מודל: ${model}`;
   outputArea.innerHTML = finalHtml.replace(/\[([^\]]+)\]/g, '<span class="bracket">[$1]</span>');
   showScreen(screenOutput);
 });
 
+// ── OUTPUT ACTIONS ──────────────────────────────────────────────────
 resetBtn.addEventListener('click', () => {
   rawEl.value = '';
   fileInfoEl.textContent = '';
@@ -343,8 +476,7 @@ resetBtn.addEventListener('click', () => {
 });
 
 copyAllBtn.addEventListener('click', () => {
-  const text = outputArea.innerText;
-  navigator.clipboard.writeText(text).then(() => {
+  navigator.clipboard.writeText(outputArea.innerText).then(() => {
     copyAllBtn.textContent = '✓ הועתק!';
     setTimeout(() => { copyAllBtn.textContent = 'העתק הכל'; }, 2000);
   });
@@ -368,27 +500,27 @@ newProcessBtn.addEventListener('click', () => {
   showScreen(screenInput);
 });
 
-// Helpers
-function splitChunks(text, n) {
-  if (n <= 1) return [text];
-  const size = Math.ceil(text.length / n);
-  const out = [];
-  for (let i = 0; i < n; i++) out.push(text.slice(i*size, (i+1)*size));
-  return out.filter(Boolean);
-}
-
+// ── STATUS ROTATION ─────────────────────────────────────────────────
 function startRotating(msgs) {
   let i = 0;
   statusMsgEl.textContent = msgs[0];
-  rotatingInterval = setInterval(() => { i=(i+1)%msgs.length; statusMsgEl.textContent=msgs[i]; }, 2200);
+  rotatingInterval = setInterval(() => { i = (i + 1) % msgs.length; statusMsgEl.textContent = msgs[i]; }, 2200);
 }
 function stopRotating() { clearInterval(rotatingInterval); }
 
-async function callAPI(userContent, maxTokens = 4000) {
+// ── API ROUTER ───────────────────────────────────────────────────────
+async function callAPI(userContent, maxTokens = 8000) {
+  return modelSelectEl.value.startsWith('gemini')
+    ? callGemini(userContent, maxTokens)
+    : callAnthropic(userContent, maxTokens);
+}
+
+// Anthropic Messages API (direct browser call)
+async function callAnthropic(userContent, maxTokens) {
   const key = apiKeyEl.value.trim();
-  if (!key) throw new Error('אין מפתח API');
+  if (!key) throw new Error('אין מפתח Anthropic API');
   const body = {
-    model: 'claude-sonnet-4-20250514',
+    model: modelSelectEl.value,
     system: SYSTEM_PROMPT,
     messages: [{ role: 'user', content: userContent }],
     max_tokens: maxTokens
@@ -405,12 +537,94 @@ async function callAPI(userContent, maxTokens = 4000) {
   });
   if (!resp.ok) {
     const err = await resp.text();
-    throw new Error(`שגיאת API ${resp.status}: ${err.slice(0,200)}`);
+    throw new Error(`שגיאת Anthropic ${resp.status}: ${err.slice(0, 200)}`);
   }
   const j = await resp.json();
   return (j.content || []).map(c => c.text || '').join('');
 }
 
+// Google Gemini generateContent API (direct browser call with key in URL)
+async function callGemini(userContent, maxTokens) {
+  const key = geminiKeyEl.value.trim();
+  if (!key) throw new Error('אין מפתח Gemini API');
+  const model = modelSelectEl.value;
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${key}`;
+  const body = {
+    system_instruction: { parts: [{ text: SYSTEM_PROMPT }] },
+    contents: [{ role: 'user', parts: [{ text: userContent }] }],
+    generationConfig: { maxOutputTokens: maxTokens, temperature: 0.3 }
+  };
+  const resp = await fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body)
+  });
+  if (!resp.ok) {
+    const err = await resp.text();
+    throw new Error(`שגיאת Gemini ${resp.status}: ${err.slice(0, 200)}`);
+  }
+  const j = await resp.json();
+  return (j.candidates?.[0]?.content?.parts || []).map(p => p.text || '').join('');
+}
+
+// ── SEMANTIC CHUNKING ────────────────────────────────────────────────
+// Splits ONLY when the text exceeds maxChars.
+// Priority: paragraph break > single newline > sentence end > word boundary.
+// Overlap of `overlap` chars is prepended to each subsequent chunk so the
+// model has context across boundaries — no information is ever dropped.
+function semanticChunks(text, maxChars = 30000, overlap = 700) {
+  if (text.length <= maxChars) return [text];
+
+  const chunks = [];
+  let pos = 0;
+
+  while (pos < text.length) {
+    // If the remainder fits, take it whole
+    if (pos + maxChars >= text.length) {
+      chunks.push(text.slice(pos));
+      break;
+    }
+
+    const seg = text.slice(pos, pos + maxChars);
+    const minCut = Math.floor(maxChars * 0.4); // must consume at least 40%
+    let cut = maxChars; // fallback: hard boundary
+
+    // 1. Double newline (paragraph break) — cleanest split
+    const dn = seg.lastIndexOf('\n\n');
+    if (dn > minCut) {
+      cut = dn + 2;
+    } else {
+      // 2. Single newline
+      const sn = seg.lastIndexOf('\n');
+      if (sn > minCut) {
+        cut = sn + 1;
+      } else {
+        // 3. Sentence-ending punctuation (. ! ?) followed by space or newline
+        let sentCut = -1;
+        for (let i = seg.length - 1; i > minCut; i--) {
+          if ('.!?'.includes(seg[i]) && i + 1 < seg.length && ' \n\r'.includes(seg[i + 1])) {
+            sentCut = i + 2; break;
+          }
+        }
+        if (sentCut > 0) {
+          cut = sentCut;
+        } else {
+          // 4. Word boundary
+          const sp = seg.lastIndexOf(' ');
+          if (sp > minCut) cut = sp + 1;
+        }
+      }
+    }
+
+    chunks.push(seg.slice(0, cut));
+    // Next chunk starts `overlap` chars before the cut point to preserve context
+    pos = pos + cut - overlap;
+  }
+
+  return chunks;
+}
+
+// ── DOCX TEXT EXTRACTION ─────────────────────────────────────────────
 async function extractDocxText(ab) {
   try {
     const data = new Uint8Array(ab);
@@ -422,21 +636,21 @@ async function extractDocxText(ab) {
     }
     const eocd = findEOCD();
     if (eocd < 0) return null;
-    const centralOffset = dv.getUint32(eocd+16, true);
-    const centralSize = dv.getUint32(eocd+12, true);
+    const centralOffset = dv.getUint32(eocd + 16, true);
+    const centralSize   = dv.getUint32(eocd + 12, true);
     let ptr = centralOffset;
     while (ptr < centralOffset + centralSize) {
       if (dv.getUint32(ptr, true) !== 0x02014b50) break;
-      const fnLen = dv.getUint16(ptr+28, true);
-      const exLen = dv.getUint16(ptr+30, true);
-      const cmLen = dv.getUint16(ptr+32, true);
-      const lhOff = dv.getUint32(ptr+42, true);
-      const fname = new TextDecoder().decode(data.slice(ptr+46, ptr+46+fnLen));
+      const fnLen = dv.getUint16(ptr + 28, true);
+      const exLen = dv.getUint16(ptr + 30, true);
+      const cmLen = dv.getUint16(ptr + 32, true);
+      const lhOff = dv.getUint32(ptr + 42, true);
+      const fname = new TextDecoder().decode(data.slice(ptr + 46, ptr + 46 + fnLen));
       if (fname === 'word/document.xml') {
         const lh = lhOff;
-        const lfn = dv.getUint16(lh+26, true);
-        const lfx = dv.getUint16(lh+28, true);
-        const compSize = dv.getUint32(lh+18, true);
+        const lfn = dv.getUint16(lh + 26, true);
+        const lfx = dv.getUint16(lh + 28, true);
+        const compSize  = dv.getUint32(lh + 18, true);
         const dataStart = lh + 30 + lfn + lfx;
         const compressed = data.slice(dataStart, dataStart + compSize);
         if (typeof DecompressionStream !== 'undefined') {
@@ -444,7 +658,7 @@ async function extractDocxText(ab) {
           const stream = new Blob([compressed]).stream().pipeThrough(ds);
           const text = await new Response(stream).text();
           const doc = new DOMParser().parseFromString(text, 'application/xml');
-          return Array.from(doc.getElementsByTagName('w:t')).map(n=>n.textContent).join(' ').replace(/\s+/g,' ').trim();
+          return Array.from(doc.getElementsByTagName('w:t')).map(n => n.textContent).join(' ').replace(/\s+/g, ' ').trim();
         }
         return null;
       }
@@ -454,6 +668,7 @@ async function extractDocxText(ab) {
   } catch { return null; }
 }
 
+// ── PDF TEXT EXTRACTION ───────────────────────────────────────────────
 async function extractPdfText(ab) {
   try {
     const bytes = new Uint8Array(ab);
