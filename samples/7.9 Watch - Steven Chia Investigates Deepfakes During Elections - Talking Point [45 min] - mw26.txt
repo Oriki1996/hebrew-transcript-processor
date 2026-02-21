@@ -1,0 +1,794 @@
+[דובר 15] (0:00 - 0:08)
+Hi guys, this is a really special episode of Talking Point. It's likely to be my last. I'll be making a special announcement at the end of the show.
+
+[דובר 11] (0:17 - 0:24)
+An election is upon us. The PAP will be fielding more than 30 new candidates.
+
+[דובר 23] (0:24 - 0:28)
+When the country calls, I have to come up. I cannot just sit around.
+
+[דובר 12] (0:29 - 0:35)
+We're very conscious and intentional about making sure that our residents are always at the centre of our plans and what we do.
+
+[דובר 23] (0:35 - 0:38)
+What we want to do is ensure that Singaporeans are given a choice.
+
+[דובר 1] (0:39 - 0:43)
+But this time, there's a new sheriff in town.
+
+[דובר 23] (0:45 - 0:49)
+Well hello Singapore, welcome to Times Square.
+
+[דובר 1] (0:51 - 1:21)
+Hello Singapore, I wish I could be there. No, not him. I'm talking about a ban on deepfakes during the Singapore elections.
+
+In other words, you cannot digitally manipulate videos and audio of any of the political candidates saying something false. But deepfakes have been around from the early 2000s. So why the ban now?
+
+Because there are deepfakes.
+
+[דובר 11] (1:26 - 1:35)
+And there are deepfakes. Today is a special day for you. You didn't end up here by accident and I am sure you won't regret it.
+
+[דובר 1] (1:36 - 2:05)
+The fake ones that actually made you believe it. How advanced is deepfake technology today? Join me in this one-hour special where my search for answers brings me halfway around the world, here in the USA.
+
+Before my trip, I wanted to get a sense of just how much the average Singaporean knows about deepfakes.
+
+[דובר 13] (2:06 - 2:14)
+Okay. Anything unusual about this video? Nothing.
+
+Does it look real? Looks like it's real because there's a line with the white holes.
+
+[דובר 2] (2:14 - 2:20)
+They dare to publish it as under a white house and probably there's some standing and some... probably some 10cc there.
+
+[דובר 20] (2:20 - 2:34)
+This one looks a bit real. I don't think there's any AI element here. That looks very consistent.
+
+Okay. They're all deepfakes. All of them.
+
+What? Okay. Are you surprised by that?
+
+I am surprised by that. Even as someone that uses AI extensively at times. Yeah, it is shocking indeed.
+
+[דובר 13] (2:34 - 2:35)
+He keeps stuttering.
+
+[דובר 20] (2:35 - 2:36)
+50-50.
+
+[דובר 13] (2:36 - 2:37)
+Yeah, 50-50.
+
+[דובר 1] (2:37 - 2:40)
+No, so what's your guess if I ask you? Real or fake?
+
+[דובר 13] (2:40 - 2:40)
+Fake.
+
+[דובר 1] (2:41 - 2:41)
+Fake?
+
+[דובר 2] (2:41 - 2:42)
+Real.
+
+[דובר 1] (2:42 - 2:50)
+Real, okay. Fake. This is fake.
+
+This is also fake. They're both fake. All the videos I've shown you are fakes.
+
+[דובר 21] (2:50 - 2:51)
+Okay.
+
+[דובר 1] (2:51 - 2:52)
+Could you tell from just looking at it?
+
+[דובר 21] (2:53 - 2:56)
+Cannot, of course cannot. We stand with Ukraine.
+
+[דובר 1] (2:56 - 3:11)
+This is what I showed people. A video of former US President Joe Biden erroneously saying Russia occupied Kyiv for 10 years. Former US Vice President Kamala Harris appearing to slur her words.
+
+[דובר 2] (3:11 - 3:14)
+So the future today will be as the past.
+
+[דובר 1] (3:15 - 3:21)
+And videos of late leaders in India and Indonesia who have died and were resurrected for their party events.
+
+[דובר 12] (3:21 - 3:28)
+Since I took office, my dream is to build an advanced and prosperous Indonesia.
+
+[דובר 1] (3:30 - 4:07)
+So most of them suspected there was some kind of fakery involved with these videos and photos. But they were genuinely surprised when I told them that all of them were actually deepfakes. And in fact, some even expressed concern that they were unable to tell the real apart from the fakes.
+
+That's perhaps why the Singapore government introduced this. The Eleonor Bill. Or the Elections Integrity of Online Advertising Amendment Bill.
+
+During the campaigning period, advertising or posting digitally manipulated content like this that shows a candidate saying or doing something they didn't do will be an offence.
+
+[דובר 11] (4:08 - 4:13)
+I am talking about an amount that will allow you to go home and stop working altogether.
+
+[דובר 1] (4:14 - 4:18)
+The content should also look so realistic that people believe it to be true.
+
+[דובר 22] (4:18 - 4:23)
+It's essentially hands-free crypto trading with a track record of success.
+
+[דובר 1] (4:24 - 4:42)
+That means the law will not apply to cartoons, memes or satire, even though these are also fake. I still have some questions though. Why have this law when there are already rules in place on spreading falsehoods in Singapore?
+
+[דובר 4] (4:43 - 5:30)
+Yes, we do have the POFMA that prohibits false information. Under the POFMA, it typically takes longer for something to be corrected. This process that's new makes it faster for the government to deal with any kinds of deepfakes that surface during the election period.
+
+Because the election period is typically very short, so when we have the width of election up until polling day, historically we've only seen typically around two to two and a half weeks of turnaround. This means that whatever deepfakes or any false information that comes out that's realistic during this time, it has to be tackled very swiftly. Who's going to decide whether it really is fake or not?
+
+The candidate has to declare whether or not the representation, the depiction of the candidate is in fact what actually happened.
+
+[דובר 1] (5:30 - 5:38)
+Let's say I'm the candidate and then I discover there's a video going around of me saying things which I didn't really say. I can then bring it to light and say, hey...
+
+[דובר 4] (5:38 - 6:07)
+Yes, and the returning officer can then decide is this something that has to be taken down. So I'm going to show you some examples of what could be considered as potentially caught under the act, right? So this is a former PM who posted on Facebook that there was these scam videos of him asking people to invest in cryptocurrencies.
+
+So what I want to highlight in this video is that this kind of a video is very realistic.
+
+[דובר 22] (6:08 - 6:14)
+And quantum computing algorithms analyze market trends, make strategic investment decisions and execute trades.
+
+[דובר 4] (6:15 - 7:45)
+You can see that the lips of the video clip, it looks as though that the former PM is actually saying those words. If you play the audio, you can hear that the audio sounds very much like a former PM. So what this means is that the realism here is highly believable.
+
+And it is likely that some people may believe that. So this makes this kind of content real enough to be caught under the act. So this is an example that came up during the presidential elections in the US, right?
+
+So what happened was the current president, Donald Trump, he posted some other posts that showed Taylor Swift's generated images, obviously not of her, but generated images of her and her supporters saying that they supported Trump. So just wanted to highlight that under the Singapore amendments, the new law, this is not caught. If Trump were a candidate here in Singapore, it would be fine.
+
+Because the law targets candidates specifically. And some of the examples are using AI to generate live translation. Let's say if you are reaching out to people who speak different languages.
+
+So if you record yourself, you translate that into another language, using your mannerism, using your voice, then that will be caught under the act.
+
+[דובר 1] (7:45 - 8:15)
+So I speak in English, I give a speech, but I want it in four languages. So I use AI to do that. That's not allowed.
+
+That would come under the act. Digital manipulation like CGI existed since the 1990s. But it wasn't until 2014, where there was a breakthrough in deepfake technology, when an American computer scientist invented GANs, or Generative Adversarial Networks, that can mimic human behavior and speech patterns.
+
+What came next were deepfakes of celebrities.
+
+[דובר 18] (8:16 - 8:19)
+I am not Morgan Freeman. What you see is not real.
+
+[דובר 1] (8:27 - 8:34)
+Fast forward today, we are seeing deepfake technology being used to disseminate disinformation or advance political agendas.
+
+[דובר 26] (8:35 - 8:40)
+I'd like to announce that I have selected The Great Rush Limbaugh as my VP.
+
+[דובר 1] (8:51 - 9:33)
+So I'm going to where it all started. Here in the US. A country that's been ranked as one of the top global leaders in AI technology, and concluded its own election not too long ago.
+
+This is Silicon Valley, or what's called the Mecca for technology. Located in Northern California, it's home to some of the biggest names in tech. So just about every other billboard I've seen is offering some kind of AI service.
+
+I guess it just shows that that's really the buzzword here.
+
+[דובר 24] (9:47 - 9:48)
+Oh, what's this?
+
+[דובר 1] (9:55 - 10:03)
+Hello, I am an AI human. Hello, I'm a real human. Do you know who is Stephen Chow?
+
+[דובר 18] (10:03 - 10:14)
+Stephen Chow is a news presenter and journalist who works for a Singaporean-English-language Asian cable news channel. He has been with the channel for many years, covering major news events and anchoring news bulletins.
+
+[דובר 1] (10:14 - 10:20)
+Okay, then. Well, it's nice to meet you, and I guess I'll see you later.
+
+[דובר 18] (10:22 - 10:25)
+It seems like you're struggling to find the right words.
+
+[דובר 24] (10:26 - 10:27)
+Take a deep breath.
+
+[דובר 1] (10:32 - 10:42)
+Okay, maybe this AI human can't connect with me just yet. But in the past, a similar concept was used by South Korea's former president, Yoon Suk-kyo.
+
+[דובר 8] (10:46 - 10:56)
+He actually wanted to create an avatar digital replica of himself to reach out to the population as much as possible to promote his campaign.
+
+[דובר 1] (10:56 - 11:05)
+And this is the company that created the avatar. So that was back in 2022. How has technology changed since then?
+
+[דובר 8] (11:05 - 11:15)
+Everything's more faster, smoother, and more cost-effective. If I can show you a clip of video, this is one of our newer models explaining our AI studios.
+
+[דובר 9] (11:16 - 11:20)
+I am Hayden, an AI avatar. It's a pleasure to meet you.
+
+[דובר 8] (11:21 - 11:24)
+As you can see, it has more realistic movements, gestures, and lip syncs.
+
+[דובר 1] (11:25 - 11:28)
+It seems more natural, more lifelike, more human-like.
+
+[דובר 8] (11:28 - 11:54)
+Well, yes, the process is more optimized. The presidential avatar took up to one month of production. Nowadays, it's two weeks by using a feature called custom avatar.
+
+Now, what our custom avatars can do is basically create a personal avatar of yourself. And here comes your big surprise. We've created one custom avatar of you.
+
+Oh, I recognize that.
+
+[דובר 25] (11:55 - 11:55)
+That looks like my car.
+
+[דובר 14] (11:56 - 12:07)
+Hi, Steve from Singapore. I'm Steve from California. I'm more handsome than you.
+
+You know why? Because you're going to grow old, and I never will.
+
+[דובר 8] (12:08 - 12:11)
+No hard feelings, but this is our AI version of you.
+
+[דובר 14] (12:11 - 12:12)
+Yeah, yeah, okay.
+
+[דובר 8] (12:12 - 12:40)
+How long did that take to make? This video took less than 20 minutes to create this. We couldn't have done this in 2022.
+
+But now it's possible because we can use video clips to create avatars. The studio avatars that you saw earlier, we needed to have the actual actors in our studio. Whereas in this case, we just use the clip of you online.
+
+We can give them new scripts, and then you can generate an AI-generated video of it.
+
+[דובר 14] (12:41 - 12:51)
+Hi, Steve from Singapore. I'm Steve from California. I'm more handsome than you.
+
+You know why? Because you're going to grow old, and I never will.
+
+[דובר 1] (12:53 - 15:13)
+Now, here's a bit of trivia. This car originally did not have any seatbelts. It was registered in 1971, and the seatbelt law came into effect in 1973 in Singapore.
+
+So it's got me thinking. I'm wondering if you could help us make a deepfake video of one of our Singapore politicians. Let's see what we can do with it.
+
+I'm giving John footage of our own minister in charge of digital development and information, Josephine Teo, the very ministry that tabled the bill prohibiting deepfakes during Singapore's elections. And I'll be taking the final result back home. But before I do that, I'm heading to the Big Apple to find out what impact deepfakes had on the 2024 US presidential election.
+
+All eyes were on the 2024 US presidential election, given its highly polarizing political environment. But in the lead-up to voting, rampant fake AI content led to a growing fear of voter manipulation. With Americans across party lines concerned about the impact of artificial intelligence on the presidential campaign, and its potential to spread disinformation remain a concern as the election approach, leading to some 20 states enacting laws on AI deepfakes in elections.
+
+I'm at the office of Reality Defender, one of the many cyber security firms that sprouted out to help companies detect deepfakes during the US election. How does the software actually work?
+
+[דובר 9] (15:14 - 15:21)
+Yeah, we have a few examples that we prepared. First, we'll show a video of former President Biden.
+
+[דובר 21] (15:22 - 15:32)
+At this moment, we must be crystal clear. We stand with Ukraine. We stand with Ukraine.
+
+We will ensure that Ukraine has what it needs.
+
+[דובר 9] (15:33 - 16:23)
+So upload a video, you quickly get a number of insights. And the goal is that a non-technical user, they can just look at it and see color-coded bounding box. For example, you see the red square over the face.
+
+If it's indicatively fake. So once you upload a piece of media, audio, video, images or text, you'll see it on this dashboard. And it's color-coded based on the confidence level of the models.
+
+So given that the models are very confidently referring to the image within the video as a deepfake, it's red. And why don't we look at another piece of media? And so it says analyzing, we'll give it a second.
+
+And look, it's 99% confidently AI manipulated.
+
+[דובר 1] (16:23 - 16:28)
+Okay. And during the last US elections, did you spot quite a few?
+
+[דובר 19] (16:28 - 16:35)
+We don't see what our clients scan, but we can tell you that our clients spotted a few. But do we really need a software like this?
+
+[דובר 1] (16:35 - 16:40)
+Because I think I can spot some deepfakes. Some of them are really bad. Can we do that on our own?
+
+[דובר 9] (16:41 - 17:01)
+Well, there's two parts to that question. On one side, even the bad ones still cause a lot of harm. Whether it's geopolitical, whether it's during an election, whether it's financial fraud.
+
+But the good ones, unfortunately, in the last six months, even PhD researchers on our team cannot tell the difference with their naked eyes. And what does that mean for an average person who's not a PhD? They just don't stand a chance.
+
+[דובר 19] (17:01 - 17:09)
+Moving forward, is it going to get more challenging each year to detect these deepfakes? You know, I think we're only in the first kind of chapter.
+
+[דובר 9] (17:09 - 17:21)
+Focusing on right now, is it real or is it fake? I'd say as things get more advanced, we'll think about content and context and truthfulness and different types of emotional biomarkers. But we certainly have our work cut out for us.
+
+[דובר 1] (17:30 - 18:53)
+This sounds like former US President Joe Biden. It's not. The robocall, or automated telephone call, is actually an audio deepfake of him spreading false information to voters, telling them to skip the New Hampshire primary election.
+
+The fake robocall hit headlines. The call was made using software tools from this company. 11Labs can generate human-like voices using AI.
+
+Let's try making a voice. It says I can do an instant voice clone with only 10 seconds of audio. That sounds really easy.
+
+Let's give it a try. OK, it says 10 seconds of audio required. Here we go.
+
+So hi guys, this is Stephen here. I'm recording my 10 seconds of audio so that you can create a clone of my voice and later on use it so that I can be saying a whole bunch of different stuff. I just need to send that in and...
+
+Wow. We're done. That was really easy.
+
+I'm bringing my clone voice to 11Labs.
+
+[דובר 25] (18:53 - 18:59)
+Hi Artemis, it's great to finally meet you in person. Ni hao ma, whether it means you're Stephen.
+
+[דובר 7] (18:59 - 19:01)
+Very cool. Nice to meet you as well, Stephen.
+
+[דובר 1] (19:01 - 19:02)
+Yeah, you think it sounds like me?
+
+[דובר 7] (19:02 - 19:03)
+I think it's pretty good.
+
+[דובר 1] (19:03 - 19:14)
+What do you think? I think it's pretty good too. So I cloned my own voice using your software.
+
+But this one was done with my consent. What if someone else uses it and tries to clone the voice of, say, a politician? What happens then?
+
+[דובר 7] (19:15 - 19:24)
+We have a series of safeguards for trying to access this platform. First of all, we screen our users. We don't let them sign up using third-party vendors.
+
+[דובר 1] (19:24 - 19:26)
+But how do you know it's a bad user?
+
+[דובר 7] (19:27 - 20:13)
+There is a variety of signals out there. For example, bad credit cards, bad email domains, tactics that bad users would use that we can see in their data. And we work with also third-party vendors that give us additional signals.
+
+Let's say you're a business. How do we know, et cetera? So the first step is to make sure that known bad actors sign up on the platform.
+
+We have a list of celebrities and public figures. And if you try to clone a voice of someone on that list, you won't be allowed to do so. Secondly, we also have voice verification in some instances.
+
+So if your account is flagged as high-risk, then you'll be routed to pass voice verification, which means that you have to prove essentially that you are the owner of the voice by reading out the dynamic script.
+
+[דובר 1] (20:14 - 20:18)
+To demonstrate this, Artemis has flagged my account as a high-risk user.
+
+[דובר 7] (20:19 - 20:21)
+So now record yourself saying something.
+
+[דובר 1] (20:21 - 20:51)
+So hey guys, it's Stephen here. And I'm doing this test to see if it will actually work, recording my voice into the app and to see if it will recognize it. Let me just put in some script.
+
+Hi guys, I'm running in the upcoming elections. Please vote for me. And I generate speech.
+
+Oh, what's this voice requires verification? Verify voice.
+
+[דובר 7] (20:51 - 21:00)
+So you are effectively put on probation as we call it. And now you have to verify a voice every time you try to use a cloned voice.
+
+[דובר 1] (21:01 - 21:12)
+So this is essentially putting an additional barrier to anyone who might want to impersonate me. In terms of an election, what kind of abuse have you seen happen when people use your software?
+
+[דובר 7] (21:12 - 21:24)
+Now imagine a candidate being made to say to their supporters to not show up and vote, for example, which is something that happened using our tools in the past.
+
+[דובר 1] (21:25 - 21:28)
+Yeah, that's right. The US elections actually with Joe Biden, right?
+
+[דובר 7] (21:28 - 21:59)
+It was the New Hampshire primary in January 2024. So the company was still very, very young. We only had about 20 employees in place and it was barely two years in.
+
+And a lot of our safety mitigations and safety program has evolved in response to that incident. So we're in a much better place now. But the risk of these tools being abused in the election context persists nonetheless, right?
+
+Because there's many of these tools out there. There's many elections out there. So we have to stay vigilant ahead of that.
+
+[דובר 3] (22:01 - 22:05)
+Hey, I'm Alex Boris. You may have seen me around. I'm a lifelong Eastsider.
+
+[דובר 1] (22:06 - 22:18)
+New York politician Alex Boris thinks we need to move beyond safeguards. As a computer engineer turned state lawmaker, he's tabled a few AI-related bills to stop deepfakes.
+
+[דובר 3] (22:21 - 22:58)
+One required that any campaign materials that were manipulated with AI be labeled as such. And that includes what the campaigns put out. But it also means if some outside group puts an image or video or audio out and the news plays it, the news needs to say, you know, hey, this was manipulated by AI.
+
+So they're not propagating that falsehood even further. People are getting the right warning. The second thing that we did was allow for court review.
+
+We set up a process whereby if there is a deepfake of a candidate that near an election, that candidate can sue in our courts.
+
+[דובר 1] (22:58 - 23:05)
+And these AI companies, do you think there should be more legislation regulations on them to prevent such deepfakes from coming out using their tools?
+
+[דובר 3] (23:05 - 23:52)
+You're seeing some use voice verification to try to crack down on faking voices. You're seeing people have signups where you sign up with a credit card or you verify the identity of the user so they can trace back who is creating certain images. These are all useful things, but it is at the end of the day a cat and mouse game, right?
+
+People will come up with additional ways of faking a voice using a different AI algorithm. So companies, I think they definitely can be doing more. Much more monitoring of how their products are being used, right?
+
+Every time a new model comes out, there's a race for people to jailbreak it, to put in some prompt that gets around the protections. And usually they do it within a few hours. Companies should be investing much more in AI safety and in making sure that the models are doing only what they're supposed to be doing.
+
+[דובר 19] (23:52 - 23:54)
+So it's a constant evolution.
+
+[דובר 3] (23:55 - 24:41)
+Absolutely. But the hope is that we find systems that go beyond that. So for example, that's C2PA standard.
+
+What is C2PA? It's a file format. It's a way of storing information about audio or video or sound.
+
+Sometimes on your computer, you right-click, you see extra information about it. Or if you do a Google image search in the bottom corner, you'll see the number of pixels. All of that is metadata stored about the file.
+
+And C2PA is just additional information stored about a file, but it tells you provably how that image was created. And that's the key part is that you can't fake that piece of it. You can't fake that information about the file.
+
+And so if everyone uses that, then we know for a fact how things were created.
+
+[דובר 1] (24:41 - 24:44)
+And are companies using C2PA already?
+
+[דובר 3] (24:44 - 25:09)
+Some are. So most AI image generators will attach this information, but it also can work with hardware, right? You can prove it's coming from a digital camera or a phone.
+
+As far as I know, no phones on the market have this built in. Why not? It's still pretty new.
+
+I'm hoping the next generation do have it. You can buy digital cameras with this built in. Right, right.
+
+My hope is in two or three years, this is standard and everyone is using this technology.
+
+[דובר 1] (25:13 - 26:25)
+We've been seeing deepfakes used for nefarious reasons. But what if it can be used for good? Should it be allowed?
+
+In 2023, New York mayor Eric Adams created a series of audio deepfakes of himself, speaking several foreign languages as a way to reach more people. BeHuman calls itself a digital cloning company and advertises its services for campaigns saying they can give clients a competitive advantage. I want to see how they do this.
+
+Little did I expect they've set up a surprise for me.
+
+[דובר 16] (26:30 - 26:37)
+Hey there, Don. Welcome to talk. Well, hello there, Stephen.
+
+So you're here to talk about the political uses of the human. What exactly do you mean by that?
+
+[דובר 17] (26:37 - 26:55)
+A fellow inquisitive mind. I love it. When we talk about the political uses of BeHuman, I'm referring to how candidates and campaigns can leverage our AI to connect with voters in a more personal and impactful way.
+
+Think personalized video messages to sway voters, drive donations and boost event attendance.
+
+[דובר 16] (26:55 - 27:04)
+But one concern is the potential for misuse. Could BeHuman be used to spread misinformation or manipulate voters? Sounds like me.
+
+[דובר 6] (27:04 - 27:17)
+It is you. We've basically taken clips that we found of you online, information from your LinkedIn profile, from your YouTube page, and we've basically uploaded that into a persona. And that persona is now talking to our founder, Don.
+
+[דובר 1] (27:17 - 27:18)
+Okay.
+
+[דובר 6] (27:18 - 27:35)
+We see it being used for political campaigns in the future. One way would be to drive voters to the voting booth. Okay.
+
+Another way would be to get messaging out that's customized to that specific constituent. Let me show you an example of how that works. So what I did was I created a video of you.
+
+Oh, really? Okay.
+
+[דובר 24] (27:35 - 27:35)
+Yeah.
+
+[דובר 6] (27:35 - 27:50)
+And I created a campaign for me. This says Talking Point up top. It's a landing page.
+
+So this will be sent to you in an email. Okay. You click on the link.
+
+The email will be personalized to you. It might have some text in that email about the specific campaign issues that you're interested in. And then you can watch the video.
+
+[דובר 16] (27:51 - 27:53)
+So hi, Michael. It's Stephen here from Talking Point.
+
+[דובר 1] (27:53 - 28:08)
+Now, I want to tell you about something that I've been working on lately. In fact, the most recent story was about elderly drivers where we had a viewer writing into us. Essentially, each and every message could be personalized to the individual.
+
+[דובר 6] (28:08 - 28:38)
+That's right. And at the beginning of each one of these videos, actually, the website could change. So some of the ways that we see people utilizing this is not only are they customizing the name, but they might be customizing an issue.
+
+For example, if they're interested in the environment, education, social security, Medicare, whatever that issue might be, that issue can also be embedded into the video. We can actually just change what they're saying. So we can actually change healthcare to the environment, to social security or whatever it might be.
+
+You can make multiple variables within the video.
+
+[דובר 1] (28:39 - 28:42)
+Oh, so can you make me say whatever you want me to say?
+
+[דובר 6] (28:43 - 29:02)
+The basic concept behind it is that you're recording a video. You're putting pauses around the issues that you want to be changed. And then we can edit those issues.
+
+However, we aren't at the point now where a video could be created completely from scratch. So in other words, I can't take your likeness and create something 100% by typing in a text.
+
+[דובר 19] (29:02 - 29:02)
+Okay.
+
+[דובר 6] (29:02 - 29:10)
+Our technology is really designed for scale. 100,000 or a million messages, that would be quite expensive. That's not so easy to do.
+
+[דובר 1] (29:10 - 29:14)
+And has that already been done? Like in the last US elections, was that done?
+
+[דובר 6] (29:15 - 29:33)
+Yes. So we had a candidate that was running for an office. So basically, what it did is it allowed him to reach out to tens of thousands of his constituents with a personalised message, talking about the interests that they have in the race.
+
+The ability for him to reach out and do that wasn't there before. There was no way he could reach out to each one of them.
+
+[דובר 1] (29:33 - 29:34)
+He could have sent out flyers.
+
+[דובר 6] (29:35 - 29:38)
+I mean, he could have sent out flyers, but those flyers would have been generic messaging.
+
+[דובר 1] (29:45 - 30:27)
+I think we can all agree that when it comes to using deepfakes for bad things, like scamming people out of money, that's a crime and should be persecuted. But there's also a grey area when it comes to using AI technology during elections. Because as we've seen, it can be beneficial in helping a candidate better connect with their voters.
+
+Remember the assignment I gave DeepBrain? It's time to see if Singaporeans can tell the difference when it comes to their own politician. I'm going to be showing people four videos.
+
+[דובר 2] (30:28 - 31:02)
+The men who participated in the conversations then became the bridge. They became the bridge back to their own circles. We often hear exciting news about new advancements in AI research, how AI is beating top human players in games like Go and StarCraft.
+
+Quite often, people express a desire to see equality at the workplace. Equality at the workplace, I think there are two parts to it. One is equality of opportunity and the other is in terms of outcomes.
+
+[דובר 1] (31:03 - 31:06)
+This fourth one is this video created by DeepBrain.
+
+[דובר 2] (31:07 - 31:16)
+We have to acknowledge these otters and to properly characterise them. If we don't articulate the extent to which these otters will materialise...
+
+[דובר 1] (31:16 - 31:40)
+It's fake, as the minister never said the word otters. We also added this and this. But the people I'm showing it to can't see it.
+
+So there are four videos here. Can you tell me which one you think is fake? So I'll pay for you one by one.
+
+[דובר 2] (31:40 - 31:49)
+The men who participated in the conversations then became the bridge... Hear exciting news about new advancements in AI research, the extent to which these otters will materialise.
+
+[דובר 24] (31:50 - 31:55)
+I'd love to see that. If we don't articulate the extent...
+
+[דובר 20] (31:55 - 31:58)
+It's not like the words do not match what she's saying.
+
+[דובר 24] (31:58 - 31:58)
+Yeah.
+
+[דובר 12] (32:01 - 32:08)
+I would say that this one, I feel like it's a bit off-sync.
+
+[דובר 1] (32:08 - 32:12)
+Okay. So if you think it's fake, you take a sticker and stick on it.
+
+[דובר 10] (32:17 - 32:37)
+I mean, I picked B and C because I was looking at your faces trying to tell... I think I was more sure of C than B because her expression in video C is kind of exaggerated. She keeps looking back in the exact same manner like compared to the other video, she's more natural.
+
+She's looking around.
+
+[דובר 2] (32:43 - 32:47)
+Why did you think it was B and C?
+
+[דובר 1] (32:47 - 32:55)
+Why did you think it was B and C? It looks like a lot of fingers here. You know, I think the complexion here is a bit bright.
+
+What made you think it was fake?
+
+[דובר 2] (32:55 - 32:58)
+Because of her facial expression, so like, not natural.
+
+[דובר 1] (32:59 - 33:02)
+But you also guessed video D.
+
+[דובר 2] (33:02 - 33:05)
+The lipping, that was not very synchronised. High degree of willingness.
+
+[דובר 1] (33:06 - 33:17)
+Gentlemen, I have four videos here. Some are real, some are fake. See if you can spot the real and the fake.
+
+Okay? C. Video C.
+
+C. C. C.
+
+C. Only one? Or more than one?
+
+[דובר 2] (33:17 - 33:19)
+Yes, yeah. It was lagging a bit.
+
+[דובר 1] (33:19 - 33:27)
+Okay. Grab a sticker. Put a sticker against the video you think is fake.
+
+Is it video A as well, is it?
+
+[דובר 10] (33:32 - 33:38)
+I also think C is fake. Yeah? I think because of the background and the movement, it doesn't look natural.
+
+Is it?
+
+[דובר 24] (33:38 - 33:40)
+Yeah, I mean a bit glitchy.
+
+[דובר 1] (33:41 - 33:42)
+A bit glitchy, okay.
+
+[דובר 24] (33:47 - 33:49)
+A and C. P.
+
+[דובר 13] (33:49 - 33:54)
+It is three. A, B and C? Yeah.
+
+A. The facial colours are not natural.
+
+[דובר 24] (33:55 - 33:55)
+B.
+
+[דובר 13] (33:56 - 34:03)
+I don't think Josephine wears this, right? This kind of attire. Which are the fake ones?
+
+Why did you think D was fake?
+
+[דובר 2] (34:04 - 34:06)
+Just look fake.
+
+[דובר 1] (34:11 - 35:11)
+As you can see, a real close fight between video B and C. Video C emerging the winner. So yes, people did correctly guess the fake video.
+
+But their reasons were her complexion was a bit odd, the background seemed funny, the image was a bit blurry. None actually guessed that her voice and the words she was saying had been manipulated. Which was actually the only thing we had changed.
+
+I think it's time I showed this to the real Josephine Teo. I want to start off by showing you a video. Actually, it's a deep fake video of you.
+
+Take a look. Okay.
+
+[דובר 2] (35:14 - 35:21)
+Then we can't actually expect people to be able to weigh in how serious these odders are. It could alarm them.
+
+[דובר 25] (35:22 - 35:23)
+Do you recognise where that clip was taken from?
+
+[דובר 2] (35:23 - 35:38)
+Yes. It actually did take place, but we were talking about other stuff. Then we can't actually expect people to be able to weigh how serious these risks are.
+
+It could alarm them.
+
+[דובר 1] (35:38 - 35:47)
+We're talking about Otis, right? Which was nowhere near what you were actually talking about. We took this video and a few others and we put up a booth at a mall and we showed it to the general public.
+
+[דובר 2] (35:48 - 35:48)
+In a real mall?
+
+[דובר 1] (35:48 - 35:52)
+In a real mall. Real people, real Singaporeans. Nothing was pretend, you know.
+
+[דובר 2] (35:52 - 36:02)
+Okay. We often hear exciting news about new advancements in AI research. How AI is beating top human players in games like Go and StarCraft.
+
+[דובר 1] (36:02 - 36:11)
+So they thought that video was fake too. But it's not. They thought it was fake.
+
+Yeah. Video C was the actual deep fake. Video B is this video.
+
+[דובר 2] (36:11 - 36:13)
+This one is real, but they think it's fake.
+
+[דובר 1] (36:13 - 36:14)
+Does it surprise you?
+
+[דובר 2] (36:14 - 36:38)
+It doesn't really surprise me. Today, the degree of realism has gone up so much that if you haven't actually interacted with a person, you haven't actually heard them speak, they've not stood in front of you or you do not have direct contact with this person and this image is being represented as this person, you might very well mistake it to be real.
+
+[דובר 1] (36:38 - 36:43)
+Do you feel concerned about the fact that after a while, you're not sure which is the real one and which is the fake one? Which one to believe?
+
+[דובר 2] (36:43 - 37:12)
+I think ordinarily, you could make the argument that these kinds of fake videos are not particularly harmful. Maybe you could even say they're just for a bit of fun. However, in the election context, where it is really important we know what a candidate said, for example, this can be very dangerous.
+
+Misrepresentation and people being shown videos of candidates saying what they did not say or doing what they did not do, that can change election outcomes.
+
+[דובר 1] (37:12 - 37:16)
+So we also had you speaking in Malay and Tamil. Let's take a look.
+
+[דובר 2] (37:51 - 38:13)
+This is literally putting words in my mouth. Actually, it's very well done. Particularly the one in Malay.
+
+I do speak a little bit of Malay. So if I have gone to a constituency event and my residents have heard me speak a little bit of Malay before, then they watch this and they say, oh, actually her Malay is better than we thought. Like it's nowhere near that.
+
+But I think for Tamil, it was a little bit less convincing.
+
+[דובר 1] (38:14 - 38:20)
+So what if you made a deepfake video to help communicate your message to residents in a different language?
+
+[דובר 2] (38:20 - 39:16)
+I mean, would that be okay? I think it is very dangerous when the audience doesn't know when they can trust stuff that you approve and stuff you put up. Do you want to go there?
+
+I think for me, the answer is very clear. I don't want to go there. There are other ways of doing it.
+
+Captioning is one way. Using someone to do the interpretation and then having that exchange film is, to my mind, better than using the AI-generated content that shows you speaking a language that you actually don't speak. To me, that's very clearly misrepresentation.
+
+Now, outside of the election period, the law doesn't say specifically that you can't. But if you deliberately allow yourself to be misrepresented this way and you make no attempt to clarify when you speak no such language, then you are allowing the confusion to persist. And when the time comes where you really have to make a clarification, how can that clarification be believed?
+
+[דובר 1] (39:18 - 39:54)
+Now, the cost of an avatar really depends on the quality. You could get a simple one done up for around $20. But if you wanted a more sophisticated, high-quality avatar, well, that could set you back several thousand Singapore dollars.
+
+But what if I told you you could get a deepfake done for free? I'm meeting with the team at KATOS. They are a government initiative set up to combat misinformation online.
+
+And they have been tracking the development of something called cheatfakes. So what actually is a cheatfake?
+
+[דובר 5] (39:55 - 40:23)
+A cheatfake means a video or image manipulated by non-AI technologies. For example, we can just edit an image by cropping some part of the image. Or we can slow down a video to show a person like appear you or mentally disorder or something.
+
+Or we can, for example, add some fake captions to a video or an image to re-conceptualize the content.
+
+[דובר 1] (40:23 - 40:29)
+I see, I see. So it's called a cheatfake because I guess it's cheaper and it's easier to make.
+
+[דובר 5] (40:29 - 40:40)
+You don't need specific AI skills. You don't need powerful computers. You can just use very simple image or video editing tools.
+
+[דובר 1] (40:40 - 40:41)
+Okay, you've got some examples here?
+
+[דובר 5] (40:41 - 40:57)
+Yeah, this is a fake one manipulated recently in the context of some war. Refugees, right? Actually, it's not happening right now.
+
+It's happening in some other events in history. And right now, they just use it again. So you take it out of context.
+
+[דובר 1] (40:58 - 41:03)
+They took this woman who was just lining up in a queue somewhere and they put her against a backdrop which looks like it's at war.
+
+[דובר 5] (41:05 - 41:28)
+Right, to fool people. I see. Yeah.
+
+Others, like during COVID, so this is one video. Actually, the sound behind is fake. So it's just manipulated video.
+
+They add the sound, add the thing along to the original video.
+
+[דובר 1] (41:28 - 41:34)
+And this is something that, yeah, I mean, I could do myself too because it's just basically taking a video, changing the sound.
+
+[דובר 5] (41:35 - 41:43)
+Yeah, you can also add some captions on the video. I even found an example about you. Oh, I remember this.
+
+[דובר 1] (41:44 - 41:52)
+This is me with our current Prime Minister and previous Prime Minister. Supposedly, we were all telling people to invest in something.
+
+[דובר 5] (41:52 - 41:54)
+Yeah, I think you can tell this is fake, right?
+
+[דובר 1] (41:54 - 42:00)
+Yeah, I remember this shot because I've seen this. It's a real show, but former Prime Minister Lee Hsien Loong was not really there.
+
+[דובר 5] (42:01 - 42:10)
+Yeah, right. So this is basically to use some cropping techniques and put one people's image into another image.
+
+[דובר 1] (42:10 - 42:11)
+This would be a cheap fake.
+
+[דובר 5] (42:11 - 42:12)
+Yeah, a cheap fake.
+
+[דובר 1] (42:12 - 42:22)
+But it looks quite real, right? Yeah, yeah, yeah. It looks very convincing.
+
+So when it comes to things like elections in Singapore, we have one coming soon. Are you more concerned about cheap fakes or deep fakes?
+
+[דובר 5] (42:22 - 42:36)
+For me, I think both. Because if you asked me the question two years ago, maybe I'd say cheap fake. But right now, deep fake is becoming more and more easy to make.
+
+So we need to concern both.
+
+[דובר 1] (42:37 - 42:50)
+And as a consumer, actually, sometimes I don't even know whether it's deep fake or cheap fake. It doesn't matter. As long as it can fake me, then it's a problem.
+
+So in the future, I can imagine cheap fakes will get better, right?
+
+[דובר 5] (42:50 - 43:10)
+So people who use cheap fake to make the fake content right now, they have more powerful tools. For example, previously, they used Photoshop to make cheap fake. Right now, Photoshop can integrate more AI technologies, tools inside.
+
+So you can make your previously cheap fake become more deep fake.
+
+[דובר 16] (43:10 - 43:10)
+Right.
+
+[דובר 5] (43:11 - 43:15)
+Make it more realistic. Everybody can try to make the digital clone of yourself.
+
+[דובר 15] (43:22 - 43:33)
+Hi, guys. This is a really special episode of Talking Point. It's likely to be my last.
+
+I'll be making a special announcement at the end of the show. So remember that video you saw of me at the start of the episode?
+
+[דובר 1] (43:33 - 45:29)
+Well, how many of you believed it to be true? Well, if you didn't, then you are right. Because that was actually a deep fake video of me, and it only took me about 20 minutes to make it.
+
+So hey, guys, it's Steven here. You know, I've been thinking about doing a whole bunch of stuff, like picking up different hobbies, maybe learning how to cook some different cuisines. And for those who did believe it, ah, well, don't worry.
+
+I'm not going away anytime soon. I'm going to be right here. That could be good or bad for you.
+
+But you know what? I think I'm going to try sending this video around to a few people to see who might actually believe it. So we had some fun responses there.
+
+But what amazed me the most is that everyone I sent this to was fooled into thinking that I would actually be leaving my job. They all said the video looked and sounded like me, and since I had sent it to them too, they believed it to be true. So it's clear the technology is good enough to deceive people.
+
+But if you're still not quite sure about videos you're getting, I've got a few tips for you. First, look into their eyes. Are they blinking too little or too much?
+
+What about those lips? Are they syncing with everything they say? And take a look at the whole face.
+
+Is there anything that just seems a bit unnatural about it? Because these days, you can't just believe everything you see.

@@ -1,0 +1,114 @@
+[דובר 1] (0:09 - 8:08)
+Hey, imagine waking up to a breaking news video of your country's president declaring war or resigning unexpectedly. The clip looks real, the voice sounds authentic, panic spreads. Then comes the twist.
+
+It's a deepfake, a sophisticated AI-generated hoax. This isn't science fiction or a distant worry. It's part of our political reality today.
+
+In this lecture, we'll explore how these digital forgeries emerge in politics, who is using them and why, and the profound impact they're having on elections, news, and public trust. The term deepfake, a blend of deep learning and fake, first gained notoriety around 2017. For something far from politics, celebrity face swap pornography.
+
+But it didn't take long for this AI-driven manipulation to leap from twirly forums to the world stage. By 2018, the technology had advanced enough to be used creatively in political satire. One famous early example was a video produced by BuzzFeed, where filmmaker Jordan Peele lent his voice and impression of President Barack Obama to a deepfake video of Obama himself.
+
+In this eerie clip, Obama, which is actually Peele, looks into the camera and casually warms about the dangers of fake videos. Although this particular video was meant as a warning and went viral as a public awareness demonstration, it signaled that political figures could now be impersonated on video with AI. If a comedian could do it for education, others could do it for nefarious reasons.
+
+The following year, a video of U.S. House Speaker Nancy Pelosi was deliberately slowed down to make her appear drunk. Technically, this was not a true deepfake but a shallow fake, a simple manipulation. But it had a real effect.
+
+It embarrassed the top politician and fueled misinformation in a heated political feud. The Pelosi incident was a wake-up call. It showed that doctored media can dominate news cycles and damage reputations even when quickly debunked.
+
+If a cheaply edited video could do that, imagine the chaos a convincing AI-generated fake could unleash. Why would someone fabricate a politician's image or voice? Unfortunately, the reasons are numerous.
+
+To begin with, deepfakes can be used by hostile actors to spread falsehoods and create confusion. An honorable case occurred in March 2022, shortly after Russia invaded Ukraine. A video appeared showing Ukrainian President Vladimir Zelensky urging his own troops to surrender.
+
+The deepfake was quickly exposed. It had unnatural facial movements and poor quality, but it still forced Zelensky to publicly deny the message and rally his people. Though the plot failed, it marked a turning point.
+
+In late 2023, another deepfake of Zelensky surfaced, this one far more realistic, again aiming to demoralize Ukrainian forces. Analysts noted the striking improvement in quality over just one year. What began as crude wartime disinformation is quickly evolving into a powerful, high-tech weapon in the battle over truth and a major threat to democracy.
+
+Just days before Slovakia's 2023 election, the deepfake audio recording emerged, falsely portraying Michal Šimečka, the progressive Slovakia's leader and front-running in the polls, conspiring to buy votes and rig the outcome. Released just 48 hours before the actual election, the clip spread rapidly online, leaving little room for fact-checking or rebuttal. Although quickly debunked, the disinformation likely influenced public perception and contributed to Šimečka's defeat and the victory of Robert Fico.
+
+Analysts have pointed to possible Russian involvement, noting that Fico's pre-Kremlin stance opposing military aid to Ukraine and echoing Moscow's narratives make him a far more favorable outcome for Russian interests than the pro-EU, pro-Ukraine Šimečka. A year later, during the 2024 U.S. presidential primary season, voters in New Hampshire got an alarming robocall with a voice identical to President Joe Biden's, telling Democrats not to vote in the upcoming primary elections. Of course, it wasn't really Biden.
+
+It was a deepfake audio designed to suppress turnout. When the person responsible for the video was caught, he claimed he only wanted to raise awareness to the dangers of EIA. Yeah, right.
+
+Deepfakes are also used during elections for character assassination and electoral smear campaigns. In June 2023, Florida Governor Ron DeSantis' team released an attack ad against Donald Trump that featured photos of Trump hugging Dr. Anthony Fauci, images that never actually happened. Experts quickly identified these Trump-Fauci images as AI-generated deepfakes.
+
+The goal? To portray Trump, DeSantis' rival for the Republican presidential nomination, as overly friendly with Fauci, an official that's very unpopular in many conservative circles. By the time fact-checkers caught on, the misleading visual had already spread.
+
+China has also employed AI-generated personas in its information campaigns. In 2023, researchers uncovered pro-China propaganda videos featuring deepfake news anchors dubbed Wolf News, delivering Beijing-friendly messages in fluent English. These avatars appear on social media criticizing the U.S. or praising China's diplomacy. One deepfake even targeted Taiwan's president ahead of an election, mocking her with strange metaphors. Analysts warn these fakes don't need to be perfect, just believable enough to plant doubt. But it's not just foreign agents.
+
+Domestic actors, political operatives, partisans, activists with the country are equally capable of deploying deepfakes. A Belgian climate advocate group in 2020 released a deepfake video of Belgium's prime minister giving a speech that tied COVID-19 to climate change, a speech she never actually gave. Their aim was to jolt the public and politicians into thinking about climate action, an arguably well-intended use of deceit.
+
+It caused an uproar and debate about whether such methods do more harm than good. Until recently, creating deepfakes demanded specialized skills, powerful computers and resources that only Hollywood studios or intelligence agencies could afford. Today, thanks to the advanced AI models and free apps, even kids can produce deepfakes that look disturbingly real.
+
+Fortunately for politics, though not for individuals, most users are more interested in generating pornographic content than toppling governments, rigging elections, inciting violence or justifying war. But the threat is no longer theoretical. It's real and it's everywhere.
+
+For example, in 2025, as Canada and the U.S. were in the midst of a tariff war, American users tried to influence Canadian public opinion by tarnishing the reputation of Canada's prime minister, Mark Carney. One user posted a deepfake video of Carney announcing new draconic vehicle regulations. Take a look.
+
+[דובר 4] (8:09 - 8:42)
+Effective June the 1st, all vehicles manufactured before 2000 will be gradually phased off. Canadian roads, due to safety and emission standards, noncompliant window tints, including rear windows, are now prohibited. Drivers will have a 14 day grace period to install approved replacements.
+
+Lifts and her levels on trucks must be taken off for not only the owner's safety, but for the people around. It doesn't make sense to have a truck jacked in the air. These will be taken very seriously.
+
+[דובר 1] (8:45 - 14:47)
+And this clip was reposted over 4000 times and viewed by 2.4 million people before X finally added a warning that it's entirely fabricated. This begs the question, what happens when we can no longer trust what we see and hear? Deepfakes strike at the very core foundation of democratic society, trust.
+
+A healthy democracy relies on an informed public, citizens who can trust what they read, what they watch, what they listen to, especially about public figures and events. They must believe that it's real. By polluting the information environment, deepfakes corrode that trust in several dangerous ways.
+
+First, they can mislead and confuse voters and citizens, undermining the integrity of elections. As these techniques become more widespread, voters will increasingly face a minefield of falsehoods. Imagine the night before a major election.
+
+A video emerges appearing to show candidate A accepting a bribe or making a racist remark. It goes viral on social media and WhatsApp. By the time it's exposed as a deepfake, election day votes are already cast.
+
+The damage is done. This is a very real scenario that keeps election officials up at night. The FBI, the U.S. Federal Bureau of Investigations, warned that deepfake disinformation could wreak havoc on the coming election, reflecting the high levels of concern among experts. The 2023 Slovakia election was the first documented election that was flipped due to deepfake. It will probably not be the last. Second, deepfakes contribute to a phenomenon we already discussed, known as the liar's dividend, a term coined by law professors Bobby Chesney and Daniel Citron.
+
+The liar's dividend is essentially the flip side of the deepfake problem. Not only can fake content fool people, but the existence of deepfake technology lets real wrongdoing be dismissed as fake. If a compromising video of a politician surfaces, they can exploit public skepticism by claiming that's a deepfake, even if it's real, and avoid any accountability.
+
+The news media tasked with informing the public also suffer a credibility hit. Journalists can get duped by cleverly planted deepfakes. If news outlets broadcast a forgery, their reputation takes a blow.
+
+Conversely, news outlets might have to spend more time vetting and debunking fake videos, chasing false stories rather than covering real ones. Even debunking has a downside. As research suggests, when media heavily cover deepfake scandals, even to refute them, it can reinforce the false message in some viewers' minds or at least leave a residue of doubt.
+
+It's a damned if you do, damned if you don't situation. The next effect is that people's confidence in information erodes. A democracy can survive heated debates between parties and news channels.
+
+What it cannot survive is a collapse in the basic agreement on reality. If no one believes anything, if every piece of media could be dismissed as fake, then how do we make collective decisions based on facts? This is the nightmare scenario deepfakes edge us towards.
+
+An information ecosystem so polluted that truth and lies become nearly indistinguishable. We're already seeing chilling real world impacts. In 2019, Gabon's president, Ali Bongo, had been ill and out of sight for months when a video of him finally appeared, showing him stiff and odd speech.
+
+Rumors flew that this was a deepfake and that Bongo might actually be incapacitated or even dead. Within a week, those rumors helped spur an attempted military coup. Soldiers actually seized the radio station, saying they doubted the president in the video was real.
+
+Whether or not the video was truly a deepfake didn't even matter in the end. The mere possibility that it could be fake fueled a violent power grab. The technology's very existence can be enough to inject uncertainty into a volatile situation.
+
+Fortunately, that coup failed, but it showed how deepfake uncertainty can destabilize governments. Or consider the personal damage. Imagine a fabricated video of a public official in a compromising situation, like having sex with a woman that is not his wife.
+
+Even if proven fake, eventually, that person's reputation could be permanently stained in the eyes of some. Finally, deepfakes strike at something very human and very necessary for democracy, our trust in each other. Democratic societies function when we trust that our fellow citizens, while maybe disagreeing on policy, share a common reality.
+
+Deepfakes create an atmosphere of doubt and cynicism. People might start disbelieving videos of hate crimes or police violence, claiming that's an hoax. Or conversely, they might fall for fake extremist videos and believe the worst about the other side.
+
+This exacerbates polarization. It's hard to have a good fake political debate if half of us are convinced a candidate said something hideous in a fake video and the other half is convinced even a true video of that candidate is fake. The result, a post-truth stalemate where conspiracy theories thrive and rational discourse dies.
+
+Now that deepfake technology has advanced to allow for live manipulation, generating fake audio and video in real time, the threat has grown exponentially. Just watch this.
+
+[דובר 3] (14:48 - 15:00)
+What's being calculated here? This is capturing your face and it's applying a little mesh. And what we're able to do is take that mesh and just replace it with someone else's face.
+
+[דובר 2] (15:01 - 15:23)
+Yeah, wow. Geez, that's scary. Yeah.
+
+Well, that's mimicking everything as I move. Cybersecurity expert Liam O'Shannessy is showing us just how easy it is to turn anyone into a digital avatar of Keanu Reeves. Even more worrying, how easy it is to change a face from man to woman.
+
+[דובר 3] (15:24 - 15:30)
+Now, we're not changing your body, right? So for you, it doesn't look very believable.
+
+[דובר 2] (15:30 - 15:46)
+But that's still terrifying that the whole face has changed. Yeah. It's this artificial intelligence that scammers now use to trick even the most astute people who think they can expose a scammer simply by asking.
+
+For a video call.
+
+[דובר 3] (15:46 - 16:03)
+And this is happening in real time. It's like a live deepfake. Yeah, yeah.
+
+So we can take these sort of streams, stream it to a WhatsApp call, stream it to FaceTime calls. We can also throw in some voice changing technology as well.
+
+[דובר 1] (16:03 - 17:19)
+This means that during a live stream, press conference or video call, a politician's face and voice could be hijacked on the fly, making it nearly impossible for viewers to know what's real. Unlike prerecorded fakes, live deepfakes remove the delay that once allowed for fact checking or debunking, opening the door to instant disinformation with immediate impact. As we confront the growing threat, it's worth underscoring just how vital trust is.
+
+Trust is the glue that bind the social contract between citizens and institutions. It enables us to accept election results, rely on news during a crisis and believe that a president's televised address is real. When that trust erodes, democracy begins to falter.
+
+Deepfakes reminds us that the true strength of democracy lies not only in laws or elections, but in the shared belief in truth and in one another. One of the upcoming videos shows how tech companies and governments are working to push back. But the fight is uphill and far from over.
+
+If we don't step up, we risk of losing this battle. The future of democracy and our own future depends on it.

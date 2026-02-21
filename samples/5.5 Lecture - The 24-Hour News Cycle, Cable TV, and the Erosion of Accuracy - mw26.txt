@@ -1,0 +1,82 @@
+[דובר 1] (0:10 - 15:02)
+Imagine this, you turn on the TV at 8 p.m. and you see a news anchor yelling. Not reporting, not analyzing, yelling. Flip the channel and there's another anchor, just as loud, saying the opposite thing.
+
+How did we get here? This lecture explores the interlocking effects of three key developments. The rise of cable news, the fragmentation of the audience into ideologically homogeneous groups, and the relentless pace of the 24-hour news cycle.
+
+We will trace how these changes degraded journalistic norms, encouraged the spread of misinformation, and reduced trust in traditional media. Let us begin by exploring the emergence and impact of the 24-hour news cycle. For much of the 20th century, television news was broadcast once a day.
+
+This practice, which began in the United States and became the norm across much of the world, viewed television news as a complementary side of the morning newspaper. While people read the newspaper during their first cup of coffee to prepare themselves for the day ahead, the evening news was there to inform them what happened while they were at work. At exactly 6.30 p.m. in the United States or at 9.00 p.m. in Israel, audiences would tune in and catch up on what today's events were. This structure worked well for journalists. They had the entire day to prepare, verify, and carefully edit their news segments before broadcast. Newsrooms focused on accuracy and context.
+
+Live coverage was rare and typically reserved for extraordinary events. The rhythm was deliberate and the standards high. That changed with the launch of CNN in 1980, marking the profound turning point in broadcast journalism.
+
+Ted Turner, CNN's founder, envisioned something revolutionary, a 24-hour news channel that would bring global news and national news to the audience at any time, day or night. His goal was to break free from the mold of scheduled nightly news programs and provide a continuous coverage of unfolding events from politics to international crisis to natural disasters. This innovation was driven not only by journalistic ambition, but also by commercial opportunity.
+
+It meant that news was no longer a single daily summary. Instead, it became an ongoing narrative, always live, always updating, and always demanding fresh content. At first glance, the ability to access news at any time might seem like a blessing for those who want to stay informed, but there's a problem.
+
+The immediacy of content sometimes comes into direct conflict with the principle of accuracy. The concept of accuracy is foundational to journalism. Alongside truth, fairness, credibility, and objectivity, accuracy serves as one of the bedrocks of responsible reporting.
+
+Yet, as scholar Colin Potela argues, the evolving practices driven by the demand of a 24 news hour cycle increasingly place this principle in jeopardy. Today, most countries have multiple TV channels that broadcast news all day long. In the United States, the major ones are CNN, Fox News, and MSNBC.
+
+In Argentina, they include Todo Noticias, La Nación, and C5N. In Israel, it's I24, along with channels 12, 13, and 14, which broadcast news across multiple hours during the morning, afternoon, and evening. This constant flow of news creates an intensely competitive atmosphere.
+
+Networks are not only competing with one another for ratings and prestige, but also with online newspapers, independent digital platforms, and individual journalists who disseminate their news on social media. There is, in short, a growing thirst to be first, and being first often comes at the cost of being right. According to Justin Lewis and Stephen Cushion, the editorial decision to significantly increase the volume of breaking news stories had serious consequences for the quality of journalism.
+
+Breaking news, by its nature, involves lack of clarity, evolving details, and high pressure. There is little time to cross-check sources, verify facts, or provide adequate context. The faster a network wants to broadcast a story, the more corners it may be tempted to cut.
+
+Consider the Southport riots of July 2024. A quiet seaside town in Britain suddenly found itself in the center of a national chaos. Channel 3 Now aired a false report that a Muslim asylum seeker on an MI6 watch list stabbed children in Southport.
+
+The story quickly spread across social media and was amplified by far-right campaigner Tommy Robinson, one of the UK's most prominent anti-Islam voices. Violent protests erupted against immigrants. The unrest left more than 50 police officers injured.
+
+But the report was completely false. Authorities soon clarified that the attacker was a 17-year-old boy born in Cardiff and not an immigrant. Nonetheless, the damage had already been done.
+
+The false narrative had taken root and continued to circulate, highlighting how difficult it is to correct misinformation once it spreads, particularly in a fast-moving media environment. The nature of competition is such that even when one outlet airs a false report, others may follow suit. Seeing that a rival network has already broadcast the story, editors may assume it's legitimate and repeat it without verifying the facts independently.
+
+This kind of repetition can give false claims unwarranted credibility. It's a phenomenon known as the illusionary truth effect. The more people hear a claim, even a false one, the more likely they are to believe it's true.
+
+Meanwhile, the overwhelming flood of updates can exhaust and confuse viewers. When information is constantly changing and little time is spent on verification or context, the audience is left with the impossible task of separating truth from fiction. OK, with this out of the way, let's shift to the second development, the fragmentation of audiences and the rise of partisan echo chambers.
+
+This transformation began quietly, buried in a fine print of the federal regulation. In 1987, the Ronald Reagan-era Federal Communications Commission repealed the Fairness Doctrine, a longstanding rule requiring broadcasters to cover controversial issues in a balanced, honest and equitable manner. At the time, the decision may have seemed minor, a bureaucratic adjustment to a growing media landscape.
+
+But in hindsight, it was the first domino in a series of changes that would fundamentally reshape the news industry. It opened the door to opinion-driven programming and the rise of ideologically polarized media. The reasoning behind the repeal was straightforward.
+
+With the growth of cable TV and the explosion in the number of available channels, it was assumed that audiences would naturally encounter multiple perspectives. Government regulation was no longer necessary. Competition, it was believed, would ensure balance.
+
+But the assumption underestimated both the power of niche media and the human tendency to seek affirmation over challenge, to hear not what is true, but what is comfortable. Cable news emerged at just the right time. CNN's launch in 1980 was followed by Fox News and MSNBC in 1996.
+
+Traditional networks like CBS, NBC and ABC had always sought to appeal to the broadest possible audience. Cable channels, on the other hand, could afford to specialize in a certain audience. And increasingly, they specialized in ideology.
+
+Since the 1990s, Fox News discovered that there was a lucrative market in courting a conservative audience that felt alienated by what it saw on liberal media. MSNBC leaned left, particularly during the Bush and Obama years. CNN, stuck in the middle, struggled to hold on to its identity as a neutral platform, increasingly turning to personality-driven formats to retain viewership.
+
+This segmentation created what scholars called selective exposure. Talia Stroud, in her book, Niche News, shows that people began selecting news sources based not on their credibility or objectivity, but on which one made them feel most validated. Stroud's research finds that audiences increasingly sought out ideologically consistent content, news that reinforced their existing beliefs, while helping them avoid conflicting viewpoints.
+
+What began as a diversity of perspectives evolved into a division of realities. And then, the 24-hour news cycle made things even worse. Unlike the era of Tom Brokaw at NBC, Dan Rather at CBS, and Peter Jennings at ABC, or even Chaim Yevins in Israel's Channel One, anchors who became famous for delivering the news with restraint and clarity, today's cable networks must fill every hour with content, even when there's nothing new to report.
+
+To fill the gaps, they turn to opinion. Panels of pundits, political strategists, and provocateurs dominate the screen, often shouting over each other. The result is a constant stream of commentary disguised as reporting, which burrs the line between journalism and editorializing.
+
+This is an ideal breeding ground for fake news, whether outright fabrication or twisted half-truths. Take, for example, Sean Hannity's persistent promotion of conspiracy theories. For example, Hannity pushed fake stories that Seth Rich, a young staffer at the Democratic National Committee, was murdered in 2016 by Democrats because he leaked internal emails to Wikileaks.
+
+Despite repeated denials by law enforcement, Hannity and others gave the story airtime for weeks, suggesting a cover-up and feeding a narrative designed to damage Hillary Clinton's campaign. On the left, MSNBC's Rachel Meadow came under fire for drawing sweeping conclusions during the Trump-Russia 2020 investigation. While her approach was more cautious than Hannity's, critics argued that she gave her audience the illusion of certainty in a story that was still unfolding.
+
+The deeper issue is that these kinds of partisan narratives thrive in an environment where viewers already assume the other side is lying. Kevin Coe and his co-authors call this hostile media phenomenon, the tendency of people with strong political beliefs to view even neutral reporting as biased against their side. This creates a vicious cycle in which trust erodes further with each passing news cycle.
+
+This isn't just an American story. In Israel, the media landscape has followed a similar path. For decades, Israel's television was dominated by Channel 1, the state-run broadcaster.
+
+It was slow and bureaucratic, but widely trusted. That began to change in the 1990s with the introduction of commercial broadcasting. Channel 2 brought diversity and competition, followed by Channel 10 and eventually Channel 14, a station that openly models itself on Fox News.
+
+Channel 14 brands itself as the people's channel, a voice for right-wing audiences who feel excluded by the traditional media. Its broadcasts frequently blurred the line between journalism and advocacy. Segments questioned the legitimacy of the judiciary, accused civil rights organizations of treason, and suggest conspiracies orchestrated by the Shin Bet or foreign donors.
+
+These narratives, often unchallenged on air, are designed to energize supporters and delegitimize critics. The recent addition of Channel I-24, a 24-7 news network, along with the expansion of political programming on Channels 12, 13, is likely to make things even worse. A similar pattern is visible in Argentina.
+
+There, media polarization is referred to as la grieta, the crack. On one side is La Nacion, a conservative channel with pro-market views. On the other is C5N, which supports the Peronist left.
+
+Between them stands Todo Noticias, attempting to maintain a more centrist, CNN-like position. But the result, again, is the same, fragmented audiences, partisan loyalties, and a shrinking space for shared facts. So why does all this lead to fake news?
+
+Because when news becomes entertainment, facts become secondary. The 24-hour news format demands constant content, instant analysis, and emotional impact. The incentive isn't to get the story right.
+
+It's to get it first, or better yet, to make it loud. Outrage draws viewers. Viewers drive ratings, and ratings generate revenues.
+
+This model favors performers over journalists. Former Fox News anchor Tucker Carlson didn't dominate ratings because of his reporting skills, nor does Inon Magal in Israel. They are compelling performers, as are Keith Oberman for MSNBC or Lior Schlein for Liberal TV.
+
+Today's news is designed not to inform, but to provoke. And in such an environment, the line between misinformation, manipulation, and outright fabrication begins to fade. In sum, the convergence of the 24-hours news cycle and ideologically-driven media has created fertile grounds for the erosion of accuracy and the spread of misinformation.
+
+When speed replaces verification and affirmation replaces truth, fake news is no longer the exception. It becomes inevitable. Until next time.

@@ -1,0 +1,130 @@
+[דובר 2] (0:00 - 0:31)
+You know that feeling when you're scrolling through social media that that sort of endless pull Sometimes it feels okay. Sometimes maybe a bit agitating. Oh, definitely draining sometimes exactly Okay, and get this there's research showing that just like four weeks off Facebook.
+
+It had a happiness boost similar to months of therapy Wow and Even crazier it actually made people less polarized on issues Significantly less so that makes you wonder right? Yeah, what is it about these platforms that gets into our heads so much?
+
+[דובר 1] (0:32 - 1:30)
+Yeah, that's That's the core question, isn't it? And that's exactly what we're digging into today We're doing a deep dive into the ideas from the chaos machine, right? basically looking at how social media platforms are well almost designed in ways that help misinformation spread and Maybe surprisingly why that can actually be profitable profitable.
+
+Okay. Yeah, so our mission here is to kind of unpack the mechanics, you know Why these places are such fertile ground for false stuff getting believed and shared we'll try to keep it clear and not get too tangled up in like super technical jargon good plan and The chaos machine it pulls from a lot of different fields, right? Neuroscience psychology, that's right neuroscience.
+
+So how our brains work cognitive psychology social psychology how we think and act in groups yeah, political science to and Crucially insights from people who actually worked inside Silicon Valley so real insider perspectives to exactly it paints a really Comprehensive picture of what's happening behind the screen.
+
+[דובר 2] (1:31 - 1:39)
+Okay, so let's start with that foundational idea. The book makes a really a Really stark comparison early on it does.
+
+[דובר 1] (1:39 - 1:58)
+Yeah, it compares social media platforms to well to cigarette Okay, the point being just like cigarettes were engineered to be addictive These platforms are also, you know Designed designed to hook us keep us coming back and this is key to shape our behavior for the platform's benefit They're not just neutral town square, right?
+
+[דובר 2] (1:58 - 2:02)
+They have a built-in agenda sort of and the engine driving the algorithm.
+
+[דובר 1] (2:02 - 2:23)
+Yeah deciding what we actually see precisely It's not just a random firehose of posts. These algorithms are like Complex sets of rules they prioritize showing you stuff that they think you'll interact with like comment share And what kind of stuff gets the most interaction? Well research points very strongly to one thing Outrage outrage.
+
+[דובר 2] (2:23 - 2:25)
+Yeah, like just people being angry online.
+
+[דובר 1] (2:25 - 2:49)
+It's a specific kind actually Moral outrage that feeling when you're angry at someone or some group on behalf of your social group because you feel like they've crossed a line Violated some norm. Okay, like defending your team's honor sort of kind of yeah And studies show posts expressing that the platforms tend to boost them give them more visibility Which means more likes more shares more comments.
+
+[דובר 2] (2:49 - 2:54)
+Hmm doesn't exactly sound like a recipe for calm reason debate Not really.
+
+[דובר 1] (2:54 - 3:14)
+No, there was this one study quite revealing. They had people post these Outrageous tweets on a fake platform and even though the engagement numbers were totally fake just inflated by the researchers The people who saw their outrage posts get lots of likes and shares They actually became more likely to post that kind of stuff again, right?
+
+[דובר 2] (3:14 - 3:14)
+It makes sense.
+
+[דובר 1] (3:15 - 3:41)
+But here's the kicker They also reported feeling more underlying outrage themselves even when they were offline Wow, so the platform was actually training their emotions. It looks like it Yeah, it suggests that some of the anger you feel online. It might not be purely organic It could be like a learned response amplified by the platform because it serves their goal, which is engagement Not necessarily your goal of understanding things better.
+
+[דובר 2] (3:41 - 3:55)
+So it's not just what we see It's how it literally shapes how we feel and act even away from the screen. And okay, this is where it gets really fascinating for me The book talks about context right how seeing something on Facebook changes whether we believe it.
+
+[דובר 1] (3:56 - 4:18)
+Absolutely. Yeah, there's the study They mentioned people were shown fake headlines about refugees news, right? When they saw these headlines presented like a standard news article people were pretty decent at spotting They were false.
+
+Uh-huh, but when they showed the exact same fake headlines just embedded in a mock-up of a Facebook news feed People were way more likely to believe them.
+
+[דובר 2] (4:18 - 4:19)
+No way.
+
+[דובר 1] (4:19 - 4:25)
+Just seeing it in Facebook made it think more real Significantly more likely to believe it and even say they'd be willing to share it.
+
+[דובר 2] (4:26 - 4:30)
+That's that's kind of disturbing Why why does the context make such a difference?
+
+[דובר 1] (4:30 - 4:57)
+Well, the thinking is our brains switch gears basically in a social media context. We seem to rely more on social cues What does it look like other people in our network think? Ah, so it's less about the info itself more about the social vibe around it sort of it ties into this idea of common knowledge If something seems like everyone else believes it even if that seeming is just because the algorithm is showing it to you a lot We're more inclined to just accept it like a mental shortcut.
+
+[דובר 2] (4:57 - 4:59)
+Yeah, if it's everywhere, it must be true Exactly.
+
+[דובר 1] (5:00 - 5:05)
+Our brain kind of assumes high visibility equals broad agreement, which probably means it's true
+
+[דובר 2] (5:05 - 5:12)
+It bypasses some of that critical thinking so just the presence of something scrolling past gives it this weird air of credibility
+
+[דובר 1] (5:13 - 5:40)
+Precisely and it's not just passive scrolling Remember these platforms thrive on us doing things posting liking sharing a participation and that participation Creates social feedback you post something people like it you feel validated this loop reinforces the engagement But it can also kind of subtly shift your actual attitudes and beliefs over time The more you engage with certain ideas see others engaging more normal
+
+[דובר 2] (5:40 - 5:53)
+Exactly more normalized even validated in your own head and this presumably is how you get these really tight-knit Sometimes extreme online groups forming the book mentions anti vaccine groups on Facebook as an example
+
+[דובר 1] (5:53 - 6:27)
+Yeah, that's a really stark illustration the platform's recommendation engine, you know, if you like that, you'll love this It's designed to keep you engaged, right? So if someone shows even a slight interest and say Vaccine hesitancy the algorithm might start suggesting more and more extreme content health conspiracies things like that Because that stuff is often really emotionally charged really engaging more engaging than like a dry scientific paper much more So users can get guided down these rabbit holes finding communities built around shared fear or suspicion It creates the sense of shared identity.
+
+[דובר 2] (6:27 - 6:49)
+Maybe a perceived threat and that reinforces the more radical views So more interaction with misinformation Makes the algorithm show it more widely potentially pulling more people in it's a cycle a really worrying feedback loop Yeah, okay left pivot slightly. Why is this profitable? You mentioned that earlier?
+
+How does spreading misinformation actually make money for these companies?
+
+[דובר 1] (6:49 - 7:16)
+Well, it boils down to the fundamental business model attention eyeballs on screens Exactly the longer you spend on the platform scrolling clicking engaging the more ads they can show you as simple as that Right more engagement equals more ad revenue. Uh-huh. And what keeps us engaged?
+
+often, it's the stuff that provokes a strong reaction the shocking the emotional the tribal and unfortunately Misinformation and extreme content often fit that bill perfectly.
+
+[דובר 2] (7:16 - 7:26)
+They're highly engaging So it's not like they have a department of spreading lies, but their core Profit engine maximizing engagement just happens to favor stuff.
+
+[דובר 1] (7:26 - 7:45)
+That's often false or inflammatory That's a good way to put it The algorithm is optimized for engagement full stop if misinformation drives clicks shares and comments more effectively than nuanced truth Well, the algorithm is going to amplify the misinformation It's an unintended or maybe just an accepted consequence of optimizing for engagement above all else, right?
+
+[דובר 2] (7:46 - 8:03)
+The system inadvertently rewards it because it keeps people hooked which is good for the bottom line truth often isn't as sticky, you know Okay, so we've got the platform design the profit motive What about just the basic nature of social media itself what makes it such Such fertile ground for this stuff to take root.
+
+[דובר 1] (8:03 - 8:08)
+There are a few things really all interconnected One big one is that false sense of consensus?
+
+[דובר 2] (8:08 - 8:13)
+We talked about right seeing the algorithms picks and thinking it's what everyone thinks exactly
+
+[דובר 1] (8:13 - 8:29)
+You mistake the curated feed for genuine widespread opinion in your network It gives you a warped view of what people actually believe it's like seeing only the loudest voices in the room Precisely and then there's the way the social context can like short-circuit our critical thinking sometimes
+
+[דובר 2] (8:29 - 8:30)
+How so?
+
+[דובר 1] (8:30 - 9:31)
+well when we're in a social mode our emotional responses can kind of override our analytical brain if Something fits with our group identity or triggers that outrage reflex we discussed We might just accept it without really interrogating it feeling over facts sometime Yeah And remember the training aspect the likes the shares, uh-huh The constant feedback these platforms are constantly subtly training us reinforcing certain expressions certain feelings like outrage like tribalism this Ongoing reinforcement loose can shift our emotional baseline making us more receptive to stuff that hits those emotional buttons Even if it's misleading and then there's just this year Right the amount of information flying around absolutely the fire hose of content filtered through these engagement hungry algorithms It creates this incredibly noisy distorted information environment It's genuinely hard work to sift through it all and figure out what's real Especially when the sensational stuff gets pushed to the top.
+
+[דובר 2] (9:31 - 9:36)
+It's overwhelming the book uses an analogy from Sri Lanka Doesn't it about germs and wind?
+
+[דובר 1] (9:36 - 10:12)
+Yeah, it's a powerful one Hey The idea as one official put it is that maybe the platforms don't create the underlying hatreds or biases those are the germs that might already exist in society, but the platforms act like the wind a Powerful accelerant that spreads those germs much faster and wider than they could travel on their own Well, so they amplify existing problems dramatically, right and the very features meant to boost engagement the likes the shares the algorithmic ranking That's what creates the wind it preferentially blows the engaging stuff Which is often the misinformation or the hateful stuff further and faster than factual nuanced information
+
+[דובר 2] (10:12 - 10:21)
+So wrapping this up thinking about everything we've discussed from the chaos machine What are the main things you think we should really take away from this deep dive?
+
+[דובר 1] (10:22 - 10:54)
+I think the biggest thing is realizing these platforms aren't just passive tools their design taps directly into our psychology Their main aim is maximizing engagement and that drive Unfortunately often ends up amplifying and spreading misinformation, right? It happens through algorithms boosting emotional content through creating these false impressions of what everyone thinks and through this whole gamified chase for likes and shares And all of this can subtly but really powerfully shape what we believe and how we see the world Maybe without us even noticing it's happening.
+
+[דובר 2] (10:54 - 11:20)
+Yeah, it's It's definitely a lot to think about especially how integrated these platforms are in our lives now It leaves you with a pretty big question, doesn't it? You know for you listening knowing how these designs work how they can influence us What can you actually do to be a more critical consumer of information online It's just knowing about this stuff enough or do we need a more? Fundamental shift and how we interact with these platforms in the reality.
+
+They present definitely something to chew on

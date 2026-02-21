@@ -1,0 +1,177 @@
+[דובר 1] (0:01 - 0:49)
+You may never have heard the term synthetic media, more commonly known as deepfakes, but our military, law enforcement, and intelligence agencies certainly have. They are hyper-realistic video and audio recordings that use artificial intelligence and deep learning to create fake content or deepfakes. The U.S. government has grown increasingly concerned about their potential to be used to spread disinformation and commit crimes. That's because the creators of deepfakes have the power to make people say or do anything, at least on our screens. Most Americans have no idea how far the technology has come in just the last four years or the danger, disruption, and opportunities that come with it.
+
+[דובר 3] (0:51 - 0:53)
+The story will continue in a moment.
+
+[דובר 1] (0:56 - 1:31)
+You know, I do all my own stunts, obviously. I also do my own music. This is not Tom Cruise.
+
+It's one of a series of hyper-realistic deepfakes of the movie star that began appearing on the video-sharing app TikTok earlier this year. Hey, what's up, TikTok? For days, people wondered if they were real, and if not, who had created them.
+
+It's important. Finally, a modest 32-year-old Belgian visual effects artist named Kris Umi stepped forward to claim credit.
+
+[דובר 3] (1:32 - 1:46)
+We believe, as long as we're making clear this is a parody, we're not doing anything to harm his image. But after a few videos, we realized, like, this is blowing up. We're getting millions and millions and millions of views.
+
+[דובר 1] (1:46 - 2:18)
+Umi says his work is made easier because he teamed up with a Tom Cruise impersonator, whose voice, gestures and hair are nearly identical to the real McCoy. Umi only deepfakes Cruise's face and stitches that onto the real video and sound of the impersonator. That's where the magic happens.
+
+For technophiles, deep Tom Cruise was a tipping point for deepfakes. Still got it. How do you make this so seamless?
+
+[דובר 3] (2:18 - 2:51)
+It begins with training a deepfake model, of course. I have all the face angles of Tom Cruise, all the expressions, all the emotions. It takes time to create a really good deepfake model.
+
+What do you mean, training the model? How do you train your computer? Training means it's going to analyze all the images of Tom Cruise, all his expressions, compared to my impersonator.
+
+So the computer is going to teach itself. When my impersonator is smiling, I'm going to recreate Tom Cruise smiling. And that's how you train it.
+
+[דובר 1] (2:51 - 3:12)
+Using video from the CBS News archives, Chris Umi was able to train his computer to learn every aspect of my face and wipe away the decades. This is how I looked 30 years ago. He can even remove my mustache.
+
+The possibilities are endless and a little frightening.
+
+[דובר 3] (3:13 - 3:31)
+I see a lot of mistakes in my work, but I don't mind it, actually, because I don't want to fool people. I just want to show them what's possible. You don't want to fool people?
+
+No, I want to entertain people. I want to raise awareness and I want to show where it's all going.
+
+[דובר 2] (3:31 - 3:44)
+It is, without a doubt, one of the most important revolutions in the future of human communication and perception. I would say it's analogous to the birth of the Internet.
+
+[דובר 1] (3:45 - 4:08)
+Political scientist and technology consultant Nina Schick wrote one of the first books on deep fakes. She first came across them four years ago when she was advising European politicians on Russia's use of disinformation and social media to interfere in democratic elections. What was your reaction when you first realized this was possible and was going on?
+
+[דובר 2] (4:09 - 4:31)
+Well, given that I was coming at it from the perspective of disinformation and manipulation in the context of elections, the fact that AI can now be used to make images and video that are fake, that look hyper-realistic, I thought, well, from a disinformation perspective, this is a game changer.
+
+[דובר 1] (4:31 - 5:15)
+So far, there's no evidence deep fakes have changed the game in a U.S. election. But, earlier this year, the FBI put out a notification warning that Russian and Chinese actors are using synthetic profile images, creating deepfake journalists and media personalities to spread anti-American propaganda on social media. So, how do you get deepfakes?
+
+The U.S. military, law enforcement and intelligence agencies have kept a wary eye on deepfakes for years. At this 2019 hearing, Senator Ben Sasse of Nebraska asked if the U.S. is prepared for the onslaught of disinformation, fakery and fraud.
+
+[דובר 6] (5:15 - 5:26)
+When you think about the catastrophic potential to public trust and to markets that could come from deepfake attacks, are we organized in a way that we could possibly respond fast enough?
+
+[דובר 7] (5:26 - 5:37)
+We clearly need to be more agile. It poses a major threat to the United States and something that the intelligence community needs to be restructured to address.
+
+[דובר 1] (5:38 - 6:14)
+Since then, technology has continued moving at an exponential pace, while U.S. policy has not. Efforts by the government and big tech to detect synthetic media are competing with a community of deepfake artists who share their latest creations and techniques online. Like the internet, the first place deepfake technology took off was in pornography.
+
+The sad fact is the majority of deepfakes today consist of women's faces, mostly celebrities, superimposed onto pornographic videos.
+
+[דובר 2] (6:14 - 6:25)
+The first use case in pornography is just a harbinger of how deepfakes can be used maliciously in many different contexts, which are now starting to arise.
+
+[דובר 1] (6:25 - 6:26)
+And they're getting better all the time?
+
+[דובר 2] (6:26 - 6:54)
+Yes. The incredible thing about deepfakes and synthetic media is the pace of acceleration when it comes to the technology. And by five to seven years, we are basically looking at a trajectory where any single creator, so a YouTuber, a TikToker, will be able to create the same level of visual effects that is only accessible to the most well-resourced Hollywood studio today.
+
+[דובר 1] (6:54 - 7:13)
+The technology behind deepfakes is artificial intelligence, which mimics the way humans learn. In 2014, researchers for the first time used computers to create realistic-looking faces using something called Generative Adversarial Networks, or GANs.
+
+[דובר 2] (7:14 - 7:37)
+So you set up an adversarial game where you have two AIs combating each other to try and create the best fake synthetic content. And as these two networks combat each other, one trying to generate the best image, the other trying to detect where it could be better, you basically end up with an output that is increasingly improving all the time.
+
+[דובר 1] (7:38 - 7:47)
+Schick says the power of Generative Adversarial Networks is on full display at a website called thispersondoesnotexist.com.
+
+[דובר 2] (7:47 - 7:54)
+Every time you refresh the page, there's a new image of a person who does not exist.
+
+[דובר 1] (7:54 - 8:03)
+Each is a one-of-a-kind, entirely AI-generated image of a human being who never has and never will walk this Earth.
+
+[דובר 2] (8:03 - 8:21)
+You can see every pore on their face. You can see every hair on their head. But now imagine that technology being expanded out not only to human faces, instill images, but also to video, to audio synthesis of people's voices.
+
+And that's really where we're heading right now.
+
+[דובר 8] (8:21 - 8:23)
+This is mind-blowing.
+
+[דובר 2] (8:23 - 8:23)
+Yes.
+
+[דובר 8] (8:24 - 8:26)
+What's the positive side of this?
+
+[דובר 2] (8:27 - 8:43)
+The technology itself is neutral. So just as bad actors are, without a doubt, going to be using deepfakes, it is also going to be used by good actors. So first of all, I would say that there is a very compelling case to be made for the commercial use of deepfakes.
+
+[דובר 1] (8:43 - 8:56)
+Victor Ripparbelli is CEO and co-founder of Synthesia, based in London, one of dozens of companies using deepfake technology to transform video and audio productions.
+
+[דובר 4] (8:56 - 9:13)
+The way Synthesia works is that we've essentially replaced cameras with code. And once you're working with software, you do a lot of things that you wouldn't be able to do with a normal camera. We're still very early, but this is going to be a fundamental change in how we create media.
+
+[דובר 6] (9:13 - 9:16)
+This video was, of course, generated by Synthesia.
+
+[דובר 1] (9:17 - 9:48)
+Synthesia makes and sells digital avatars using the faces of paid actors to deliver personalized messages in 64 languages and allows corporate CEOs to address employees overseas. Synthesia has also helped entertainers like Snoop Dogg go forth and multiply. This elaborate TV commercial for European food delivery service Just Eat cost a fortune.
+
+[דובר 4] (9:49 - 10:10)
+Just Eat has a subsidiary in Australia, which is called Menulog. So what we did with our technology was we switched out the word Just Eat for Menulog. And all of a sudden, they had a localized version for the Australian market without Snoop Dogg having to do anything.
+
+[דובר 1] (10:11 - 10:13)
+So he makes twice the money, huh?
+
+[דובר 4] (10:13 - 10:13)
+Yeah.
+
+[דובר 1] (10:15 - 11:11)
+All it took was eight minutes of me reading a script on camera for Synthesia to create my synthetic talking head, complete with my gestures, head and mouth movements. Another company, Descript, used AI to create a synthetic version of my voice. This is Bill Whitaker's synthetic voice with my cadence, tenor, and syncopation.
+
+This is the result. The words you're hearing were never spoken by the real Bill into a microphone or to a camera. He merely typed the words into a computer and they come out of my mouth.
+
+It may look and sound a little rough around the edges right now, but as the technology improves, the possibilities of spinning words and images out of thin air are endless. Wow. And the head, the eyebrows, the mouth, the way it moves.
+
+[דובר 4] (11:11 - 11:12)
+It's all synthetic.
+
+[דובר 1] (11:12 - 11:20)
+I could be lounging at the beach and say, folks, you know, I'm not going to come in today, but you can use my avatar to do the work.
+
+[דובר 4] (11:20 - 11:21)
+Maybe in a few years.
+
+[דובר 1] (11:21 - 11:23)
+Don't tell me that. I'd be tempted.
+
+[דובר 4] (11:23 - 11:25)
+I think it'll have a big impact.
+
+[דובר 1] (11:25 - 11:51)
+The rapid advances in synthetic media have caused a virtual gold rush. Tom Graham, a London-based lawyer who made his fortune in cryptocurrency, recently started a company called Metaphysic with none other than Chris Umi, creator of Deep Tom Cruise. Their goal?
+
+Develop software to allow anyone to create Hollywood-caliber movies without lights, cameras, or even actors.
+
+[דובר 5] (11:51 - 12:01)
+As the hardware scales and as the models become more efficient, we can scale up the size of that model to be an entire Tom Cruise body movement and everything.
+
+[דובר 1] (12:01 - 12:05)
+Well, talk about disruptive. I mean, are you going to put actors out of jobs?
+
+[דובר 5] (12:06 - 12:23)
+I think that it's a great thing if you're a well-known actor today, because you may be able to let somebody collect data for you to create a version of yourself in the future where you could be acting in movies after you have deceased, or you could be the director directing your younger self in a movie or something like that.
+
+[דובר 1] (12:23 - 12:48)
+If you are wondering how all of this is legal, most deep fakes are considered protected free speech. Attempts at legislation are all over the map. In New York, commercial use of a performer's synthetic likeness without consent is banned for 40 years after their death.
+
+California and Texas prohibit deceptive political deep fakes in the lead up to an election.
+
+[דובר 2] (12:49 - 12:54)
+There are so many ethical, philosophical gray zones here that we really need to think about.
+
+[דובר 1] (12:54 - 12:58)
+So how do we as a society grapple with this?
+
+[דובר 2] (12:58 - 13:23)
+Just understanding what's going on, because a lot of people still don't know what a deep fake is, what synthetic media is, that this is now possible. The counter to that is how do we inoculate ourselves and understand that this kind of content is coming and exists without being completely cynical, right? How do we do it without losing trust in all authentic media?
+
+[דובר 1] (13:25 - 13:35)
+That's going to require all of us to figure out how to maneuver in a world that we're seeing is not always believing.

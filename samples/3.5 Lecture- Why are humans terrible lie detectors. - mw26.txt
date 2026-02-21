@@ -1,0 +1,64 @@
+[דובר 1] (0:09 - 13:19)
+Hey, welcome back. In this segment, I would like us to tackle a question that has plagued humanity for centuries. Why are we so bad at detecting lies?
+
+It turns out there's a whole host of reasons, and they're more complex than you might think. Some of these reasons have to do with the liars themselves, and some have to do with the people who are trying to detect these liars. Towards the end, we'll also explore why it is so much difficult to detect when politicians lie.
+
+Let us begin with ourselves. It appears that sometimes we're simply not motivated to uncover the truth, because we may be uncomfortable with what we'll find. This reason is called motivated reasoning.
+
+Motivated reasoning is a cognitive bias in which people interpret information in a way that aligns with their pre-existing beliefs, desires, or emotions, rather than objectively seeking the truth. This bias often appears as confirmation bias, where people seek out information that reinforces their beliefs while ignoring opposing evidence. So, for instance, when Argentinian President Javier Mille said in 2025 that the economy was doing much better, his supporters could focus on the declining inflation and at the same time ignore the rise in child poverty or unemployment.
+
+Similarly, this confirmation bias makes them overly critical of conflicting viewpoints, searching for flaws rather than evidence that challenges their views rather than engaging with the argument. Moreover, when beliefs are tied to identity, whether political, religious, or cultural, identity-protective cognition makes accepting contrary evidence feel like a personal threat. Emotions like fear, pride, or anger further cloud judgment, making people cling to comforting falsehoods rather than unsettling truths.
+
+A classic example of motivated reasoning is how many meat-eaters consciously or unconsciously avoid information about the treatment of animals in the meat industry. People who enjoy eating meat, like myself, often recognize, at least at some level, that factory farming involves cruelty to animals. However, fully confronting the reality of how animals are raised and slaughtered could create a psychological discomfort that arises when one's actions conflict with one's values.
+
+To resolve this, people may tell themselves that animals don't suffer as much as activists claim or rationalize that eating meat is natural or necessary. Some may deliberately steer off documentaries, undercover investigations, or articles exposing the industry, not because they don't believe the information is true, but because knowing too much would make it harder to enjoy meat without guilt. Beyond our motivation, the very act of detecting lies is an uphill battle due to several inherent cognitive errors and biases.
+
+Let's go over them, starting with the illusion of transparency. We are all overconfident in our ability to spot a lie. It may derive from our experiences or training, such as being an accountant or lawyer or even a parent, but we think that we are pretty good at it while research shows that we are all bad at it.
+
+As you can see in this figure, no profession or group performs much better than chance at detecting when a child lies and when he tells the truth. We are also victims of the just world fallacy explanation. We like to believe the world is fair, which can lead to an assumption that people get what they deserve.
+
+This may explain why in Israel it is common for non-religious criminals to put on a yarmulke immediately after being arrested, in the hope that we will think they are good people and trust them more, because if we'll see them as bad people, we may not believe them, even when they tell the truth. Our belief in a just world makes us eager to assign trust or suspicion based on superficial cues, but this instinct is easily manipulated. Similarly, when it comes to detecting lies, we often rely on lie detection stereotypes, and imagine giveaways like Pinocchio's nose, even though no single behavior reliably reveals deception.
+
+While certain behavioral, speech or physiological changes may occur more frequently when someone is lying, they are not unique to deception, and different individuals exhibit different signs depending on the context. For example, one person might blink more or touch their nose when lying, but that alone doesn't confirm dishonesty. These lie detection stereotypes derive from the assumption that when people lie, they exhibit an emotional leakage, what poker players call a tell, such as twitching of the mouth, a raised eyebrow, someone avoiding eye contact, but these tells are highly unreliable within and across different cultures.
+
+In fact, those aware of those stereotypes, such as con artists or politicians, might deliberately overcompensate by smiling, maintaining steady eye contact, or speaking smoothly to appear more truthful. While research suggests that suppressing nonverbal cues like hand movements might be difficult, liars can learn to manipulate physiological responses, even in polygraph tests, or craft seemingly truthful stories that align with verbal assessment tools. Similarly, while there is some truth in the cognitive load misconception, the idea that lying requires more mental effort than telling the truth, skilled liars can prepare the stories in advance, reducing their cognitive load.
+
+Observers may misjudge a well-rehearsed liar as truthful because they appear composed, while they may wrongly suspect an honest person struggling to recall details. Even when differences exist between truth-tellers and liars, they are often incredibly subtle. Let us watch a short clip from the series Lie to Me, where the protagonist shows his talent at spotting these emotional leaks or cues of hidden emotions, often called micro-expressions.
+
+The problem is that reality is far more complex than the television series, and that most people, including police officers, are not very good at spotting these expressions that may last only a fraction of a second. Additionally, even if we do spot some movement or behavior, most of us lack the skill to interpret them. When the US president said recently during a press conference that he will lower taxes and his pupils shrank, did he lie or was it because of the cameras flashing in front of him?
+
+It's hard to tell. Catching lies is also challenging because sometimes skillful liars frequently weave their falsehoods into a mostly truthful narrative, a strategy known as embedded deception. Instead of fabricating an entire story, they might alter a few crucial details within an otherwise accurate account.
+
+For example, the minister of education may report on a student's score improvement and give himself the credit while omitting that the exam took place just before he took office, meaning the credit should go to her predecessor. This makes detection challenging because the statement might contain many genuine details and just a single little lie. Even when trying our best, we often fall victim to common errors in judgment.
+
+To begin with, we suffer from a truth bias or a veracity bias. Most people tend to believe that others are telling the truth by default. This bias exists because communication is essential for cooperation and assuming truthfulness is more efficient than assuming deception.
+
+Constant suspicion would make daily interactions impractical and very stressful. Another error, called the Othello error, occurs when signs of nervousness in truth-tellers are wrongly perceived as indicators of deception. Anxiety doesn't necessarily mean guilt.
+
+An innocent person may simply be distressed by the fear of being wrongly accused. Shakespeare's Othello exemplifies this phenomenon, as the protagonist misreads Desdemona's emotional distress as proof of her infidelity when she was actually loyal to Othello. Just as people differ from each other, the same person might behave differently in different situations.
+
+But we tend to overlook situational changes. For example, imagine your husband comes home two hours late, blaming bad traffic. At first, he's cool about it, but when you begin asking simple questions like, Really?
+
+Which road? He starts to feel he is being interrogated at a police station. It's easy to think that he's lying because he's nervous.
+
+But most of the time, he's just panicking because he knows one wrong word could land him on the sofa for the next week. Relatedly, we're more likely to believe our partners due to a relational truth bias, a tendency to trust those persons close to us. This makes us less suspicious or more likely to overlook lies, which helps explain why cheating partners often go undetected.
+
+Even when something feels wrong, we prefer to believe them rather than face betrayal. Finally, the anchoring heuristic means our initial impression can overly influence subsequent judgments. Judging someone's honesty based on their attractiveness, their posture, or their voice can lead us astray.
+
+Let's end by talking about politicians. Like actors and spies, politicians lie constantly. It's part of their job.
+
+As the saying goes, how do you know a politician is lying? His lips are moving. During campaigns, they make promises they know they cannot keep, but because their success depends on winning trust, only the best liars survive.
+
+Over time, we are left with those who sound convincing whether or not they are telling the truth. While the challenges we'll discuss aren't unique to politicians, their nature, work, and our relationship with them make lie detection especially tricky. To begin with, these skillful politician actors deceive us because they are natural performers, exhibiting behaviors associated with honesty and likability, such as direct eye contact, gaze, smiling, and open body language, even when lying.
+
+Moreover, like skillful liars, they plan their stories and lies in advance, making them more plausible and easier to recall. In addition, politicians deliver emotional persuasive stories, and even when these are false, we are more likely to believe them. Research shows that lies wrapped inside emotionally compelling stories bypass critical reasoning, making them harder to detect.
+
+Con artists and politicians tend to have some additional skills that make it harder for us to detect them when they are lying. They are eloquent, rapid, and original thinkers who are used to talk for a living. They can manipulate language, offering evasive but convincing responses even when they tell a lie.
+
+Moreover, they tend to speak in general, often vague terms, and just like their Burnham effect in astrology, people interpret vague or general statements as personally meaningful, gaining people's trust by seeming insightful even when they are deceptive. In addition, these individuals have a thick skin, or in other words, they are emotionally detached. Good liars might not experience strong feelings of guilt, fear, or duping delight, meaning there are fewer emotional cues to suppress.
+
+They might even be able to convince themselves of their lies due to a strong imagination. Finally, we fall victim to politicians for two additional reasons. The first is the authority bias, our tendency to trust and believe statements from authority figures or perceived experts even when what they say is false.
+
+The second is familiarity heuristic, the tendency to believe people simply because they are familiar to us or seem trustworthy regardless of whether their information is actually true. So, there you have it, a multitude of reasons why we, as humans, are far from perfect lie detectors. Understanding these pitfalls is the first step towards becoming more discerning, though perhaps not perfect, truth detectors.
+
+Thank you for tuning in.

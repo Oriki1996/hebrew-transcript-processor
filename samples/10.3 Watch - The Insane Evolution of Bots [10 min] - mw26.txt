@@ -1,0 +1,48 @@
+[דובר 1] (0:00 - 10:30)
+What do pop icon Taylor Swift, Israeli Prime Minister Benjamin Netanyahu, and tech mogul Michael Dell have in common? Although never fully proven, they have all been accused of inflating online metrics to boost their popularity and influence. In our digital age, clicks, likes, and views have become the currency of the internet.
+
+They decide what's hot and what is not. But how much of this is real? According to the 2024 Bad Bot Report, only 50.3% of all internet activity comes from humans, and the rest are bots. At this very moment, digital operations all over the world are manipulating metrics that determine the videos you watch, the products you buy, the opinions you form, and the people you vote for. This is the evolution of click farms. It's the early 2000s.
+
+We survived the Y2K glitch, and the internet has transformed from a niche technology to a global phenomenon. Cybercafes can be found on every corner, and the sound of dial-up modems have become the background score of a new digital era. The first social media platforms such as Friendster and MySpace emerge, and millions of people are connected like never before.
+
+The World Wide Web is turning into a giant marketplace of ideas and interactions. A new social structure is forming, where online popularity and visibility are now desired assets. With this new territory came the gold rush of digital advertising.
+
+Marketers, eager to capitalize on this uncharted territory, invest heavily in online ads, and pay for each click they receive. But as the stakes of online presence skyrocketed, so did the temptation to cheat the system. This pay-per-click model laid the groundwork for what we know today as click farms.
+
+The early click farms are rudimentary. They consisted of people behind computers manually clicking ads, filling out forms, and reacting to content to artificially inflate engagement. Each click translated into revenue and misled advertisers about the true effectiveness of their campaigns, which cost them millions of dollars.
+
+As the digital age advanced into the mid-2000s, click farms experienced a significant transformation from their manual rudimentary beginnings. During this period, scripting technologies like JavaScript, which had already been enhancing web interaction since the mid-90s, evolved significantly. Now, these scripts could handle much more complex tasks.
+
+For example, they could automate the process of logging into accounts, navigate pages, and click ads. Advertisers and social media platforms struggled to distinguish genuine consumer interactions from those manufactured by bots. In response, they implemented countermeasures such as algorithms to detect unnatural behavior and capshots to verify user authenticity.
+
+The online cat-and-mouse game had truly begun. By the late 2000s, the digital landscape underwent perhaps the most significant transformation so far. The introduction of the iPhone in 2007 catalyzed the mobile internet revolution and contributed to an exponential increase in online accessibility.
+
+In August 2008, Facebook had reached 100 million active users, but by July 2010, it had exploded to 500 million. The rapid expansion of internet users now numbered in the billions globally and set the stage for even more sophisticated forms of digital manipulation. Click farms could now also make use of mobile phones and take advantage of diverse IP addresses through cellular networks.
+
+This also enabled easy management of multiple accounts via SIM cards, crucial for evading the ever-evolving detection systems and to verify accounts on different social media platforms. Their cost-effectiveness and portability also provided great scalability. This marked the beginning of the mass creation of fake profiles and the generation of automated likes, shares, and basic comments.
+
+During this period, academic attention began to focus on understanding and exposing these manipulative practices. One notable example was the Trophy Project at Indiana University. Initiated in 2010, this project aimed to study how information spreads on social media and to identify the use of automated bots that could influence political discourse.
+
+It is safe to say that click farms were now a global phenomenon and influenced not only commercial advertising, but also political narratives and public sentiment. As we moved into the mid and late 2010s, click farms entered an era characterized by the integration of AI and machine learning. Natural language processing revolutionized click farms and elevated them from automated clickers to sophisticated manipulators.
+
+This technology, similar to what powers ChatGPT, enables bots to analyze content and craft contextually relevant comments that closely mimic genuine users. For example, during election cycles, AI-driven bots can flood social media with targeted propaganda and significantly sway public sentiment and influence voter behavior. An example of such an operation is Team Jorge, a covert unit that specializes in hacking and disinformation.
+
+This group is led by Tel Hanan, a former Israeli Special Forces operative. The group is said to have influenced over 33 presidential elections and claims to be successful in 27 of them. Team Jorge uses software called AIMS, short for Advanced Impact Media Solutions, to control an army of more than 30,000 bots, which weaponize social media to spread propaganda and disinformation.
+
+This tool was specifically built to create and manage fake online profiles that participate in social media discussions and shape public discourse. This era also saw the introduction of cell hashers, which again significantly improved the scalability of click farms. Cell hashers allow click farm operators to control vast arrays of devices simultaneously.
+
+It connects a bank of smartphones or tablets to a central system that commands all devices at once. Cell hashers can be used for crypto mining, but also allows tasks like swiping, clicking, typing, and starting and stopping videos. The devices are all programmed to mimic human behavior and include features such as random delays between actions, scrolling patterns, and varied interaction times.
+
+Over the years, there have been many journalistic investigations into click farms. In 2017, Tim Blanchard published an article where he suspected that a playlist on Spotify promoting Taylor Swift's album Reputation might have been part of his scheme to inflate streaming counts. This playlist was named TS6 Promo and contained 228 songs, many of which were duplicates of just four tracks on the album.
+
+It had over 13,000 followers, a suspiciously high number given its repetitive content. Blanchard noted that the username TS6 Promo itself raised suspicion and hinted at a purpose-built account for metrics manipulation rather than a genuine fan creation. A year later, the New York Times exposed a covert global market for social media fraud, where celebrities, athletes, and politicians purchased fake followers to appear more popular online.
+
+The company DaVumi had sold over 200 million fake Twitter followers and had to settle for $2.5 million with the Federal Trade Commission for the sale of misleading social media influence indicators. Today, the cost of click fraud alone is estimated to be around $100 billion globally and is expected to grow to $172 billion by 2028, not to mention the damage it causes by influencing people's purchases, opinions, and voting behaviors. Despite regular crackdowns on click farms, the industry persists.
+
+The geographic diversity of operations make them particularly challenging to combat as they are often located in jurisdictions with lax enforcement or where legal loopholes allow them to operate relatively undisturbed. Interestingly, not everyone involved in click fraud hides in the shadows. Rapper Chet Focus openly admits to using these schemes to boost his popularity.
+
+This openness extends to platforms like YouTube, where influencers sometimes provide tutorials on setting up personal click farms. Cell hashers and old phones are readily available for purchase and make it very easy for people to set up shop from the comfort of their own home. Furthermore, a simple Google search reveals numerous websites where you can buy likes, followers, and even custom comments.
+
+These websites boast large followings and positive reviews. Ironically, the very metrics they are hired to inflate. Fraud detection systems are becoming more and more sophisticated, but so is the technology that's fooling the system.
+
+Add deepfakes, voice cloning, and AI-generated video in the mix and we are starting to have a real problem. That's why I'm very curious to see where this online cat and mouse game is going. For now, please like and subscribe if you enjoyed the video and I really hope to see you in the next one.

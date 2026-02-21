@@ -1,0 +1,73 @@
+(0:08 - 0:30)
+Hey, welcome back to Politics, Lies and Misinformation. Since honesty is vital to all human interactions and is a bedrock of any society, there has been relentless human quest to separate truth from deception. From the philosophers of ancient Greece to the emerging sciences of the 19th century, people wanted to find ways to tell when someone is lying.
+
+(0:30 - 0:43)
+In this lecture, we will explore the early quest to detect lies. Our story begins in ancient Greece. The great philosopher Aristotle believed that liars betrayed themselves through their words and behaviors.
+
+(0:43 - 1:02)
+You observe that deception often came with hesitation, excessive details or nervous mannerisms. But the Greeks weren't just theorists, they had practical ways of exposing liars. In Athens, public oaths were taken in court, often invoking the wrath of the gods if one spoke falsely.
+
+(1:03 - 1:18)
+The Greeks believed that a guilty conscience revealed itself in subtle ways, sometimes even through divine punishment. But they weren't alone in their quest to expose deception. The ancient Chinese had their own method, the rice test.
+
+(1:19 - 1:38)
+Suspected liars were asked to fill their mouths with dry rice and then spit it out. The idea was that a liar, made anxious by guilt, would have a dry mouth and because of that fail to spit all the rice out. While we now know that anxiety can affect saliva production, it wasn't exactly foolproof.
+
+(1:39 - 1:52)
+As civilizations evolved, so did their techniques, sometimes taking on brutal forms. During the Middle Ages, lie detection became a matter of life and death. Trial by ordeal was a common practice in Europe.
+
+(1:52 - 2:07)
+One of the most infamous methods was the ordeal of boiling water. A suspect had to plunge their hand into the cauldron of scalding liquid. If they healed quickly, it meant God was protecting them and they were deemed truthful.
+
+(2:07 - 2:29)
+If not, guilt was assumed. Of course, this had little to do with deception and more to do with pure chance and resistance. A similar approach was used by ethnic people in West Africa, where accused individuals drank a poisonous concoction made of calabar beans, known also as Fesos Tigma Venomosum.
+
+(2:30 - 2:47)
+If they survived, they were innocent. While these methods were terrifying, they were deeply rooted in the belief that supernatural forces would protect the truthful and punish the deceitful. Another horrifying method was trial by fire and water, famously used in witch hunts.
+
+(2:48 - 3:14)
+In medieval Europe, suspected witches or liars were sometimes burned at the stake, based on the belief that fire would only consume the guilty while the innocent would be spared by divine intervention. Similarly, the infamous swimming test was used particularly during the European witch trials. Accused individuals, mostly women, were submerged into a body of water using a device like the duckling stool.
+
+(3:15 - 3:32)
+If they lived, they were deemed guilty and often executed. If they drowned, they were presumed innocent, though often at the cost of their lives. These brutal trials reflected the desperate human need to uncover lies, even at the expense of logic and justice.
+
+(3:33 - 3:43)
+Let us watch a funny example of this twisted logic. I hope you enjoyed it. By the Renaissance, the idea of detecting lies through physical signs gained popularity.
+
+(3:44 - 4:03)
+The Italian philosopher Gian Battista della Porta suggested in the 16th century that facial expressions and body language reveal deception. He noted that liars often avoided eye contact, fidgeted, or showed signs of discomfort. This concept laid the groundwork for later theories on nonverbal communication.
+
+(4:04 - 4:34)
+A century later, British physician John Bulwer, a pioneer in body and gesture communication, and the first person to suggest deaf people should be taught to communicate with hand gestures, examined how emotions were expressed through facial muscles. His studies reinforced the idea that the face could betray a liar. One of the earliest written works about lie detection came from an unexpected source, Daniel Defoe, the very author who wrote Robeson Crusoe.
+
+(4:35 - 4:57)
+In 1730, he wrote An Affectual Scheme for the Immediate Preventing of Street Robberies, in which he suggested monitoring physiological responses like the pulse rate to detect lies. Though it was speculative at the time, his ideas foreshadowed later scientific developments. The 19th century was an era of discovery.
+
+(4:58 - 5:27)
+As psychology emerged as a formal field, scientists turned their attention to deception. In 1872, Charles Darwin published The Expressions of the Emotions in Man and Animals, arguing that emotional expressions, including those related to lying, were universal across all cultures. Around the same time, French psychologist Charles Samson Ferre made contributions to the study of deception through his work on physiological responses.
+
+(5:27 - 5:54)
+He found that emotional states, including lying, could influence involuntary physical reactions, like changes in the hand strength. His research further suggested that deception might be measurable through bodily changes. One of the founding fathers of the field of criminology, Italian scientist Cesare Lombroso, attempted to link physical traits to criminal behavior, including deception.
+
+(5:55 - 6:17)
+He believed that humans' facial features could reveal if they are criminals. Though his ideas were largely discredited, they reflected a growing belief that science could uncover truth. In 1895, Italian physician Angelo Mosso conducted experiments measuring changes in blood pressure and breathing when subjects lied.
+
+(6:17 - 6:44)
+He noticed that heartbeats changed during thinking, suggesting that more blood flows to the brain during mental activity. To study this without surgery, Mosso created the Human Circulation Balance, a device that measured how blood moved through the body during emotions and thinking. This was the first ever brain imaging technique and paved the way for modern methods like the fMRI and PET scans.
+
+(6:44 - 7:34)
+His work was one of the earliest scientific attempts to detect deception, paving the way for the modern polygraph. Just about the same time, German doctor Georg Sticker first discovered that electrical conductivity of the skin could be used to determine if someone was lying or telling the truth. He was the first person to discover that when people who have to lie may experience an intense emotional state which activates the body's autonomic nervous system, increasing sweat production. 
+
+This change in sweat levels affects skin conductance, making it more electrically conductive, and this conductivity can be measured. Further progress came in the early 20th century. Austrian psychologist Vittorio Benussi studied the impact of lying on respiration.
+
+(7:34 - 8:01)
+He discovered that when people lied, their breathing patterns changed, an insight that would later influence polygraph technology. German-American psychologist Hugo Mustenberg, one of the pioneers of applied psychology, advocated for the use of psychological science in legal settings. In his 1908 book On the Witness Stand, he suggested that deception could be detected through observation of mental and psychological responses.
+
+(8:02 - 8:53)
+At the same time, he described how police forced false confessions by making prisoners miserable and terrifying them, arguing that this method fails to reveal the truth, leading to false accusations, fake confessions, and invented crimes. One last contribution that would become essential to the development of the lie detector was made by psychology professor Walter Summers, who applied Sticker's findings and created in the cycle galvanometer, a device that measures changes in skin conductance, also called galvanic skin response, which reflects variations in sweat glands activity due to emotional or psychological arousal, such as when someone is trying to deceive you. Now that we understand its origins, we are ready for the appearance of the polygraph, or as it is more commonly known, the lie detector.
+
+(8:54 - 9:39)
+As we shall see in the next segment, the period from the 1920s to the 1950s was the most crucial for both the technological advancement of the polygraph and its widespread adoption by law enforcement and legal systems. You'll get to know William Marston and John Larson, who in the 1920s developed the first polygraphs, which measured blood pressure, pulse, and respiration to detect deception, and Leonard Keillor, who a decade later refined the device by adding galvanic skin response, making it more reliable and portable. But in the 1940s and 1950s, the polygraph had become a widely used investigative tool with law enforcement agencies and military organizations integrating it into their interrogation techniques.
+
+(9:39 - 9:54)
+However, as you'll see in the documentary to follow, during this time, courts began debating its admissibility as evidence, setting the stage for ongoing discussions about its reliability and ethical implications. See you later.

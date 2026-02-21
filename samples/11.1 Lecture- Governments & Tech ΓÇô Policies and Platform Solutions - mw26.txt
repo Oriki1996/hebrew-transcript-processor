@@ -1,0 +1,96 @@
+[דובר 1] (0:10 - 19:29)
+Hi, in the summer of 2018, a chilling wave of rumors swept through WhatsApp groups in India. Forwarded messages falsely warned of child abductors, igniting panic. In one tragic incident, villagers in Karnataka turned violent based on a mere WhatsApp whisper.
+
+By the time authorities intervened, over 20 innocent people had been lynched due to these baseless kidnapping rumors. WhatsApp, the messaging service used by 400 million Indians, was pressured to respond. The company limited messages forwarding to five chats at a time, down from the previous limit of 250, and began labeling forwarded messages.
+
+According to WhatsApp, this step reduced forwarded message volume in India by 25%. It was a drastic move, but it likely saved lives. A WhatsApp spokesperson admitted, it's a challenge which requires action by civil society, government, and tech companies.
+
+A sentiment that captures the collaborative spirit needed to fight misinformation. The tragic event in India highlights just how far-reaching and dangerous unchecked misinformation can be. But this raises an important question.
+
+Why don't we treat online misinformation the way we treat offline misinformation? Some argue that free speech protects online expression, claiming that the internet is a platform for unrestricted speech, unlike traditional media. However, should the medium really determine the boundaries of regulation, or should it be about the content itself?
+
+Let's consider a hypothetical situation. Jane Smith, a reporter for the New York Times, writes an article claiming, without any evidence, that drinking bleach will cure COVID-19. Some people believe in her story, follow her advice, and consume bleach.
+
+Tragically, some of them die as a result. In this scenario, the second someone reads the story, be it a doctor or even the head of the Center for Disease Control, they can contact the New York Times and demand that they immediately delete the story. The victims and their families could also sue Jane Smith and the New York Times for causing harm.
+
+But what if Jane Smith publishes the same lie on her ex-account, on Twitter? Does the medium change their responsibility? Should a lie on a social media platform be treated any differently?
+
+We know that Elon Musk or any social media platform CEO cannot be expected to personally read every post and determine whether it's factual. But at the very least, shouldn't there be a mechanism in place to take care of that? After all, if an independent fact-checking organization or internal ex-review finds that the post is false, shouldn't X take it down rather than simply label it as possibly false?
+
+In the case where X knowingly allows a lie to remain on the platform because it generates a lot of traffic and money, shouldn't those who were harmed by the spread of this misinformation have the right to sue X for keeping the post online, knowing it's false? This brings us to the heart of the very issue. Free speech does not give anyone the right to incite violence or harm others.
+
+While the digital realm provides unprecedented opportunities for expression, it also allows misinformation to spread like wildfire, causing real-world consequences. How can we combat this fire of misinformation without curbing legitimate speech? Governments around the world are grappling with this very question, exploring ways to regulate harmful content, hold platforms accountable, and ensure public safety without sliding into authoritarian censorship.
+
+How can governments address this challenge through regulation, platform accountability, content monitoring, and libel laws while striving to avoid overreach that could infringe on free expression? First, let's consider the key strategy of holding platforms accountable for the content they amplify. If tech giants like Facebook, YouTube, and Twitter are the new public square, then they must carry some responsibility for the chaos that falsehoods cause.
+
+In Europe, governments have implemented serious regulatory measures to force platforms into action. For example, the European Union Digital Service Act, or the DSA, that passed in 2022, requires major online platforms to mitigate systemic risks like disinformation. Platforms must enhance content moderation, share data with regulators, and face hefty fines if they fail to curb harmful content.
+
+This law is groundbreaking, and it mandates transparency and responsibility from tech giants. It shows that governments are no longer willing to let platforms act as neutral conduits of misinformation. In contrast, the United States has struggled with regulating online content due to the First Amendment protections.
+
+Section 230 of the Communication Decency Act, a law passed in 1996, shields platforms from liability for user-generated content. Instead of treating social media like newspapers, this law views social media more like a telephone company that cannot be held accountable for the conversations people have on the phone. This legal protection has made it difficult for the U.S. government to enforce regulations on misinformation. While there have been talks about reforming Section 230, the balance between regulation and freedom of speech remains a challenge. In addition to regulatory actions, governments must also actively monitor and counter misinformation. To this end, many governments have established fact-checking initiatives to ensure the public receives accurate information.
+
+In Europe, for example, Istratcom, a team within the EU, monitors this information, especially from foreign actors, and publishes corrections. Similarly, in the U.S., agencies like CISA run rumor-control websites to debunk viral false claims, particularly around election periods. Moreover, governments encourage platforms to act against harmful content by alerting them to viral hoaxes.
+
+While this cooperation is necessary to curb misinformation, it raises concerns about overreach. Consider the case of the Global Engagement Center, or the GEC, unit within the U.S. State Department, created by President Obama, tasked with combating foreign disinformation. The GEC was created in response to growing concerns about the influence of misinformation from hostile actors like Russia and China, particularly during election periods.
+
+But as it worked to counter foreign narratives, it became embroiled in controversy. Many conservative figures in the Republican Party accused the GEC of pressuring social media platforms to remove domestic content, even though it was supposed to focus solely on foreign threats. While a court ruled that there was no evidence of improper interference, the damage was done.
+
+The center's credibility took a hit, and by December of 2024, without reauthorization, it was set to be shut down. Another critical tool in combating misinformation is holding individuals and entities accountable for spreading harmful lies. Governments have long used libel and defamation laws to protect individuals from false statements that cause damage.
+
+A recent example of this action is the Dominion Voting Systems lawsuit against Fox News, which resulted in a $787 million settlement over false election claims. Fox News had falsely reported that Dominion was involved in rigging the 2020 presidential election, which Dominion argued harmed its reputation and business. Such lawsuits show that malicious misinformation can have serious legal consequences, deterring some from spreading harmful lies.
+
+Moreover, governments have also targeted misinformation related to elections and public health. For example, France has passed laws that allowed for a rapid removal of election-related disinformation, ensuring that lies don't undermine democratic processes. Singapore, for its part, had criminalized the spread of certain types of health misinformation with penalties for those found guilty of creating or sharing dangerous falsehoods.
+
+These targeted actions show that while misinformation is complex, legal tools can help mitigate its harmful effects. In recent years, over 78 countries passed laws to combat misinformation. However, many of these laws have been criticized for being overly broad, which may suppress freedom of expression.
+
+For example, Russia's 2022 law aimed to control the narrative surrounding the war in Ukraine, punishing anyone who spreads what the government deemed false information. Similarly, a Singapore law requires platforms to carry government-issued corrections, which critics argue should be abused to stifle dissent. So what should we take from all this?
+
+Governments do have a role in combating misinformation, but they must do so carefully. First, they can regulate large platforms to ensure they take responsibility for the content they host. Second, they can monitor the information ecosystem and use fact-checking initiatives to counter false claims.
+
+Third, they can hold individuals and organizations accountable through libel and defamation laws. However, governments must also keep in mind the need to balance regulation with the preservation of free speech. The goal should be not to control the narrative, but to ensure that harmful lies don't threaten public safety or undermine democratic processes.
+
+Now let's turn to the tech giants, the Facebooks, the YouTubes, the Twitters, or now X of the world. Initially, many Silicon Valley executives were reluctant arbiters of truth. For years, the reigning ethos was that more speech was good and that platforms merely reflected society.
+
+The 2016 U.S. election and other upheavals shattered that complacency. Revelations that Russian troll farms reached millions of American voters with fake news on Facebook and that YouTube algorithms might recommend conspiracy theories send these companies scrambling. They have since adopted a flurry of measures.
+
+One of the first measures they took was content moderation. Facebooks had over 35,000 moderators, both AI and human, who worked to remove or downgrade viral falsehoods. Twitter also had teams dedicated to elections and health misinformation, but after the 2022 takeover by Elon Musk, it decided to scale down on content moderation and move instead to a community notes program where readers, not the company, can flag content they think is hateful or wrong.
+
+Research shows that when effectively applied, community notes have a positive impact. After a note is attached to a misleading post, the likelihood of the original poster deleting it increases by approximately 80%, and other users are about 60% less likely to share that post. Additionally, academic research indicates that community notes are trusted more than conventional misinformation labels across the political spectrum.
+
+However, the effectiveness of community notes is hindered by several challenges. A significant issue is the low volume of posts that receive these notes. For instance, during the 2024 US election period, 74% of misinformation posts with wrong information failed to receive the status of a community note.
+
+Moreover, when notes are applied, there are often delays. A study found that notes took an average of seven hours to appear, with some taking up to 70 hours, allowing misinformation to spread unchecked for extended periods. Despite these failures, in 2025, Meta, who owns Facebook and Instagram, also decided to scale down on their content moderation and shift to a community notes model.
+
+For community notes to work, these companies must improve their reaction speed and also flag more misinformation out there. One of the most impactful but least visible steps is tweaking recommendation algorithms, or in other words, algorithmic down-ranking. YouTube announced in 2019 it would reduce recommendations of borderline content, videos that don't flat-out violate rules but skirts close to disinformation or extremism.
+
+By one internal estimate, this cut down views so much the content by even 70%. Facebook, likewise, adjusted its feed algorithm to reward meaningful interactions over provocative virality, partially to squeeze out their low-quality clickbait and fake news farms. There's evidence this has helped in some areas, but critics note that sensational misinformation still often outperforms truth due to its emotional punch.
+
+We already learned that a lot of disinformation is amplified by fake personas and automated bots. Tech companies have gotten better at hunting these. Facebook reports disabling around 4 billion fake accounts every year.
+
+Before the improved detection, spammers and state-sponsored propagandists could create fake accounts almost as fast as you could blink. Now, suspicious bursts of account sign-ups trigger automated defenses. Twitter, for its part, has purged large networks of bots.
+
+And yet, due to advances in AI, these bots are becoming harder to detect and it feels that the media companies play an endless game of high-tech Pokémon. For each bot they remove, a new one pops up. Despite these efforts, the results have been mixed.
+
+On the one hand, companies can point to specific successes, for example, during the 2020 US election, Facebook and Twitter labeled many false claims about voting, and Twitter even banned President Trump's account when it was used to spread election disinformation that incited violence. On the other hand, misinformation continues to flourish in slightly altered forms on newer platforms. When one platform cracks down, the false narratives migrate to another into a private group or an encrypted chat where moderation is tougher.
+
+For instance, Facebook's enforcement drove some communities spreading conspiracies into other apps like Telegram or Gab with looser rules. So far, we've seen governments tentatively regulating and 10 companies somewhat improving moderation and design. Yet, nobody is fully satisfied with the status quo.
+
+What else can be done? Here are some forward-looking ideas grounded in research and expert recommendations. First, we need greater transparency and data sharing.
+
+Social media platforms are often black boxes. To build trust, they should share more data about how content goes viral and who is behind large influence campaigns. Scholars argue that more openness by social media giants and greater collaboration with qualified partners is essential.
+
+For example, Twitter, or now X, once provided open APIs for researchers to study the spread of fake news. But since Musk took over, he canceled the program. If academic researchers and watchdog NGOs would be allowed back, they could help identify emerging disinformation before it spirals out of control.
+
+Second, we need smarter regulation and codes of conduct. Some experts suggest updating laws, like Section 230 in the US, to require social media platforms to follow best practices in moderating content before they can receive legal protections that shield them from being held responsible for what users post. Another idea is a circuit breaker.
+
+Rules for virality. Very similar to stock markets when they stop in trade, was an extremely viral claim like drinking bleach to cure COVID is temporarily paused and not promoted until fact-checkers can evaluate it. This could prevent fast-moving falsehoods from hitting millions before anyone can react.
+
+Third, we need better fake detection technologies. As technology advances, so do tools for deception. In May 2023, an AI-generated image of a fake explosion at the Pentagon went viral, briefly impacting the Dow Jones before being debunked.
+
+To counter such threats, platforms and government must invest in detection technologies like Microsoft Project Origin, which watermarks media ad capture. Some US states now require political ads to disclose deepfake contents, and governments may mandate truth in labeling for AI-generated media, with penalties for malicious fakes. The goal is to make misinformation easier to identify.
+
+Lastly, governments and tech firms must collaborate, as shown by the Trusted News Initiative, or TNI, a partnership of BBC, Reuters, and social media platforms to fight disinformation during the elections and COVID-19. TNI created rapid alert systems to quickly identify and debunk viral fakes, preventing their spread. This cooperation, proven effective during the 2020 election and the pandemic, should be expanded to make more spreading falsehoods costly and less effective.
+
+We focused on policies and tech fixes from the top down. Later, we'll examine another critical front in this struggle, the role of the news media organizations and NGOs. How are journalists and civil society groups working to fact-check and educate?
+
+What have they achieved? And what obstacles do they face? I'll see you later.

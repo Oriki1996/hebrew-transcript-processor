@@ -1,0 +1,88 @@
+[דובר 1] (0:09 - 15:16)
+Hello, glad you could join me. Let's begin with a simple but uncomfortable truth. We are all much more persuadable than we think, especially when we're online.
+
+In everyday face-to-face life, every falsehood usually hits a natural barrier. If you told, for instance, a friend that a pharmaceutical company had developed a cure for cancer but was selling it only to the Jews, you'd probably be met with a rised eyebrow, a suspicious glance, or a worried, are you sure about that? If an actress were to claim that her son became autistic after receiving the polio vaccine, it's likely that a reporter, a scientist, or even a concerned parent would step in to fact-check or challenge the claim.
+
+And imagine walking into your office on a Monday morning and announcing to all your colleagues that Paul McCartney, the Beatles' lead singer, actually died in a car crash in 1966, and he'd been secretly replaced by a lookalike. Even if you believed it, you'd probably think twice before saying anything. Social pressure, the fear of looking foolish, being challenged, or having to defend a wide claim acts as a natural break on spreading misinformation.
+
+But on social media, all those friction points vanish. As cartoonist Peter Steiner captured in this cartoon from 1993, on the internet, nobody has to know who you are. There's no skeptical glance, no awkward silence, no immediate reality check, just a screen, a feeling, and a share button.
+
+And with one tap, misinformation can travel farther and faster than ever before. Instead of slowing us down, today platforms are designed to do the opposite. They reward speed, outrage, novelty, and emotion, but not accuracy.
+
+Social media has turned all of us into information accelerators, not careful editors. It's no wonder misinformation spreads far more virulently online than it ever could through traditional news or face-to-face conversations. Social media hijacks some of our oldest and most fundamental instincts, curiosity, empathy, tribal loyalty, and turbocharges them into powerful engines of viral misinformation.
+
+Today, I want to walk you through the major forces that explain this phenomenon, and show you how decades of psychology, communication theory, and cognitive science all converge to help us understand why, in the digital world, lies almost always travel faster than the truth. Classic rumor theory in communication tells us that when people face uncertainty or anxiety, they collectively fill information gaps with stories. In other words, when facts are scarce, we don't just sit quietly, we create narratives to help us make feel safer.
+
+During a crisis, like a pandemic outbreak or a national disaster, an information vacuum often forms. And in that vacuum, rumors rush in, giving people some way, or any way, to make sense of these terrifying events. This is where the Antecedent Misinformation Outcomes Framework comes into play.
+
+When people are anxious, confused, or personally affected, they grab onto whatever information is available, true or false, and then spread it. Fear opens the door, rumors walk right in, and chaos follows. If the old rumor mill ran on whispers and town squares, today it runs 24-7, global, instant, and relentless through social media.
+
+Take the early days of COVID-19. Unverified posts about miracle cures, like drinking hot water, inhaling steam, eating garlic, exploded across Facebook and WhatsApp. The science didn't matter, the need for comfort did.
+
+Or take a different example. During the Israel-Gaza War, Israelis often circulated urgent inside information, a friend of a friend who knows someone high up in the IDF, or the son of a neighbor currently serving in Gaza. Each message would warn, an offensive will start tonight, or a ceasefire will be announced tomorrow.
+
+Each person sharing it was willing to swear the information was legitimate, and even when it wasn't, the urge to pass it along, to prepare loved ones to feel some control was overwhelming. Why do people share these rumors? Sometimes simply to ease their own anxiety, sometimes out of a genuine desire to help others even if the information is unverified.
+
+Either way, the outcome is the same. In moments of fear and uncertainty, rumors thrive, and the truth struggles to catch up. Moving along, in the era of traditional media, newspapers, radio, television, information moved through a relatively orderly system.
+
+A few trusted broadcasters and editors acted as gatekeepers, filtering out falsehoods before they reached the public. The flow was centralized, one source to many listeners. Even influence followed a clear pattern.
+
+The classic two-step flow model in communication describes it well. Media shaped the opinions of key opinion leaders, who in turn shaped everybody else. But that world is long gone.
+
+Today, on social media, everyone is a broadcaster. This is where Everett Rogers' diffusion of innovations theory comes back into focus. Originally, it was about how new ideas spread, but now it helps us explain how falsehoods travel too.
+
+A juicy piece of fake news acts like an innovation, diffusing organically through social networks. Think of the lie as a spark. On social media, that spark can ignite an entire forest fire, a phenomenon called an information cascade.
+
+One person posts a false claim, like NASA is hiding a second sun. Soon enough, 10 followers reshare it. Their friends reshare it again.
+
+Before long, a fringe conspiracy theory is trending worldwide. And with no editorial filters, there's nothing to slow it down. The gatekeepers are gone.
+
+Today, whether you have 5 followers or 5 million, you can influence the conversation online. Another powerful force at play is the existence of echo chambers and filter bubbles. These are environments where people are exposed only to information that reinforces their existing beliefs.
+
+This exists with traditional media like television and newspapers, but is accelerated on social media. On social media, we naturally tend to follow like-minded friends, influencers, and news sources. Algorithms then personalize our news feeds, doubling down on what we already want to see.
+
+The result? A personalized reality where misinformation that fits our own worldview can circulate endlessly, largely unchallenged. Take for example a person who decides out of compassion for animals to become vegan.
+
+But soon, through online communities and algorithmic recommendations, you're surrounded almost exclusively by content reinforcing that choice. Over time, what began as a personal ethical decision can harden into a belief system where eating meat isn't just a different lifestyle that is good for the environment, which is true. Very fast, you may be convinced that eating meat even once a week is toxic to your body, which is totally false.
+
+Studies illustrate this clearly. Communities devoted to conspiracy theories or science denial on Facebook, for example, largely self-police their information, not against lies, but against dissent. Inside these bubbles, false narratives become normalized because users are rarely exposed to opposing evidence or any critical viewpoints.
+
+It is important to understand that humans are not neutral processors of information. We are emotional, tribal creatures who love nothing more than hearing what we were right all along. Confirmation bias is our tendency to favor information that supports what we already believe and to ignore or discredit information that contradicts us.
+
+On social media, this bias is supercharged. A false story that aligns with our political culture or personal views isn't just more likely to be believed, it's more likely to be shared. Take, for example, the major fires near Jerusalem on the eve of Israel's 2025 Independence Day.
+
+Almost immediately, rumors began circulating that the fires weren't natural, they were said deliberately by Palestinians. The theory, entirely unsubstantiated, gained even more momentum when Yair Netanyahu, the son of Prime Minister Benjamin Netanyahu, posted that leftist Jews may have conspired with Arabs to ruin the holiday celebrations. Just like the fire itself, the rumors spread quickly, especially among those who already had negative views towards Palestinians.
+
+From regular users to influencers and singers, the conspiracy traveled fast and wide. It wasn't until the next day that firefighters and police officially confirmed the likely cause, simple negligence by Israelis having a picnic in the forest. This is why during elections, blatantly false claims often gain tremendous traction.
+
+People are naturally drawn to stories that flatter their own side and vilify the opposition. In the online world, accuracy often takes a backseat to emotional validation. And once a false story fits what we already want to believe, it can be almost impossible to unstick.
+
+Studies show that emotionally charged content, especially posts that evoke anger, fear, outrage, spreads further and faster than neutral information. On social media, the posts that shock or enrage us dominate our feeds. False information often exploits this dynamic.
+
+The more exaggerated, outrageous, or novel claims sound, the more likely it will be going viral. Imagine scrolling through your phone and seeing a headline, Scientists have secretly known the cure for cancer for years, but Big Pharma is hiding it. Your heart races.
+
+You feel betrayed. You don't stop to verify. You share.
+
+It feels urgent. It feels true. And this has real-world consequences.
+
+In a 2014 survey, an astounding 37% of Americans believed that the American Food and Drug Administration intentionally suppressed natural cancer cures at the request of pharmaceutical companies. Research also confirms that falsehoods tend to be more novel and surprising than the truth, and humans are wired to share new, surprising information. The crazier the story sounds, the more tempting it becomes to pass it along.
+
+Because after all, who would make up something so crazy, right? Another mental trap we fall into is the illusory truth effect. Simply put, the more often we hear something, even if it's false, the more true it starts to feel.
+
+And on social media, repetition isn't a bug. It's a feature of the matrix. Falsehoods aren't just shared once.
+
+They're repeated endlessly, amplified by algorithms, and echoed across networks. Even when false claims are labeled or debunked, the sheer act of seeing them again and again increases our acceptance over time. A striking example comes from the Netherlands in early 2020.
+
+A conspiracy theory claiming that 5G technology weakens the immune system and thus helps spread COVID-19 began circulating first on WhatsApp groups, then spreading rapidly to Facebook pages and YouTube videos. Repeated exposure made the claim feel more credible, despite having no scientific basis, a textbook case of the illusory truth effect. The consequences were real.
+
+Dozens of 5G towers across the Dutch cities were vandalized or set on fire, forcing authorities to issue national security warnings and protect critical infrastructure. This is why disinformation campaigns rely not on proving anything, but simply on volume and persistence. They don't need you to believe right away.
+
+They just need the claim to feel familiar enough to lodge itself into your mind, where it can quietly erode through it over time. Finally, once misinformation takes root, it's incredibly hard to correct. The continued influence effect means that even after hearing a correction, people thinking remains shaped by the original falsehood.
+
+On social media, fact checks often fail to catch up with viral lies. And even when corrections are seen, many users rationalize them away through motivated reasoning, the psychological tendency to twist new information to protect beliefs that we already hold. We've seen this effect play out around the world.
+
+After the Japan-Fukushima nuclear disaster in 2011, repeated testing confirmed that the seafood across the Pacific was safe to eat. Yet fears about radiation persisted for years in Japan and all across Asia, damaging fishing industries and shaping public behavior long after the facts were clear. Similarly, from 2014 all through 2016, there was a devastating Ebola outbreak in West Africa.
+
+False rumors that the virus was a Western oaks continued to influence communities even after massive public health campaigns tried to correct them, leading some to resist life-saving treatments and quarantine efforts. Once a false ID becomes emotionally embedded, even the best evidence often struggles to unroot it. In a digital world designed to amplify our instincts rather than our reason, resisting misinformation requires a conscious effort, not just good intentions.
+
+Remember, believing wisely today means slowing down, questioning often, and staying aware of the forces that so easily lead us astray. I'll see you later today.

@@ -1,0 +1,169 @@
+/* css/components.css - עיצוב רכיבי המערכת */
+
+/* ── Header (כותרת עליונה) ── */
+.app-header {
+  background: var(--surface);
+  backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 32px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-titles h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: var(--primary);
+}
+
+.header-titles p {
+  margin: 4px 0 0;
+  font-size: 0.95rem;
+  color: var(--text-light);
+}
+
+/* ── אזור כפתורים עליון (Actions) ── */
+.header-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.bridge-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: var(--card);
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ccc;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.icon-btn:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+.dark-theme .icon-btn:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* ── פריסה מרכזית (Layout) ── */
+.app-main {
+  max-width: 1200px;
+  margin: 24px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 0 16px;
+}
+
+@media (max-width: 800px) {
+  .app-main {
+    grid-template-columns: 1fr;
+  }
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: var(--primary);
+}
+
+/* ── תיבות טקסט ותוצאות (Textareas) ── */
+textarea, .output-content {
+  width: 100%;
+  height: 500px;
+  background: rgba(255,255,255,0.4);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  font-family: 'Heebo', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  resize: vertical;
+  box-sizing: border-box;
+  color: var(--text);
+}
+
+.output-content {
+  overflow-y: auto;
+}
+
+.dark-theme textarea, .dark-theme .output-content {
+  background: rgba(0,0,0,0.2);
+}
+
+textarea:focus {
+  outline: 2px solid var(--primary);
+  background: rgba(255,255,255,0.7);
+}
+
+.dark-theme textarea:focus {
+  background: rgba(0,0,0,0.4);
+}
+
+.empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--text-light);
+  font-style: italic;
+}
+
+/* ── אזור כפתור השליחה ── */
+.process-controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.btn.large {
+  padding: 14px 40px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(212, 163, 115, 0.4);
+}
+
+.btn.large:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 163, 115, 0.6);
+}

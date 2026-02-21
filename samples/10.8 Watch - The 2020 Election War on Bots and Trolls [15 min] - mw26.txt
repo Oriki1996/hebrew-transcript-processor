@@ -1,0 +1,131 @@
+[דובר 1] (0:00 - 0:08)
+The anger and mudslinging on Twitter, Facebook and Reddit have hit a high watermark as the hotly contested US presidential election comes to a head.
+
+[דובר 7] (0:08 - 0:21)
+Iran and Russia have taken specific actions to influence public opinion relating to our elections. Thirteen of the Facebook accounts removed today are linked to the Russia-based Internet Research Agency.
+
+[דובר 8] (0:21 - 0:27)
+Pro-Trump tweets are coming from fake African-American spam accounts, Twitter says, and it's taking them down.
+
+[דובר 1] (0:27 - 1:40)
+It's not just Russia and Iran that are trying to troll the election. Some in the US are as well. At the center of the fight against misinformation and polarization on social media are bots and trolls.
+
+In 2016, accounts run by the Russia-linked Internet Research Agency were more than 1.5 times as likely to share junk news and pretended to be left- or right-wing hardliners to garner likes and engagement. That's according to the Social Media and Political Participation Lab at New York University. And according to a University of Southern California research study, accounts on Twitter that could be bots produced 3.8 million tweets about the election in 2016, which is 19% of all election tweets that year. Tech companies have gotten better at fighting bots, but trolls are the new top nemesis of social media companies in the lead-up to the 2020 election. Twitter has clamped down on inauthentic behavior since 2016 and also has been critical of bot detectors used to evaluate the platform's users. Trolls, though, continue to be a vexing problem for Facebook and Twitter.
+
+These accounts look more like normal users. The 2016 election exposed how social media could be used by a foreign adversary to sow dissent and distrust within American borders. In 2020, the fight against those threats rages on, and the number of players has expanded abroad and domestically.
+
+[דובר 2] (1:41 - 1:53)
+I think one thing that gets lost is disinformation and online media manipulation in 2020 does not look the way it looked in 2008 and even 2016.
+
+[דובר 3] (1:53 - 2:02)
+So the methods have been a little bit different. It's not so much bots this time as much as people. And this time there has been some fight and at least some pushback from the U.S. government.
+
+[דובר 1] (2:03 - 2:16)
+Trolls are real people who more directly attempt to derail normal online discourse by posting inflammatory content or comments. There's also brigading, which is when a group of trolls target a specific social media user or online figure.
+
+[דובר 5] (2:16 - 2:26)
+Overwhelmingly, we see much of the disinformation, vastly more of the disinformation is produced by U.S. sources. And what we see Russian sources doing is amplifying them.
+
+[דובר 1] (2:26 - 2:42)
+Here's how the war on troll farms and botnets started and where it's headed. Recently, a U.S. political organization, Turning Point USA, was accused of running a troll farm through one of its associates, Turning Point Action.
+
+[דובר 2] (2:42 - 2:57)
+Which was apparently paying, essentially running a troll factory and paying young people to spread disinformation about coronavirus and vote by mail online.
+
+[דובר 1] (2:57 - 3:08)
+Turning Point USA is a pro-Trump group that aims to boost support of President Trump among young voters. Trolls and troll farms are different from bots and botnets. Trolls do use bots, though, to enhance their productivity.
+
+[דובר 2] (3:09 - 3:34)
+A bot is an automated social media account run by an algorithm as opposed to a real person. In other words, it's designed to make posts without human intervention. This is different from a troll, which is a real person who intentionally initiates online content, a conflict with the intention of offending people and distracting them or selling divisions.
+
+[דובר 1] (3:35 - 3:58)
+Some botnets are more nefarious. These botnets are used to capitalize on trending hashtags or topics and flood the comments with posts. Other botnets can be used for illegal purposes, such as gaining revenue from fraudulent advertising.
+
+Those botnets, such as the ones used by an international crime ring in 2018, were used to produce fake clicks and views on websites and videos owned by the criminals to produce ad revenue.
+
+[דובר 6] (3:58 - 4:04)
+You're basically scamming clicks for advertisement and getting money from that.
+
+[דובר 1] (4:04 - 4:24)
+A troll farm is a group of trolls who all work together to manipulate the various social media platforms to amplify whatever message they want. Trolls can use bots and other forms of automation to help in their efforts. But unlike bots, there is a real human in the loop, which makes it harder for social media companies to detect what is known as inauthentic behavior with automated software.
+
+[דובר 2] (4:24 - 4:44)
+There's multiple examples of bots on Twitter that serve some sort of function. What we're concerned about is really this very specific subset of social bots that is particularly focused on political manipulation, targeted harassment and spamming.
+
+[דובר 1] (4:45 - 4:51)
+There are several ways to combat bots and trolls, but as it becomes a more domestic issue in the U.S., it could get trickier.
+
+[דובר 4] (4:51 - 5:18)
+These accounts, the IPs they're posting from are from a place in Russia. We can take them all down at once, right? Well, now that these things have moved to domestic locations and are ran by Americans, the platforms really don't know how to handle this yet.
+
+The first action that we've seen taken is Facebook taking down the Turning Point troll farm.
+
+[דובר 3] (5:18 - 5:32)
+Trolls and troll farms are used by countries like Russia to manipulate the political discourse in the U.S. I think on the fringe, what you see is them still trying to push into both the political left in the United States and the political right, focusing on the fringes.
+
+[דובר 1] (5:33 - 5:44)
+In 2016, the Russian operatives of the Internet Research Agency led a campaign of disruption in the U.S. ahead of the presidential election. The FBI has warned that similar tactics are being used to disrupt the 2020 election.
+
+[דובר 3] (5:45 - 6:10)
+I think the thing to note is it's overwhelmingly domestic this time instead of foreign. It's almost the inverse of 2016. In 2020, it is about the condition of the presidents, both of them in terms of their health, I think is a big sort of majority of it.
+
+The rest of the conspiracies are really around mail-in ballots or mail-in voting, the voting process itself. And I think that's where the danger of the foreign interference comes in, particularly from Russia.
+
+[דובר 1] (6:11 - 6:20)
+China also uses bots and trolls for internal messaging and also to influence external messages on hot-button issues like Hong Kong, Taiwan and the South China Sea.
+
+[דובר 3] (6:20 - 6:47)
+Russia is the disinformation threat of 2020 and China will be the disinformation threat of 2021 and beyond. And there's several reasons for that. So what are they going to look at?
+
+COVID-19, big tech battles, trade, Xinjiang, democracy protests in Hong Kong. They stick to those narratives very narrowly. And that's where you see social bots, YouTube spam kind of content, overtrolling that comes specifically from China.
+
+[דובר 6] (6:47 - 6:57)
+Botnets can also be bought and sold online. Most of the markets that I'm aware of are Russian-speaking, so the first barrier is being a fluent Russian-speaking.
+
+[דובר 1] (6:57 - 7:04)
+Marketing firms have also taken notice of the effectiveness of these tactics and now trolling is becoming a tool to further profit margins.
+
+[דובר 2] (7:04 - 7:39)
+One of the most interesting things we've seen in the space is the proliferation of commercial disinformation and essentially multiple digital marketing firms that provide disinformation as a service, often on behalf of governments and state actors, as well as non-state actors. So I think there's an emerging understanding that disinformation can actually be profitable and there's a developing market for it.
+
+[דובר 1] (7:39 - 8:40)
+Reddit has been very successful in fighting inauthentic content. During the 2016 election, the rise of the pro-Trump subreddit called The Donald forced the company to confront users who were organized and dedicated to manipulating the algorithms that run the site. Reddit's recent success in clamping down on manipulation, both from states like Russia and also by domestic US actors like QAnon conspiracy theorists, has been put forth as an example of how to crack down on inauthentic behavior on social media platforms.
+
+Facebook has taken down 10 networks of inauthentic actors since September and in just the first week of October, took down 200 Facebook accounts, 55 pages and 76 Instagram accounts that were aiming to influence the election. Twitter recently enacted new rules for the US election that set up speed bumps between users and tweets that could spread misinformation about the election. Users have to click through warning messages in order to view these posts.
+
+Instagram and Facebook also both recently banned QAnon content that cut the number of pages supporting the baseless conspiracy theory by a large margin.
+
+[דובר 4] (8:40 - 8:57)
+Now you're hard pressed to find any large scale sets of bots operating in English. You may be able to find them in foreign language, but not English. They're still out there here and there, but they've made so many improvements that it's a lot different.
+
+[דובר 1] (8:57 - 9:04)
+In the upcoming election, several social media companies remain on high alert against users who want to game the system and cause chaos on election night.
+
+[דובר 5] (9:05 - 9:14)
+What is the bigger concern, I think, is the type of hack and leak operation as we saw against the Democratic National Committee in 2016.
+
+[דובר 4] (9:15 - 9:27)
+Like I said, they've made a lot of improvements and they're trying some new things to keep extremely false tweets from going viral really fast. So we'll see how that works out.
+
+[דובר 1] (9:27 - 9:41)
+More recently, Twitter and Facebook restricted access to a New York Post article about Hunter Biden, the son of Democratic presidential nominee Joe Biden. The social media company said they were concerned about potential disinformation and privacy issues in the article.
+
+[דובר 5] (9:41 - 10:09)
+I think we vastly overstate the impact of Facebook and other forms of social media on changing people's minds. Most of the scholars who look at the use of social media think it's fairly concentrated in a narrow group of users and is unlikely to sway committed partisans one way or another, in part because it's not usually presenting new information.
+
+[דובר 1] (10:10 - 10:24)
+We might not know who won the 2020 election on election night. That makes it even more important to curtail the spread of misinformation. The prospect of post-election unrest or violence is a real fear.
+
+Other elements of social media could be the future attack vectors of disinformation.
+
+[דובר 2] (10:25 - 10:56)
+What doesn't get as much attention is actually disinformation from influencers and verified users online. And we've consistently seen that conspiracies spread most quickly and furthest when a verified account or an influencer platforms it and amplifies it, not necessarily when a bunch of bots, for example, retweet something. So I think that's an important point to sort of anchor this discussion in.
+
+[דובר 1] (10:57 - 11:02)
+Despite the best efforts of companies to combat inauthentic behavior, the future is less than clear.
+
+[דובר 4] (11:02 - 11:25)
+The newest trend in what they've been doing is instead of running their own troll farms, they've been outsourcing the trolling to either domestic people that they can find or people in other countries, or they've been actually trying to like pay journalists to write articles for them, you know, like 75 bucks to write an article.
+
+[דובר 3] (11:26 - 11:43)
+The one question I have kind of for the horizon, though, will this just inundate people with so much garbage information or propaganda that they begin to tune it out? I think that waits to be seen, but there is a human dimension to this, which is how many bots can you see before you don't see anything but bots and start to ignore everything.

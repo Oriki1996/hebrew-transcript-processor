@@ -1,0 +1,76 @@
+[דובר 1] (0:09 - 16:46)
+Welcome back. A decade ago, fake news wasn't a common term, but today, major news outlets have dedicated reporters covering misinformation. What once was a niche concern is now central to journalism, with fact-checking and debunking becomes core responsibilities.
+
+This shift is essential because falsehoods threaten the role of journalism in providing truth. In this lecture, we'll explore how the media and non-profit organizations, or NGOs, are combating misinformation, sharing successes, and challenges. Let's start with mainstream news organizations.
+
+After high-profile failures where hoaxes fooled the media, many outlets realized they needed specialists to vet dubious claims. Today, it's common to see, within news organizations, dedicated fact-check sections. The Washington Post's Fact Checker, PolitiFact, run by Punter Institute, AFP Fact Check, and the list goes on.
+
+These teams debunk false statements by public figures and viral rumors circulating on social media. In 2023, the Duke Reports lab counted 417 active fact-checking projects in over 100 countries, up from just 11 in 2008. A remarkable expansion.
+
+Fact-checking is now an established part of the media ecosystem, with hundreds of teams scrutinizing claims in at least 69 languages. Many big newsrooms have also integrated verification into their breaking news workflow. For example, when user-generated content, like a shaky cell phone video of an incident emerges, organizations like BBC or CNN have verification teams to confirm authenticity before airing it.
+
+These teams use techniques like reverse image search, contacting original uploaders, and cross-referencing details. Here's a powerful anecdote. In 2018, BBC Africa journalists investigated a viral video purportedly showing a massacre in Cameroon.
+
+Some claimed it to be fake, but by geolocating the video and analyzing shadows, they proved it was real and identified the perpetrators, contradicting the official denials. This kind of open-source verification work has become journalistic speciality, and a bulk work against both misinformation and government cover-ups. It shows how journalistic skills can turn the tide on a false or contested narrative by providing concrete evidence.
+
+News organizations have also learned that they are stronger against misinformation when they team up rather than work in silos. A shining example is the Trusted News Initiative, or TNI, which brings together major news media like the BBC, AFP, Reuters, AP, and others together with tech platforms to share alerts on misinformation. Another is the series of collaborations by First Draft, an NGO that provided training and connection for journalists on verification.
+
+In the French election of 2017, for instance, First Draft coordinated CrossCheck, a project where journalists from multiple French newsrooms pooled resources to debunk election rumors. Competitors like Le Monde and the French news agency worked side-by-side to investigate fake stories, publishing joint fact checks. This was unprecedented in its level of cooperation, and it largely succeeded in preventing a fake news deluge from the sharing of election narrative.
+
+A similar model was used in countries like Brazil, Nigeria, and India during recent elections. Media coalitions formed rapid response teams to counter viral lies, like false claims of polling stations closing early or candidates' health scares. These efforts demonstrate a key point.
+
+When the press presents a united front against disinformation, it's harder for malicious actors to push their lies to respectable news outlets. Globally, these journalist fact-checkers have also organized underbodies like the International Fact-Checking Network, or the IFCN, which sets a code of principles around nonpartisanship, transparency of sources, and funding. As of 2023, IFCN had over 150 verified signatory organizations spanning more than 60 countries.
+
+Many of these are in newsrooms or are independent journalist NGOs. The IFCN facilitates knowledge sharing. Say one fact-checker discovers a new COVID myth, they can call and alert others in the network so everyone can watch for it.
+
+It's an inspiring example of journalists seeing beyond competition to a larger mission, and that's defending truth itself. Alongside traditional media, a whole ecosystem of non-profit organizations or NGOs has bloomed to combat misinformation. Organizations like Snoops.com, Africa Check, Boom in India, Full Fact in the UK, Chekealo in Argentina, Tayit in Turkey, and Botkin in Israel are fighting at the trenches of this war against lies and misinformation. These organizations fact-check viral claims, debunk hoaxes, and provide real-time corrections, often working directly with social media platforms and news outlets to halt the spread of false information as it emerges. Through their work, they help ensure that the public has access to accurate, trustworthy information when it's needed most. Some NGOs focus on pressuring tech companies and regulators.
+
+For instance, the Mozilla Foundation and Electronic Frontier Foundation often highlight how algorithm design or data privacy relate to the misinformation problem. Another group, the Center for Countering Digital Hate, publishes high-profile reports naming specific sites or actors spreading hate and falsehoods, thereby shaming platforms to take action. It was their report that identified the disinformation dozen, 12 anti-vaccine influencers responsible for a huge share of COVID falsehoods, a finding later even acknowledged by the U.S. officials. Such advocacy can lead to concrete results. Facebook and Twitter, under public pressure, banned several of these top disinformers and improved their policies on health misinformation. NGOs often serve as watchdogs' watchdogs, holding both governments and companies accountable for doing their part.
+
+The question is, does all this actually make a real difference? It can be hard to measure prevention because we don't always see what the crisis is adverted by the timely fact-checkers or literacy campaigns. But there are concrete wins.
+
+For example, during the 2019 Indonesia elections, a hoax spread that the ink used to mark voters' fingers after they vote, a method common in numerous countries to prevent people from voting twice, well, someone posted that the ink was poisonous and the fact was that they wanted to suppress people from voting. Indonesian fact-checkers quickly debunked this and election authorities and media amplified the correction. As a result, the false rumor didn't significantly depress turnout.
+
+A study by MIT researchers working with fact-checking organizations found that rapid corrections do reduce the spread of specific false claims on Twitter by about 13 percent on average. While fact-checks may not convince the most hardened believers, they do inform many others and inoculate those who haven't seen the rumor yet. Moreover, just knowing that something has been fact-checked makes casual sharers pause before reposting.
+
+That said, the fact-checking community faces challenges. One issue, reach and repetition. Often, the false information reaches far more people than the correction.
+
+For example, a fake hate line might rack up one million impressions, whereas the subsequent fact-check article gets maybe 100,000. This is partly human nature, as scandalous lies travel faster than boring truths and partly platform algorithms favoring engagement. Fact-checkers are addressing this by working with Facebook, WhatsApp, and others to integrate corrections directly where the falsehood spreads, like pop-up warnings or forward WhatsApp messages.
+
+Another challenge is fatigue, both fact-checkers themselves and the audiences. The pace since 2020 with the pandemic, multiple elections, global conflicts has been relentless. Some small outlets have closed because funding ran out and staff burned out.
+
+Another challenge is that trust in the media is a double-edged sword. News organizations trying to combat misinformation must also reckon with public distrust of the media. In some segments of the population, fact-checks from CNN, The New York Times, or Aharetz are dismissed a priori as biased.
+
+Partisans may label mainstream outlets themselves as fake news. This is why transparency and non-partisanship are crucial in these efforts. Fact-checkers publish their sources, methodology, and even their funding to build credibility, as required by the IFCN code.
+
+And interestingly, collaborations help credibility. When multiple outlets across the spectrum agree on a fact-check, it's harder to spin it as just one outlet's opinion. For example, if both The New York Times and Fox News fact-check teams debunk the same false claims, that spans ideological range that might sway more skeptics.
+
+What more can news media and NGOs do? Despite noble efforts, misinformation still fills the gaps where journalism sometimes retreats. For example, local news deserts, a term given to cities and towns that no longer have a local newspaper, are prime hunting grounds for rumors and conspiracies because trusted local information is scarce.
+
+One crucial solution, experts suggest, is to bolster local journalism. Governments, philanthropists, and media organizations can invest in reviving local news or supporting new community media startups. Local reporters, who know their community, can much more effectively debunk a neighborhood- specific piece of fake news, like a false rumor about a local crime or a school policy, than a national outlet can.
+
+A Carnegie report emphasized that supporting quality journalism at the grassroots is a long-term antidote to disinformation. NGOs and media should also continue innovating within formats. For example, meeting people where they are, be it on TikTok, a community radio, or even a church gathering, is key.
+
+For instance, during the pandemic, some NGOs partnered with religious leaders to spread accurate health information, realizing that a message coming from a trusted pastor, a leader in the community, or an imam could beat what WhatsApp rumors are doing. Another area for improvement is evaluation and research. Media and NGOs are trying many things, but which ones truly change beliefs or behavior?
+
+There is a need for more rigorous studies to test which interventions work best. As this field matures, NGOs could work with political scientists, psychologists, and communication scholars to measure impact and refine strategies. That way, resources can flow to what works best.
+
+Additionally, journalists and fact-checkers alike are doing a better job of treating the people they want to persuade with respect. Instead of labeling people as gullible or stupid for believing fakes, they address the content as false while respecting the audience. It's a fine line.
+
+You have to call out lies while inviting people to consider the truth, not alienate them. Training for journalists now includes guidance on how to headline fact-checks, like avoiding repeating the lie in the headline, using positive framing, like what really happened at that point, rather than amplifying the myth. These nuances help make fact-checking more effective.
+
+The fight against misinformation is daunting as misinformers are well-funded, adaptive, and often push back with accusations of bias, legal harassment, and lawsuits against news organizations and NGOs. But on the positive side, philanthropy and tech firms are increasingly funding fact-checking and media literacy, with Google News Initiative, Meta, and the IFCN investing millions in grants. While this support sustains the fight, it raises concerns about 10 companies funding watchdogs that critique them.
+
+A sustainable model may involve a mix of public funding, foundation grants, and community support to ensure independence. Media must also continue rebuilding trust with audiences. This is a broader project than just countering fake news, but they're related.
+
+When people trust quality journalism, they're less likely to fall for junk. Some news organizations now engage more with readers, explaining how they verify stories or correcting errors very transparently. All this helps inoculate the public against false information by strengthening the bond with reliable information providers.
+
+A free press acting as a true champion is something authoritarians fear. We've seen the world leaders, from Donald Trump to Benjamin Netanyahu and all the way to Vladimir Putin, crackling down on independent media at home precisely because they know good journalism is an antidote to their partisan version of truth. As tech evolves, one could imagine new partnerships, maybe AI to help journalists detect deepfakes in seconds, or community fact-checking models like a Wikipedia but for fact checks, where volunteers help document and refute viral hoaxes collaboratively.
+
+In Taiwan, for example, there's a platform called Kofax, where citizens submit questionable viral messages and volunteers fact-checkers investigate and reply in the same chat threads, creating a kind of crowdsource antivirus for information. The tone remains hopeful but realistic. So far, despite all efforts, we haven't solved misinformation, not by a long shot.
+
+The landscape keeps shifting as newer apps like TikTok, new forms of content like deepfakes keep evolving, all while governments hesitate to regulate forcibly and tech companies scale back on their moderation efforts, re-reading from frontlines just when their vigilance is mostly needed. Yet, we have also not been standing still. We have more knowledge now what works and what doesn't.
+
+We have an army of truth-tellers in newsrooms and civil society who weren't there in such a force a decade ago. And we have the wisdom of seeing some approaches fail, which is invaluable for charting new strategies. But even the best institutional efforts will falter if we, the people, don't play our part.
+
+Media and NGOs can provide facts and tools, but individuals still choose what to believe and what to share. That will be the focus of our final lecture. I'll see you there.

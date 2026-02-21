@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'; connect-src 'self' https://api.anthropic.com https://generativelanguage.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data:; font-src 'self' data: https://fonts.gstatic.com;">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <title>מעבד תמלילים אקדמי - Modular</title>
+  
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body class="light-theme">
+
+  <header class="app-header">
+    <div class="header-content">
+      <div class="header-titles">
+        <h1>מעבד תמלילים אקדמי</h1>
+        <p>מערכת חכמה לעיבוד, ניקוי וניתוח תמלילים מורכבים</p>
+      </div>
+      <div class="header-actions">
+        <div id="bridgeStatus" class="bridge-status">
+          <span class="status-dot"></span>
+          <span class="status-text">בודק חיבור...</span>
+        </div>
+        <button id="themeToggle" class="icon-btn" aria-label="החלף מצב תצוגה">🌙</button>
+        <button id="settingsBtn" class="icon-btn" aria-label="הגדרות">⚙️</button>
+        <button id="historyBtn" class="icon-btn" aria-label="היסטוריה">🕒</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-main">
+    <div class="input-section glass-panel">
+      <div class="section-header">
+        <h2>הזנת תמליל</h2>
+        <div class="actions">
+          <input type="file" id="fileInput" accept=".txt" style="display:none">
+          <button id="uploadBtn" class="btn secondary">📁 העלה קובץ</button>
+          <button id="clearBtn" class="btn text-btn">🗑️ נקה טקסט</button>
+        </div>
+      </div>
+      <textarea id="mainInput" placeholder="הדבק או העלה את התמליל כאן... (תומך בקבצים גדולים)"></textarea>
+      
+      <div class="process-controls">
+        <button id="processBtn" class="btn primary large">🚀 שלח לעיבוד</button>
+        <button id="systemDiagnosticBtn" class="btn danger" style="display: none;">🔴 דו"ח אבחון לקלוד</button>
+      </div>
+    </div>
+
+    <div class="output-section glass-panel">
+      <div class="section-header">
+        <h2>תוצאות עיבוד</h2>
+        <div class="actions">
+          <button id="copyBtn" class="btn secondary">📋 העתק</button>
+          <button id="downloadBtn" class="btn secondary">💾 שמור</button>
+        </div>
+      </div>
+      <div id="outputArea" class="output-content">
+        <div class="empty-state">התוצאות יופיעו כאן...</div>
+      </div>
+    </div>
+  </main>
+<div id="settingsModal" class="modal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000; background: var(--surface); padding: 30px; border-radius: 16px; box-shadow: var(--shadow); border: 1px solid var(--border); width: 400px; backdrop-filter: var(--glass-blur);">
+    <h2 style="margin-top: 0; color: var(--primary);">⚙️ הגדרות מערכת</h2>
+    <div style="margin-bottom: 15px;">
+       <div style="margin-bottom: 15px;">
+        <label for="modelSelect">מודל מועדף:</label>
+        <select id="modelSelect" style="width: 100%; padding: 8px; margin-top: 5px;">
+            <option value="claude">Claude (דרך Bridge)</option>
+            <option value="gemini">Gemini (דרך Bridge)</option>
+        </select>
+    </div>
+            הפעל ניקוי עברית מקדים (חיסכון בטוקנים)
+        </label>
+    </div>
+    <div style="text-align: left; margin-top: 20px;">
+        <button id="closeSettingsBtn" class="btn secondary">סגור</button>
+        <button id="saveSettingsBtn" class="btn primary">שמור</button>
+    </div>
+  </div>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
