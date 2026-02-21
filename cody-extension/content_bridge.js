@@ -1,5 +1,9 @@
 // content_bridge.js — runs on localhost/* and file:///*
-// Bridges postMessage from the web page ↔ chrome.runtime messages to background.js
+// Bridges postMessage from the HTML app ↔ chrome.runtime ↔ background.js.
+// Large payloads (> 2 KB) are stored in chrome.storage.local to avoid
+// chrome.runtime.sendMessage size limits; background.js retrieves them.
+
+const STORAGE_THRESHOLD = 2048; // bytes
 
 window.addEventListener("message", (event) => {
   if (event.source !== window) return;
@@ -21,12 +25,23 @@ window.addEventListener("message", (event) => {
     return;
   }
 
-  // Normal operation: send chunk to Claude via extension
+  // Normal operation: send chunk to AI via extension
   if (event.data?.type === "REQUEST_EXTENSION_AI") {
-    chrome.runtime.sendMessage({ type: "TO_AI", payload: event.data.payload });
+    const payload = event.data.payload || "";
+
+    if (payload.length > STORAGE_THRESHOLD) {
+      // Large payload: store in chrome.storage.local, send only the key
+      const key = "bridge_payload_" + Date.now();
+      chrome.storage.local.set({ [key]: payload }, () => {
+        chrome.runtime.sendMessage({ type: "TO_AI", payloadKey: key });
+      });
+    } else {
+      chrome.runtime.sendMessage({ type: "TO_AI", payload });
+    }
   }
 });
 
+// Messages from background.js → HTML app
 chrome.runtime.onMessage.addListener((request) => {
   if (request.type === "AI_RESULT") {
     window.postMessage({ type: "RESPONSE_FROM_EXTENSION", payload: request.payload }, "*");

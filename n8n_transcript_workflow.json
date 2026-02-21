@@ -116,7 +116,7 @@
     },
     {
       "parameters": {
-        "jsCode": "const items = $input.all();\nconst sorted = items\n  .map(i => i.json)\n  .sort((a, b) => a.part - b.part);\n\nconst combined = sorted.map(s => s.result).join('\\n\\n---\\n\\n');\nconst auditLog = sorted\n  .map(s => `חלק ${s.part}: ${s.audit}`)\n  .join('\\n');\n\nreturn [{ json: {\n  combined_output: combined,\n  audit_log: auditLog,\n  parts_processed: sorted.length,\n  timestamp: new Date().toISOString()\n}}];"
+        "jsCode": "const items = $input.all();\nconst sorted = items\n  .map(i => i.json)\n  .sort((a, b) => a.part - b.part);\n\nconst combined = sorted.map(s => s.result).join('\\n\\n---\\n\\n');\nconst auditLog = sorted\n  .map(s => `חלק ${s.part}: ${s.audit}`)\n  .join('\\n');\n\n// Collect parts flagged by the quality auditor (non-'תקין' entries)\nconst errors = sorted\n  .filter(s => s.audit && s.audit !== 'תקין' && !s.audit.startsWith('לא בוצעה'))\n  .map(s => `חלק ${s.part}/${sorted.length}: ${s.audit}`);\n\nreturn [{ json: {\n  status: errors.length === 0 ? 'Processing Complete' : 'Processing Complete with Warnings',\n  combined_output: combined,\n  audit_log: auditLog,\n  parts_processed: sorted.length,\n  timestamp: new Date().toISOString(),\n  errors: errors\n}}];"
       },
       "id": "code-3",
       "name": "מזג תוצאות",

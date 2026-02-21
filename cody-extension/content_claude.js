@@ -4,9 +4,36 @@
 
 chrome.runtime.onMessage.addListener((request) => {
   if (request.type === "PROCESS_CHUNK") {
-    injectAndSend(request.payload);
+    injectAndSend(preprocessHebrew(request.payload));
   }
 });
+
+// ── Hebrew text pre-processor ──────────────────────────────────────────────
+// Strips filler words and normalises whitespace to reduce token consumption.
+// Conservative: only removes clearly non-semantic particles.
+function preprocessHebrew(text) {
+  if (!text || typeof text !== 'string') return text;
+
+  // 1. Remove standalone filler-only lines (common in raw speech transcripts)
+  text = text.replace(/^[ \t]*(אממ+|אהה+|אוו+|יעני|כאילו|אוקיי|אוקי|נו+)[ \t]*$/gim, '');
+
+  // 2. Remove inline fillers between spaces (Hebrew has no \b, use space anchors)
+  const INLINE = ['אממ', 'אהה', 'אוו'];
+  for (const f of INLINE) {
+    // mid-sentence: " filler " → " "
+    text = text.replace(new RegExp(' ' + f + '+ ', 'g'), ' ');
+    // sentence-start: "filler " → ""
+    text = text.replace(new RegExp('^' + f + '+ ', 'gm'), '');
+  }
+
+  // 3. Collapse 3+ consecutive blank lines → 2
+  text = text.replace(/\n{3,}/g, '\n\n');
+
+  // 4. Trim trailing whitespace on each line
+  text = text.replace(/[ \t]+$/gm, '');
+
+  return text.trim();
+}
 
 // ── UI validation ─────────────────────────────────────────────────────────────
 // Checks that the required DOM elements exist before attempting any interaction.

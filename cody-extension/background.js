@@ -1,9 +1,12 @@
 // background.js — Cody Auto-Bridge switchboard
+// Routes chunks from the app tab → the active AI tab (Claude or Gemini).
+// Supports chrome.storage.local payloads (large chunks stored by content_bridge.js).
+
 let siteTabId = null;
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
-  // Diagnostic: check if a Claude.ai tab exists
+  // ── Diagnostic: check if a Claude.ai tab exists ────────────────────────
   if (request.type === "CHECK_CLAUDE_TAB") {
     chrome.tabs.query({ url: "https://claude.ai/*" }, (tabs) => {
       sendResponse({ open: tabs.length > 0 });
@@ -11,29 +14,64 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     return true; // keep channel open for async sendResponse
   }
 
-  // Normal: route chunk from app → Claude tab
+  // ── Route chunk: app → AI tab (Claude preferred, Gemini fallback) ──────
   if (request.type === "TO_AI") {
-    siteTabId = sender.tab.id;
-    chrome.tabs.query({ url: "https://claude.ai/*" }, (tabs) => {
-      if (tabs.length > 0) {
-        chrome.tabs.sendMessage(tabs[0].id, {
-          type: "PROCESS_CHUNK",
-          payload: request.payload
+    siteTabId = sender.tab?.id ?? siteTabId;
+
+    const dispatchPayload = (payload) => {
+      // Try Claude.ai first
+      chrome.tabs.query({ url: "https://claude.ai/*" }, (claudeTabs) => {
+        if (claudeTabs.length > 0) {
+          chrome.tabs.sendMessage(claudeTabs[0].id, {
+            type: "PROCESS_CHUNK",
+            payload
+          });
+          return;
+        }
+        // Fall back to Gemini
+        chrome.tabs.query({ url: "https://gemini.google.com/*" }, (geminiTabs) => {
+          if (geminiTabs.length > 0) {
+            chrome.tabs.sendMessage(geminiTabs[0].id, {
+              type: "PROCESS_CHUNK",
+              payload
+            });
+          } else if (siteTabId) {
+            chrome.tabs.sendMessage(siteTabId, {
+              type: "AI_ERROR",
+              payload: "נא לפתוח את Claude.ai או Gemini בטאב נפרד"
+            });
+          }
         });
-      } else {
-        chrome.tabs.sendMessage(siteTabId, {
-          type: "AI_ERROR",
-          payload: "נא לפתוח את Claude.ai בטאב נפרד"
-        });
-      }
-    });
+      });
+    };
+
+    if (request.payloadKey) {
+      // Large payload was stored in chrome.storage.local by content_bridge.js
+      chrome.storage.local.get([request.payloadKey], (result) => {
+        const payload = result[request.payloadKey] || "";
+        chrome.storage.local.remove(request.payloadKey); // clean up immediately
+        dispatchPayload(payload);
+      });
+    } else {
+      dispatchPayload(request.payload || "");
+    }
   }
 
-  // Normal: route response from Claude tab → app tab
+  // ── Route response: AI tab → app tab ──────────────────────────────────
   if (request.type === "FROM_AI") {
     if (siteTabId) {
       chrome.tabs.sendMessage(siteTabId, {
         type: "AI_RESULT",
+        payload: request.payload
+      });
+    }
+  }
+
+  // ── Route error: AI tab → app tab ─────────────────────────────────────
+  if (request.type === "AI_ERROR") {
+    if (siteTabId) {
+      chrome.tabs.sendMessage(siteTabId, {
+        type: "AI_ERROR",
         payload: request.payload
       });
     }
