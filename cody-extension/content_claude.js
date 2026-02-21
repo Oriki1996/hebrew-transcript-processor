@@ -8,33 +8,65 @@ chrome.runtime.onMessage.addListener((request) => {
   }
 });
 
+// ── UI validation ─────────────────────────────────────────────────────────────
+// Checks that the required DOM elements exist before attempting any interaction.
+// Returns { ok: true } or { ok: false, error: string } with a suggestion to
+// switch to API mode when the Claude.ai interface has changed unexpectedly.
+function validateUI() {
+  const box = findInputBox();
+  if (!box) {
+    return {
+      ok: false,
+      error:
+        'שגיאת ממשק: תיבת הטקסט של Claude לא נמצאה.\n' +
+        'ייתכן שממשק Claude.ai עודכן ושינה את מבנה ה-DOM.\n' +
+        'פתרון מומלץ: עבור למצב API ישיר (Anthropic / Gemini) בהגדרות הספק.'
+    };
+  }
+  return { ok: true, box };
+}
+
 async function injectAndSend(text) {
-  const textBox = findInputBox();
-  if (!textBox) {
-    chrome.runtime.sendMessage({ type: "AI_ERROR", payload: "לא נמצאה תיבת הטקסט של Claude — וודא שאתה בדף שיחה" });
+  // ── 1. Pre-flight: validate DOM ──────────────────────────────────────────
+  const validation = validateUI();
+  if (!validation.ok) {
+    chrome.runtime.sendMessage({ type: 'AI_ERROR', payload: validation.error });
     return;
   }
+  const textBox = validation.box;
 
   textBox.focus();
   await sleep(200);
 
-  // Clear any existing content first
-  document.execCommand('selectAll', false, null);
-  document.execCommand('delete', false, null);
+  // Clear any existing content via Selection API (execCommand is deprecated)
+  const sel = window.getSelection();
+  if (sel) { sel.selectAllChildren(textBox); sel.deleteFromDocument(); }
   await sleep(100);
 
-  // Insert via DataTransfer paste event — works reliably with ProseMirror/React
+  // ── 2. Inject via DataTransfer paste ─────────────────────────────────────
   const ok = pasteInto(textBox, text);
   if (!ok) {
-    chrome.runtime.sendMessage({ type: "AI_ERROR", payload: "הכנסת הטקסט נכשלה" });
+    chrome.runtime.sendMessage({
+      type: 'AI_ERROR',
+      payload:
+        'שגיאת ממשק: הכנסת הטקסט נכשלה (DataTransfer + execCommand שניהם כשלו).\n' +
+        'פתרון מומלץ: עבור למצב API ישיר בהגדרות הספק.'
+    });
     return;
   }
 
   await sleep(800); // let React re-render and enable the Send button
 
+  // ── 3. Find and click Send ────────────────────────────────────────────────
   const sendBtn = findSendButton();
   if (!sendBtn) {
-    chrome.runtime.sendMessage({ type: "AI_ERROR", payload: "כפתור השליחה לא נמצא — ייתכן שהטקסט לא נקלט" });
+    chrome.runtime.sendMessage({
+      type: 'AI_ERROR',
+      payload:
+        'שגיאת ממשק: כפתור השליחה לא נמצא או מושבת.\n' +
+        'ייתכן שהטקסט לא נקלט כראוי, או שממשק Claude.ai שונה.\n' +
+        'פתרון מומלץ: עבור למצב API ישיר בהגדרות הספק.'
+    });
     return;
   }
   sendBtn.click();
@@ -47,6 +79,7 @@ function findInputBox() {
   return (
     document.querySelector('div[contenteditable="true"].ProseMirror') ||
     document.querySelector('[data-testid="composer-input"]') ||
+    document.querySelector('div[contenteditable="true"][class*="composer"]') ||
     document.querySelector('div[contenteditable="true"]')
   );
 }
@@ -64,9 +97,16 @@ function pasteInto(el, text) {
     }));
     return true;
   } catch {
-    // Fallback: execCommand (works in most Chromium builds)
+    // Fallback: Selection-range insert (avoids deprecated execCommand)
     try {
-      document.execCommand('insertText', false, text);
+      const s = window.getSelection();
+      if (s && s.rangeCount) {
+        const r = s.getRangeAt(0);
+        r.deleteContents();
+        r.insertNode(document.createTextNode(text));
+        s.collapseToEnd();
+      }
+      el.dispatchEvent(new Event('input', { bubbles: true }));
       return true;
     } catch {
       return false;
@@ -89,35 +129,67 @@ function findSendButton() {
   return null;
 }
 
+// ── Smart streaming monitor ───────────────────────────────────────────────────
+// Declares the response "done" only when BOTH conditions hold:
+//   (a) the stop/cancel button has been absent for STOP_QUIET_CYCLES × INTERVAL ms
+//   (b) the visible response text has not grown for CONTENT_STABLE_CYCLES × INTERVAL ms
+// This prevents cutting off long responses that have internal pauses.
 function monitorResponse() {
-  // Claude.ai shows a stop button while streaming; it disappears when done.
-  // Also check for the presence of at least one assistant turn after ours.
-  let stable = 0;
+  const INTERVAL             = 2000; // ms between checks
+  const STOP_QUIET_CYCLES    = 3;    // 6 s of no stop-button → streaming likely done
+  const CONTENT_STABLE_CYCLES = 2;   // 4 s of unchanging length → content settled
+
+  let stopQuiet    = 0; // consecutive cycles without stop button
+  let contentStable = 0; // consecutive cycles with same response length
+  let lastLength   = 0;
 
   const checkInterval = setInterval(() => {
-    // Streaming is active if a stop/cancel button is visible
+    // ── Check for active streaming indicator ──────────────────────────────
     const stopBtn =
       document.querySelector('button[aria-label*="Stop"]') ||
       document.querySelector('button[aria-label*="עצור"]') ||
       document.querySelector('[data-testid="stop-button"]');
 
-    if (stopBtn) { stable = 0; return; }
+    if (stopBtn) {
+      // Streaming in progress — reset both counters
+      stopQuiet    = 0;
+      contentStable = 0;
+      lastLength   = 0;
+      return;
+    }
 
-    stable++;
-    if (stable < 2) return; // 2 × 2 s = 4 s of silence = done
+    stopQuiet++;
+
+    // ── Track response length growth ─────────────────────────────────────
+    const lastMsg       = getLastAssistantMessage();
+    const currentLength = lastMsg ? lastMsg.length : 0;
+
+    if (currentLength > lastLength) {
+      lastLength    = currentLength;
+      contentStable = 0; // still growing
+    } else {
+      contentStable++;
+    }
+
+    // ── Both conditions must be met ───────────────────────────────────────
+    if (stopQuiet < STOP_QUIET_CYCLES || contentStable < CONTENT_STABLE_CYCLES) return;
 
     clearInterval(checkInterval);
 
-    const lastMsg = getLastAssistantMessage();
-    if (!lastMsg) {
-      chrome.runtime.sendMessage({ type: "AI_ERROR", payload: "לא נמצאה תגובה של Claude" });
+    if (!lastMsg || lastMsg.length < 20) {
+      chrome.runtime.sendMessage({
+        type: 'AI_ERROR',
+        payload:
+          'לא נמצאה תגובה של Claude (או שהתגובה קצרה מדי).\n' +
+          'ודא שאתה מחובר ל-claude.ai ושהשיחה אינה נחסמת.'
+      });
       return;
     }
-    chrome.runtime.sendMessage({ type: "FROM_AI", payload: lastMsg });
-  }, 2000);
+    chrome.runtime.sendMessage({ type: 'FROM_AI', payload: lastMsg });
+  }, INTERVAL);
 
-  // Safety: abort after 3 minutes
-  setTimeout(() => clearInterval(checkInterval), 180_000);
+  // Safety: abort after 5 minutes (300 s)
+  setTimeout(() => clearInterval(checkInterval), 300_000);
 }
 
 function getLastAssistantMessage() {

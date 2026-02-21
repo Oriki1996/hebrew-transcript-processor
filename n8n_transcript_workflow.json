@@ -33,17 +33,22 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "=https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key={{ $vars.GEMINI_API_KEY }}",
+        "url": "=https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent",
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
-            { "name": "Content-Type", "value": "application/json" }
+            { "name": "Content-Type", "value": "application/json" },
+            { "name": "x-goog-api-key", "value": "={{ $vars.GEMINI_API_KEY }}" }
           ]
         },
         "sendBody": true,
         "specifyBody": "json",
         "jsonBody": "={\n  \"contents\": [{\n    \"parts\": [{\n      \"text\": \"{{ $json.prompt }}\\n\\n{{ $json.content }}\"\n    }]\n  }],\n  \"generationConfig\": {\n    \"maxOutputTokens\": 8192,\n    \"temperature\": 0.3\n  }\n}",
-        "options": {}
+        "options": {
+          "retryOnFail": true,
+          "maxTries": 4,
+          "waitBetweenTries": 60000
+        }
       },
       "id": "http-1",
       "name": "קרא ל-Gemini API",
@@ -53,7 +58,7 @@
     },
     {
       "parameters": {
-        "jsCode": "const response = $input.first().json;\nconst text = response?.candidates?.[0]?.content?.parts?.[0]?.text || '';\nif (!text) throw new Error('Gemini לא החזיר תוכן — בדוק מפתח API ומכסה');\n\nreturn [{ json: {\n  part: $('עבד חלק אחד בכל פעם').first().json.part,\n  total: $('עבד חלק אחד בכל פעם').first().json.total,\n  content: $('עבד חלק אחד בכל פעם').first().json.content,\n  result: text\n}}];"
+        "jsCode": "const response = $input.first().json;\n\n// ── 429 Rate-limit guard ──────────────────────────────────────────────────\n// If Gemini returned a 429 inside a 200-wrapper (some proxy setups),\n// surface it as a real error so n8n's retry-on-fail can catch it.\nconst errCode = response?.error?.code;\nif (errCode === 429 || errCode === '429') {\n  const retryDelay = parseInt(\n    response?.error?.details?.find(d => d['@type']?.includes('RetryInfo'))\n      ?.retryDelay?.replace('s','') || '60',\n    10\n  ) * 1000;\n  throw new Error(\n    `QUOTA_EXCEEDED — Gemini 429. המתן ${retryDelay / 1000} שניות. n8n ינסה שוב אוטומטית.`\n  );\n}\n\nconst text = response?.candidates?.[0]?.content?.parts?.[0]?.text || '';\nif (!text) throw new Error('Gemini לא החזיר תוכן — בדוק מפתח API ומכסה');\n\nreturn [{ json: {\n  part: $('עבד חלק אחד בכל פעם').first().json.part,\n  total: $('עבד חלק אחד בכל פעם').first().json.total,\n  content: $('עבד חלק אחד בכל פעם').first().json.content,\n  result: text\n}}];"
       },
       "id": "code-2",
       "name": "חלץ תשובה",
@@ -64,17 +69,22 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "=https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key={{ $vars.GEMINI_API_KEY }}",
+        "url": "=https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent",
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
-            { "name": "Content-Type", "value": "application/json" }
+            { "name": "Content-Type", "value": "application/json" },
+            { "name": "x-goog-api-key", "value": "={{ $vars.GEMINI_API_KEY }}" }
           ]
         },
         "sendBody": true,
         "specifyBody": "json",
         "jsonBody": "={\n  \"contents\": [{\n    \"parts\": [{\n      \"text\": \"אתה מבקר איכות אקדמי. בדוק את העיבוד הבא:\\n\\nמקור:\\n{{ $json.content }}\\n\\nתוצר:\\n{{ $json.result }}\\n\\nהאם היו השמטות מהותיות? ענה ב'תקין' או פרט ליקויים בקצרה.\"\n    }]\n  }],\n  \"generationConfig\": {\n    \"maxOutputTokens\": 512,\n    \"temperature\": 0.1\n  }\n}",
-        "options": {}
+        "options": {
+          "retryOnFail": true,
+          "maxTries": 4,
+          "waitBetweenTries": 60000
+        }
       },
       "id": "auditor-node",
       "name": "סוכן מבקר איכות",
@@ -84,7 +94,7 @@
     },
     {
       "parameters": {
-        "jsCode": "const auditResponse = $input.first().json;\nconst audit = auditResponse?.candidates?.[0]?.content?.parts?.[0]?.text || 'לא בוצעה ביקורת';\n\nreturn [{ json: {\n  part: $('חלץ תשובה').first().json.part,\n  total: $('חלץ תשובה').first().json.total,\n  result: $('חלץ תשובה').first().json.result,\n  audit: audit.trim()\n}}];"
+        "jsCode": "const auditResponse = $input.first().json;\n\n// ── 429 guard for auditor ─────────────────────────────────────────────────\nconst errCode = auditResponse?.error?.code;\nif (errCode === 429 || errCode === '429') {\n  throw new Error('QUOTA_EXCEEDED — מבקר האיכות קיבל 429. n8n ינסה שוב אוטומטית.');\n}\n\nconst audit = auditResponse?.candidates?.[0]?.content?.parts?.[0]?.text || 'לא בוצעה ביקורת';\n\nreturn [{ json: {\n  part: $('חלץ תשובה').first().json.part,\n  total: $('חלץ תשובה').first().json.total,\n  result: $('חלץ תשובה').first().json.result,\n  audit: audit.trim()\n}}];"
       },
       "id": "code-audit",
       "name": "חלץ ביקורת",
@@ -95,10 +105,10 @@
     {
       "parameters": {
         "unit": "seconds",
-        "amount": 12
+        "amount": 15
       },
       "id": "wait-1",
-      "name": "המתן 12 שניות (מניעת 429)",
+      "name": "המתן בין חלקים (Rate-limit)",
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1,
       "position": [1780, 300],
@@ -138,9 +148,9 @@
       "main": [[{ "node": "חלץ ביקורת", "type": "main", "index": 0 }]]
     },
     "חלץ ביקורת": {
-      "main": [[{ "node": "המתן 12 שניות (מניעת 429)", "type": "main", "index": 0 }]]
+      "main": [[{ "node": "המתן בין חלקים (Rate-limit)", "type": "main", "index": 0 }]]
     },
-    "המתן 12 שניות (מניעת 429)": {
+    "המתן בין חלקים (Rate-limit)": {
       "main": [[{ "node": "עבד חלק אחד בכל פעם", "type": "main", "index": 0 }]]
     }
   },
