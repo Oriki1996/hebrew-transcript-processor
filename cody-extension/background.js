@@ -1,8 +1,9 @@
 // background.js — Cody Auto-Bridge switchboard
 // Routes chunks from the app tab → the active AI tab (Claude or Gemini).
-// Supports chrome.storage.local payloads (large chunks stored by content_bridge.js).
+// Supports chrome.storage.local for large payloads in BOTH directions.
 
 let siteTabId = null;
+const STORAGE_THRESHOLD = 2048; // bytes
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
@@ -11,7 +12,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     chrome.tabs.query({ url: "https://claude.ai/*" }, (tabs) => {
       sendResponse({ open: tabs.length > 0 });
     });
-    return true; // keep channel open for async sendResponse
+    return true;
   }
 
   // ── Route chunk: app → AI tab (Claude preferred, Gemini fallback) ──────
@@ -19,22 +20,14 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     siteTabId = sender.tab?.id ?? siteTabId;
 
     const dispatchPayload = (payload) => {
-      // Try Claude.ai first
       chrome.tabs.query({ url: "https://claude.ai/*" }, (claudeTabs) => {
         if (claudeTabs.length > 0) {
-          chrome.tabs.sendMessage(claudeTabs[0].id, {
-            type: "PROCESS_CHUNK",
-            payload
-          });
+          chrome.tabs.sendMessage(claudeTabs[0].id, { type: "PROCESS_CHUNK", payload });
           return;
         }
-        // Fall back to Gemini
         chrome.tabs.query({ url: "https://gemini.google.com/*" }, (geminiTabs) => {
           if (geminiTabs.length > 0) {
-            chrome.tabs.sendMessage(geminiTabs[0].id, {
-              type: "PROCESS_CHUNK",
-              payload
-            });
+            chrome.tabs.sendMessage(geminiTabs[0].id, { type: "PROCESS_CHUNK", payload });
           } else if (siteTabId) {
             chrome.tabs.sendMessage(siteTabId, {
               type: "AI_ERROR",
@@ -46,10 +39,10 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     };
 
     if (request.payloadKey) {
-      // Large payload was stored in chrome.storage.local by content_bridge.js
+      // Large payload stored by content_bridge.js
       chrome.storage.local.get([request.payloadKey], (result) => {
         const payload = result[request.payloadKey] || "";
-        chrome.storage.local.remove(request.payloadKey); // clean up immediately
+        chrome.storage.local.remove(request.payloadKey);
         dispatchPayload(payload);
       });
     } else {
@@ -57,23 +50,25 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     }
   }
 
-  // ── Route response: AI tab → app tab ──────────────────────────────────
+  // ── Route response: AI tab → app tab (large responses via storage) ─────
   if (request.type === "FROM_AI") {
-    if (siteTabId) {
-      chrome.tabs.sendMessage(siteTabId, {
-        type: "AI_RESULT",
-        payload: request.payload
+    if (!siteTabId) return;
+    const payload = request.payload || "";
+
+    if (payload.length > STORAGE_THRESHOLD) {
+      const key = "bridge_result_" + Date.now();
+      chrome.storage.local.set({ [key]: payload }, () => {
+        chrome.tabs.sendMessage(siteTabId, { type: "AI_RESULT", resultKey: key });
       });
+    } else {
+      chrome.tabs.sendMessage(siteTabId, { type: "AI_RESULT", payload });
     }
   }
 
   // ── Route error: AI tab → app tab ─────────────────────────────────────
   if (request.type === "AI_ERROR") {
     if (siteTabId) {
-      chrome.tabs.sendMessage(siteTabId, {
-        type: "AI_ERROR",
-        payload: request.payload
-      });
+      chrome.tabs.sendMessage(siteTabId, { type: "AI_ERROR", payload: request.payload });
     }
   }
 });

@@ -1,7 +1,6 @@
 // content_bridge.js — runs on localhost/* and file:///*
 // Bridges postMessage from the HTML app ↔ chrome.runtime ↔ background.js.
-// Large payloads (> 2 KB) are stored in chrome.storage.local to avoid
-// chrome.runtime.sendMessage size limits; background.js retrieves them.
+// Large payloads AND large responses (> 2 KB) are stored in chrome.storage.local.
 
 const STORAGE_THRESHOLD = 2048; // bytes
 
@@ -30,7 +29,6 @@ window.addEventListener("message", (event) => {
     const payload = event.data.payload || "";
 
     if (payload.length > STORAGE_THRESHOLD) {
-      // Large payload: store in chrome.storage.local, send only the key
       const key = "bridge_payload_" + Date.now();
       chrome.storage.local.set({ [key]: payload }, () => {
         chrome.runtime.sendMessage({ type: "TO_AI", payloadKey: key });
@@ -44,7 +42,16 @@ window.addEventListener("message", (event) => {
 // Messages from background.js → HTML app
 chrome.runtime.onMessage.addListener((request) => {
   if (request.type === "AI_RESULT") {
-    window.postMessage({ type: "RESPONSE_FROM_EXTENSION", payload: request.payload }, "*");
+    if (request.resultKey) {
+      // Large response stored in chrome.storage.local by background.js
+      chrome.storage.local.get([request.resultKey], (result) => {
+        const payload = result[request.resultKey] || "";
+        chrome.storage.local.remove(request.resultKey);
+        window.postMessage({ type: "RESPONSE_FROM_EXTENSION", payload }, "*");
+      });
+    } else {
+      window.postMessage({ type: "RESPONSE_FROM_EXTENSION", payload: request.payload }, "*");
+    }
   }
   if (request.type === "AI_ERROR") {
     window.postMessage({ type: "EXTENSION_ERROR", payload: request.payload }, "*");

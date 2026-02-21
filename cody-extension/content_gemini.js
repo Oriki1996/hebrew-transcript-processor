@@ -1,5 +1,5 @@
 // content_gemini.js — runs on gemini.google.com
-// Mirrors content_claude.js architecture with Gemini-specific DOM selectors.
+// Mirrors content_claude.js architecture with Gemini-specific DOM selectors (updated 2026).
 
 chrome.runtime.onMessage.addListener((request) => {
   if (request.type === "PROCESS_CHUNK") {
@@ -33,7 +33,6 @@ async function injectAndSend(text) {
   textBox.focus();
   await sleep(200);
 
-  // Clear existing content
   const sel = window.getSelection();
   if (sel) { sel.selectAllChildren(textBox); sel.deleteFromDocument(); }
   await sleep(100);
@@ -56,24 +55,32 @@ async function injectAndSend(text) {
     chrome.runtime.sendMessage({
       type: 'AI_ERROR',
       payload:
-        'שגיאת ממשק: כפתור השליחה של Gemini לא נמצא או מושבת.\n' +
+        'שגיאת ממשק: כפתור השליחה של Gemini לא נמצא.\n' +
         'ייתכן שהטקסט לא נקלט כראוי, או שממשק Gemini שונה.'
     });
     return;
   }
   sendBtn.click();
-
   monitorResponse();
 }
 
-// ── DOM helpers ────────────────────────────────────────────────────────────
+// ── DOM helpers — updated selectors (2026) ────────────────────────────────
 function findInputBox() {
-  // Gemini uses a custom rich-textarea web component with a contenteditable inside
+  // Ordered from most-specific to generic; Gemini uses rich-textarea web component
   return (
+    // Standard Gemini 2025-2026: rich-textarea custom element
     document.querySelector('rich-textarea div[contenteditable="true"]') ||
-    document.querySelector('div[contenteditable="true"][role="textbox"]') ||
+    // ms-prompt-input-wrapper (some versions)
+    document.querySelector('ms-prompt-input-wrapper div[contenteditable="true"]') ||
+    document.querySelector('ms-prompt-input div[contenteditable="true"]') ||
+    // aria-label based (changes between releases)
+    document.querySelector('div[contenteditable="true"][aria-label*="Enter a prompt"]') ||
+    document.querySelector('div[contenteditable="true"][aria-label*="Message Gemini"]') ||
+    document.querySelector('div[contenteditable="true"][aria-label*="prompt"]') ||
+    // Quill editor variant
     document.querySelector('.ql-editor[contenteditable="true"]') ||
-    document.querySelector('div[contenteditable="true"][class*="input"]') ||
+    // role + generic fallback
+    document.querySelector('div[contenteditable="true"][role="textbox"]') ||
     document.querySelector('div[contenteditable="true"]')
   );
 }
@@ -87,7 +94,6 @@ function pasteInto(el, text) {
     }));
     return true;
   } catch {
-    // Fallback: set textContent and fire input event
     try {
       el.focus();
       const r = document.createRange();
@@ -104,10 +110,13 @@ function pasteInto(el, text) {
 
 function findSendButton() {
   const selectors = [
+    // Standard
     'button[aria-label="Send message"]',
     'button[aria-label*="Send"]',
     'button[aria-label*="שליחה"]',
-    // Gemini-specific: the send button inside the input toolbar
+    // Gemini-specific
+    'button[aria-label*="Submit"]',
+    'ms-prompt-input button[aria-label*="Send"]',
     'button.send-button',
     'button[data-mat-icon-name="send"]',
     'button[type="submit"]',
@@ -120,37 +129,35 @@ function findSendButton() {
 }
 
 // ── Smart streaming monitor ────────────────────────────────────────────────
-// Same dual-condition logic as content_claude.js.
 function monitorResponse() {
   const INTERVAL              = 2000;
-  const STOP_QUIET_CYCLES     = 3;   // 6 s of no stop-button → streaming done
-  const CONTENT_STABLE_CYCLES = 2;   // 4 s of unchanging length → settled
+  const STOP_QUIET_CYCLES     = 3;
+  const CONTENT_STABLE_CYCLES = 2;
 
   let stopQuiet    = 0;
   let contentStable = 0;
   let lastLength   = 0;
 
   const checkInterval = setInterval(() => {
-    // Gemini stop-generating button selectors
+    // Gemini stop-generating selectors (updated 2026)
     const stopBtn =
+      document.querySelector('button[aria-label="Stop generating"]') ||
       document.querySelector('button[aria-label*="Stop"]') ||
       document.querySelector('button[aria-label*="עצור"]') ||
-      document.querySelector('[data-testid="stop-button"]') ||
-      document.querySelector('button.stop-button');
+      document.querySelector('ms-prompt-input button[aria-label*="Stop"]') ||
+      document.querySelector('[data-testid="stop-button"]');
 
     if (stopBtn) {
       stopQuiet = 0; contentStable = 0; lastLength = 0;
       return;
     }
-
     stopQuiet++;
 
     const lastMsg       = getLastAssistantMessage();
     const currentLength = lastMsg ? lastMsg.length : 0;
 
     if (currentLength > lastLength) {
-      lastLength    = currentLength;
-      contentStable = 0;
+      lastLength = currentLength; contentStable = 0;
     } else {
       contentStable++;
     }
@@ -171,17 +178,16 @@ function monitorResponse() {
     chrome.runtime.sendMessage({ type: 'FROM_AI', payload: lastMsg });
   }, INTERVAL);
 
-  // Safety abort after 5 minutes
   setTimeout(() => clearInterval(checkInterval), 300_000);
 }
 
 function getLastAssistantMessage() {
-  // Try Gemini-specific selectors, then generic fallback
+  // Gemini response selectors ordered by specificity (updated 2026)
   const strategies = [
-    // Gemini's model-response custom element
+    () => document.querySelectorAll('model-response .response-content'),
+    () => document.querySelectorAll('model-response ms-cmark-node'),
     () => document.querySelectorAll('model-response .markdown'),
     () => document.querySelectorAll('model-response'),
-    // message-content blocks that are not from the user
     () => {
       const all = document.querySelectorAll('message-content');
       return Array.from(all).filter(el =>
@@ -190,7 +196,6 @@ function getLastAssistantMessage() {
         el.innerText.trim().length > 10
       );
     },
-    // Generic fallback
     () => {
       const all = document.querySelectorAll('[class*="response"], [class*="model"]');
       return Array.from(all).filter(el => el.innerText.trim().length > 10);
